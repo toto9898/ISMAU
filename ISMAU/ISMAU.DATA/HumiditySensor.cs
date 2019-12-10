@@ -23,6 +23,18 @@ namespace ISMAU.DATA
             }
         }
 
+        public HumiditySensor(
+            string name,
+            string description,
+            Location location,
+            RangeBoundaries<float> acceptableRange,
+            float tickOff,
+            int pollingInterval = 1000)
+            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+        {
+            Humidity = INVALID_VALUE;
+        }
+
         public override float GetData()
         {
             throw new NotImplementedException();

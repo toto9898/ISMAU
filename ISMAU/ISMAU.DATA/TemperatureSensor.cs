@@ -23,6 +23,18 @@ namespace ISMAU.DATA
             }
         }
 
+        public TemperatureSensor(
+            string name,
+            string description,
+            Location location,
+            RangeBoundaries<double> acceptableRange,
+            float tickOff,
+            int pollingInterval = 1000)
+            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+        {
+            Degrees = INVALID_VALUE;
+        }
+
         public override double GetData()
         {
             throw new NotImplementedException();
