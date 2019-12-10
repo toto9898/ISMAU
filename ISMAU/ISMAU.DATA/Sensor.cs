@@ -37,12 +37,12 @@ namespace ISMAU.DATA
 
         public string Name
         {
-            get => default;
+            get => name;
             set => name = value != null ? value : "NoName";
         }
         public string Description
         {
-            get => default;
+            get => description;
             set => description = value != null ? value : "NoDescription";
         }
         public int PollingInterval { get; set; }
