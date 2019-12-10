@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    class ElPowerSensor : Sensor<int>
+    public class ElPowerSensor : Sensor<int>
     {
         private static int INVALID_VALUE = -1;
         private int wats;
