@@ -22,7 +22,45 @@ namespace ISMAU
     {
         public MainWindow()
         {
-            InitializeComponent();
-        }
-    }
+			InitializeComponent();
+
+			pageWindow.Content = new HomePage();
+
+		}
+
+		private void btnHomePage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new HomePage();
+		}
+
+		private void btnRegisterPage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new RegistryPage();
+		}
+
+		private void btnModifyPage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new ModifyPage();
+		}
+
+		private void btnListPage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new ListPage();
+		}
+
+		private void btnViewPage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new ViewPage();
+		}
+
+		private void btnMapPage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new MapPage();
+		}
+
+		private void btnReportPage_Click(object sender, RoutedEventArgs e)
+		{
+			pageWindow.Content = new ReportPage();
+		}
+	}
 }

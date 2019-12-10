@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISMAU"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="ISMAU" Height="450" Width="800" Background="DarkGray">
+
+	<Grid>
+
+		<Grid.RowDefinitions>
+
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="4*"/>
+
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="0">
+
+			<Grid.ColumnDefinitions>
+
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+
+			</Grid.ColumnDefinitions>
+
+			<Button x:Name="btnHomePage" Content="Home Page" Margin="5" Grid.Column="0" Click="btnHomePage_Click"/>
+			<Button x:Name="btnRegisterPage" Content="Register Sensor" Margin="5" Grid.Column="1" Click="btnRegisterPage_Click"/>
+			<Button x:Name="btnModifyPage" Content="Modify Sensor" Margin="5" Grid.Column="2" Click="btnModifyPage_Click"/>
+			<Button x:Name="btnListPage" Content="All sensors" Margin="5" Grid.Column="3" Click="btnListPage_Click"/>
+			<Button x:Name="btnViewPage" Content="View sensor" Margin="5" Grid.Column="4" Click="btnViewPage_Click"/>
+			<Button x:Name="btnMapPage" Content="Show map" Margin="5" Grid.Column="5" Click="btnMapPage_Click"/>
+			<Button x:Name="btnReportPage" Content="Reports" Margin="5" Grid.Column="6" Click="btnReportPage_Click"/>
+
+		</Grid>
+
+		<Frame x:Name="pageWindow" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+
+	</Grid>
+	
 </Window>
