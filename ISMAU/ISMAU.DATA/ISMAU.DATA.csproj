@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoorSensor.cs" />
+    <Compile Include="ElPowerSensor.cs" />
     <Compile Include="HumiditySensor.cs" />
+    <Compile Include="NoiseSensor.cs" />
     <Compile Include="Sensor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemperatureSensor.cs" />
