@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    class NoiseSensor : Sensor<int>
+    class NoiseSensor : Sensor
     {
-        private static int INVALID_VALUE = -1;
+        private const int INVALID_VALUE = -1;
         private int decibels;
+		private RangeBoundaries<int> Boundaries;
 
-        public int Decibels
+		public int Decibels
         {
             get => decibels;
             set
             {
-                if (value >= AcceptableRange.Min && value <= AcceptableRange.Max)
+                if (value >= Boundaries.Min && value <= Boundaries.Max)
                     decibels = value;
                 else
                     decibels = INVALID_VALUE;
             }
         }
-
 
         public NoiseSensor(
             string name, 
@@ -31,12 +31,13 @@ namespace ISMAU.DATA
             RangeBoundaries<int> acceptableRange, 
             float tickOff, 
             int pollingInterval = 1000) 
-            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, pollingInterval)
         {
             Decibels = INVALID_VALUE;
+            Boundaries = acceptableRange;
         }
 
-        public override int GetData()
+        public override void GetData()
         {
             throw new NotImplementedException();
         }

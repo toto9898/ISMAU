@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    public class TemperatureSensor : Sensor<double>
+    public class TemperatureSensor : Sensor
     {
-        private static double INVALID_VALUE = -239.0;
+        private const double INVALID_VALUE = -239.0;
         private double degrees;
+        private RangeBoundaries<double> Boundaries;
 
         public double Degrees
         {
             get => degrees;
             set
             {
-                if (value >= AcceptableRange.Min && value <= AcceptableRange.Max)
+                if (value >= Boundaries.Min && value <= Boundaries.Max)
                     degrees = value;
                 else
                     degrees = INVALID_VALUE;
@@ -30,12 +31,13 @@ namespace ISMAU.DATA
             RangeBoundaries<double> acceptableRange,
             float tickOff,
             int pollingInterval = 1000)
-            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, pollingInterval)
         {
             Degrees = INVALID_VALUE;
+            Boundaries = acceptableRange;
         }
 
-        public override double GetData()
+        public override void GetData()
         {
             throw new NotImplementedException();
         }

@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    public class HumiditySensor : Sensor<float>
+    public class HumiditySensor : Sensor
     {
-        private static double INVALID_VALUE = -1.0;
+        private const double INVALID_VALUE = -1.0;
         private double humidity;
+		private RangeBoundaries<float> Boundaries;
 
-        public double Humidity
+		public double Humidity
         {
             get => humidity;
             set
             {
-                if (value >= AcceptableRange.Min && value <= AcceptableRange.Max)
+                if (value >= Boundaries.Min && value <= Boundaries.Max)
                     humidity = value;
                 else
                     humidity = INVALID_VALUE;
@@ -30,12 +31,13 @@ namespace ISMAU.DATA
             RangeBoundaries<float> acceptableRange,
             float tickOff,
             int pollingInterval = 1000)
-            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, pollingInterval)
         {
             Humidity = INVALID_VALUE;
+            Boundaries = acceptableRange;
         }
 
-        public override float GetData()
+        public override void GetData()
         {
             throw new NotImplementedException();
         }

@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    public class ElPowerSensor : Sensor<int>
+    public class ElPowerSensor : Sensor
     {
-        private static int INVALID_VALUE = -1;
+        private const int INVALID_VALUE = -1;
         private int wats;
+		private RangeBoundaries<int> Boundaries;
 
-        public int Wats
+		public int Wats
         {
             get => wats;
             set 
             {
-                if (value >= AcceptableRange.Min && value <= AcceptableRange.Max)
+                if (value >= Boundaries.Min && value <= Boundaries.Max)
                     wats = value;
                 else
                     wats = INVALID_VALUE;
@@ -30,13 +31,14 @@ namespace ISMAU.DATA
             RangeBoundaries<int> acceptableRange,
             float tickOff,
             int pollingInterval = 1000)
-            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, pollingInterval)
         {
             Wats = INVALID_VALUE;
+			Boundaries = acceptableRange;
         }
 
 
-        public override int GetData()
+        public override void GetData()
         {
             throw new NotImplementedException();
         }

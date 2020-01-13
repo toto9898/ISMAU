@@ -6,24 +6,30 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    public class DoorSensor : Sensor<bool>
+    public class DoorSensor : Sensor
     {
-        public bool IsClosed { get; set; }
+
+		private bool isClosed;
+
+		public bool IsClosed
+		{
+			get { return isClosed; }
+			set { isClosed = value; }
+		}
 
         public DoorSensor(
             string name, 
             string description, 
-            Location location, 
-            RangeBoundaries<bool> acceptableRange, 
-            float tickOff, 
+            Location location,
+            float tickOff,
             int pollingInterval = 1000) 
-            : base(name, description, location, acceptableRange, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, pollingInterval)
         {
             // true will be the default state of the door/window
             IsClosed = true;
         }
 
-        public override bool GetData()
+        public override void GetData()
         {
             throw new NotImplementedException();
         }
