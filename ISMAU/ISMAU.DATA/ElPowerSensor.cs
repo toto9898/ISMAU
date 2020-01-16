@@ -24,6 +24,24 @@ namespace ISMAU.DATA
             }
         }
 
+		public RangeBoundaries<int> SetBoundaries
+		{
+			get { return Boundaries; }
+			set
+			{
+				Boundaries = new RangeBoundaries<int>();
+				if (value != null)
+				{
+					Boundaries.Max = value.Max;
+					Boundaries.Min = value.Min;
+				}
+				else
+				{
+					Boundaries.Max = Boundaries.Min = 0;
+				}
+			}
+		}
+
         public ElPowerSensor(
             string name,
             string description,
@@ -36,6 +54,9 @@ namespace ISMAU.DATA
             Wats = INVALID_VALUE;
 			Boundaries = acceptableRange;
         }
+
+		public ElPowerSensor() : this("", "", null, null, 0)
+		{ }
 
 
         public override void GetData()

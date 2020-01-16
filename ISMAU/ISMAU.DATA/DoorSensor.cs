@@ -29,6 +29,9 @@ namespace ISMAU.DATA
             IsClosed = true;
         }
 
+		public DoorSensor() : this("", "", null, 0)
+		{ }
+
         public override void GetData()
         {
             throw new NotImplementedException();

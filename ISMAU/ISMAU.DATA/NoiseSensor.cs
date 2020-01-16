@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISMAU.DATA
 {
-    class NoiseSensor : Sensor
+    public class NoiseSensor : Sensor
     {
         private const int INVALID_VALUE = -1;
         private int decibels;
@@ -24,7 +24,25 @@ namespace ISMAU.DATA
             }
         }
 
-        public NoiseSensor(
+		public RangeBoundaries<int> SetBoundaries
+		{
+			get { return Boundaries; }
+			set
+			{
+				Boundaries = new RangeBoundaries<int>();
+				if (value != null)
+				{
+					Boundaries.Max = value.Max;
+					Boundaries.Min = value.Min;
+				}
+				else
+				{
+					Boundaries.Max = Boundaries.Min = 0;
+				}
+			}
+		}
+
+		public NoiseSensor(
             string name, 
             string description, 
             Location location, 
@@ -36,6 +54,9 @@ namespace ISMAU.DATA
             Decibels = INVALID_VALUE;
             Boundaries = acceptableRange;
         }
+
+		public NoiseSensor() : this("", "", null, null, 0) 
+		{ }
 
         public override void GetData()
         {

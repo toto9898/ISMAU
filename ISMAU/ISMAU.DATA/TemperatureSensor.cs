@@ -24,7 +24,26 @@ namespace ISMAU.DATA
             }
         }
 
-        public TemperatureSensor(
+		public RangeBoundaries<double> SetBoundaries
+		{
+			get { return Boundaries; }
+			set
+			{
+				Boundaries = new RangeBoundaries<double>();
+				if (value != null)
+				{
+					Boundaries.Max = value.Max;
+					Boundaries.Min = value.Min;
+				}
+				else
+				{
+					Boundaries.Max = Boundaries.Min = 0;
+				}
+			}
+		}
+
+
+		public TemperatureSensor(
             string name,
             string description,
             Location location,
@@ -36,6 +55,9 @@ namespace ISMAU.DATA
             Degrees = INVALID_VALUE;
             Boundaries = acceptableRange;
         }
+
+		public TemperatureSensor() : this("", "", null, null, 0) 
+		{ }
 
         public override void GetData()
         {

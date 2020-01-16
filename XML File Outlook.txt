@@ -1,0 +1,14 @@
+/// XML Sensor outlook
+/*	
+ *	<ListOfSensors Size = "value">
+ *		<Sensor> 
+ *			<Type> TypeString </Type>
+ *			<Name> NameString </Name>
+ *			<Description> DescriptionString </Description>
+ *			<PollingInterval> Value </PollingInterval>
+ *			<Location> LocationString </Llocation>
+ *			<AcceptableValues> Values </AcceptableValues>
+ *			<TickOff> Option </TickOff>
+ *		</Sensor>
+ *	</ListOfSensors>
+ */
