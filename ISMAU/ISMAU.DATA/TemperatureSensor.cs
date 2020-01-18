@@ -52,12 +52,22 @@ namespace ISMAU.DATA
             int pollingInterval = 1000)
             : base(name, description, location, tickOff, pollingInterval)
         {
-            Degrees = INVALID_VALUE;
             Boundaries = acceptableRange;
+            Degrees = INVALID_VALUE;
         }
 
-		public TemperatureSensor() : this("", "", null, null, 0) 
-		{ }
+        public TemperatureSensor() : base()
+        {
+            Boundaries = new RangeBoundaries<double>();
+            Degrees = INVALID_VALUE;
+        }
+
+        public TemperatureSensor(TemperatureSensor sensor)
+        {
+            Boundaries.Min = sensor.Boundaries.Min;
+            Boundaries.Max = sensor.Boundaries.Max;
+            Degrees = sensor.Degrees;
+        }
 
         public override void GetData()
         {

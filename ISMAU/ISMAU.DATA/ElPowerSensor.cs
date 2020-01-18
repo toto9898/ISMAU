@@ -51,12 +51,21 @@ namespace ISMAU.DATA
             int pollingInterval = 1000)
             : base(name, description, location, tickOff, pollingInterval)
         {
-            Wats = INVALID_VALUE;
 			Boundaries = acceptableRange;
+            Wats = INVALID_VALUE;
         }
 
-		public ElPowerSensor() : this("", "", null, null, 0)
-		{ }
+        public ElPowerSensor() : base()
+        {
+            Boundaries = new RangeBoundaries<int>();
+            Wats = INVALID_VALUE;
+        }
+        public ElPowerSensor(ElPowerSensor sensor) :base(sensor)
+        {
+            Boundaries.Min = sensor.Boundaries.Min;
+            Boundaries.Max = sensor.Boundaries.Max;
+            Wats = sensor.Wats;
+        }
 
 
         public override void GetData()

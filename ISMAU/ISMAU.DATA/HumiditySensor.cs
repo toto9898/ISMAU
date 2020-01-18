@@ -52,12 +52,22 @@ namespace ISMAU.DATA
             int pollingInterval = 1000)
             : base(name, description, location, tickOff, pollingInterval)
         {
-            Humidity = INVALID_VALUE;
             Boundaries = acceptableRange;
+            Humidity = INVALID_VALUE;
         }
 
-		public HumiditySensor() : this("", "", null, null, 0) 
-		{ }
+        public HumiditySensor() : base()
+        {
+            Boundaries = new RangeBoundaries<float>();
+            Humidity = INVALID_VALUE;
+        }
+        public HumiditySensor(HumiditySensor sensor)
+        {
+            Boundaries.Min = sensor.Boundaries.Min;
+            Boundaries.Max = sensor.Boundaries.Max;
+            Humidity = sensor.Humidity;
+        }
+
 
         public override void GetData()
         {

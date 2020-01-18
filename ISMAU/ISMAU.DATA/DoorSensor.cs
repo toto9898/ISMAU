@@ -29,8 +29,15 @@ namespace ISMAU.DATA
             IsClosed = true;
         }
 
-		public DoorSensor() : this("", "", null, 0)
-		{ }
+        public DoorSensor() : base()
+        {
+            IsClosed = true;
+        }
+
+        public DoorSensor(DoorSensor sensor) : base(sensor)
+        {
+            IsClosed = sensor.IsClosed;
+        }
 
         public override void GetData()
         {

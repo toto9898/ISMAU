@@ -51,12 +51,22 @@ namespace ISMAU.DATA
             int pollingInterval = 1000) 
             : base(name, description, location, tickOff, pollingInterval)
         {
-            Decibels = INVALID_VALUE;
             Boundaries = acceptableRange;
+            Decibels = INVALID_VALUE;
         }
 
-		public NoiseSensor() : this("", "", null, null, 0) 
-		{ }
+        public NoiseSensor() : base()
+        {
+            Boundaries = new RangeBoundaries<int>();
+            Decibels = INVALID_VALUE;
+        }
+
+        public NoiseSensor(NoiseSensor sensor)
+        {
+            Boundaries.Min = sensor.Boundaries.Min;
+            Boundaries.Max = sensor.Boundaries.Max;
+            Decibels = sensor.Decibels;
+        }
 
         public override void GetData()
         {
