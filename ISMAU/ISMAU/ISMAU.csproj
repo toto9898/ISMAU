@@ -146,5 +146,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISMAU.DATA\ISMAU.DATA.csproj">
+      <Project>{2ce924ca-fc87-403e-8570-692b23538db0}</Project>
+      <Name>ISMAU.DATA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISMAU.FUNCTIONALITY\ISMAU.FUNCTIONALITY.csproj">
+      <Project>{23570c10-a62d-4bf9-8a7b-4bb1f506a11f}</Project>
+      <Name>ISMAU.FUNCTIONALITY</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
