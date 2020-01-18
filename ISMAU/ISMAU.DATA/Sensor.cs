@@ -38,8 +38,8 @@ namespace ISMAU.DATA
     [XmlInclude(typeof(TemperatureSensor))]
     public abstract class Sensor
     {
-        public string name;
-        public string description;
+        private string name;
+        private string description;
 
         public string Name
         {
