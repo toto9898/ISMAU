@@ -73,6 +73,10 @@ namespace ISMAU.FUNCTIONALITY
 			return readSensors;
 		}
 
+		public void SaveState()
+		{
+			sensors.Serialize(databasePath);
+		}
 
 		#endregion
 	}
