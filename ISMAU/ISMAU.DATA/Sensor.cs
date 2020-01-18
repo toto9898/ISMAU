@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace ISMAU.DATA
 {
@@ -29,6 +30,12 @@ namespace ISMAU.DATA
         public T Max { get; set; }
     }
 
+    [Serializable]
+    [XmlInclude(typeof(DoorSensor))]
+    [XmlInclude(typeof(ElPowerSensor))]
+    [XmlInclude(typeof(HumiditySensor))]
+    [XmlInclude(typeof(NoiseSensor))]
+    [XmlInclude(typeof(TemperatureSensor))]
     public abstract class Sensor
     {
         public string name;
@@ -51,7 +58,6 @@ namespace ISMAU.DATA
         public int PollingInterval { get; set; } = 1000;
 
 
-
         public Sensor(
             string name,
             string description, 
@@ -64,6 +70,18 @@ namespace ISMAU.DATA
             Location = location;
             TickOff = tickOff;
             PollingInterval = pollingInterval;
+        }
+        public Sensor() : this(string.Empty, string.Empty, new Location(), 0f)
+        {
+
+        }
+        public Sensor(Sensor sensor)
+        {
+            Name = sensor.Name;
+            Description = sensor.Description;
+            Location = sensor.Location;
+            TickOff = sensor.TickOff;
+            PollingInterval = sensor.PollingInterval;
         }
 
         public abstract void GetData();
