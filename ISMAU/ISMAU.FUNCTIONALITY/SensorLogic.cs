@@ -25,20 +25,13 @@ namespace ISMAU.FUNCTIONALITY
 			current = Directory.GetParent(current).Parent.Parent.FullName;
 			databasePath = current + DATABASE_NAME;
 
-			if (File.Exists(databasePath))
+			try
 			{
-				StreamReader streamReader = File.OpenText(databasePath);
-				sensors = getSensors(streamReader);
-				streamReader.Close();
+				sensors = sensors.Deserialize(databasePath);
 			}
-			else
+			catch (Exception)
 			{
 				sensors = new List<Sensor>();
-				StreamWriter createFile = File.CreateText(databasePath);
-				createFile.WriteLine(@"<?xml version=""1.0"" encoding=""UTF-8""?>");
-				createFile.WriteLine(@"<ListOfSensors Size=""0"">");
-				createFile.WriteLine("</ListOfSensors>");
-				createFile.Close();
 			}
 		} 
 		#endregion
