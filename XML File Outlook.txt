@@ -1,4 +1,4 @@
-/// XML Sensor outlook
+/// XML File outlook
 /*	
  *	<ListOfSensors Size = "value">
  *		<Sensor> 

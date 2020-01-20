@@ -24,6 +24,11 @@ namespace ISMAU
     {
 		private SensorLogic sensorLogic;
 
+		//test data will be deleted
+		string[] sensorTypes = { "temperature", "humidity", "electric power", "window", "noise" };
+		const int numberSensorTypes = 5;
+		int currSensorType;
+
         public MainWindow()
         {
 			InitializeComponent();
@@ -43,6 +48,9 @@ namespace ISMAU
 			sensorLogic = null;
 
 			sensorLogic = new SensorLogic();
+
+			//delete later
+			currSensorType = 0;
 		}
 
 		private void btnHomePage_Click(object sender, RoutedEventArgs e)
@@ -78,6 +86,19 @@ namespace ISMAU
 		private void btnReportPage_Click(object sender, RoutedEventArgs e)
 		{
 			pageWindow.Content = new ReportPage();
+		}
+
+		//delete in final version
+		private async void btnTest_Click(object sender, RoutedEventArgs e)
+		{
+			ApiOutput output = await ApiConnector.getCurrentValue(sensorTypes[currSensorType]);
+			if (output == null)
+				return;
+			txtTest.Text = output.TimeStamp + " " + output.Value;
+			if (currSensorType < numberSensorTypes - 1)
+				++currSensorType;
+			else
+				currSensorType = 0;
 		}
 	}
 }

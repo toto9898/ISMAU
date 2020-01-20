@@ -51,28 +51,6 @@ namespace ISMAU.FUNCTIONALITY
 		#endregion
 
 		#region Methods
-		private List<Sensor> getSensors(StreamReader streamReader)
-		{
-			streamReader.ReadLine(); //skips first line
-			streamReader.ReadLine(); //skips second line
-			List<Sensor> readSensors = new List<Sensor>();
-			SensorReader reader = new SensorReader();
-
-			string currentRow;
-			Sensor currentSensor = null;
-			while (true)
-			{
-				currentRow = streamReader.ReadLine();
-				if (!currentRow.Equals("<Sensor>"))
-					break;
-
-				currentSensor = reader.readSensor(streamReader);
-				readSensors.Add(currentSensor);
-			}
-
-			return readSensors;
-		}
-
 		public void SaveState()
 		{
 			sensors.Serialize(databasePath);
@@ -137,7 +115,6 @@ namespace ISMAU.FUNCTIONALITY
 			}
 			return success;
 		}
-
 		#endregion
 	}
 }
