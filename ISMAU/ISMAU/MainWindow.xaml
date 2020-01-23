@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ISMAU"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
         mc:Ignorable="d"
         Title="ISMAU" Height="450" Width="800" Background="DarkGray">
 
@@ -52,6 +53,29 @@
 			<TextBlock x:Name="txtTest" Grid.Column="0"/>
 			<Button x:Name="btnTest" Grid.Column="1" Click="btnTest_Click"/>
 		</Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <telerik:RadGridView x:Name="RadGridView1" GroupRenderMode="Flat"
+							 AutoGenerateColumns="False"
+							 CanUserFreezeColumns="False"
+							 RowIndicatorVisibility="Collapsed">
+                <telerik:RadGridView.Columns>
+                    <telerik:GridViewDataColumn Header="Employee ID"
+											Width="120" />
+                    <telerik:GridViewDataColumn Header="First Name"
+											Width="120" />
+                    <telerik:GridViewDataColumn Header="Last Name"
+											Width="120" />
+                    <telerik:GridViewDataColumn Header="City"
+											Width="120" />
+                    <telerik:GridViewDataColumn Header="Country"
+											Width="*" />
+                </telerik:RadGridView.Columns>
+            </telerik:RadGridView>
+        </Grid>
 		
 	</Grid>
 	
