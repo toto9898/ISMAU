@@ -4,11 +4,19 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ISMAU"
-      mc:Ignorable="d" 
+	  xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+	  mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MapPage">
 
     <Grid>
-        
-    </Grid>
+		<m:Map x:Name="locationMap" 
+			   CredentialsProvider="AlaHtwYsvTUbKopTDZEsj8GPpkDq6NpHg9vJT1qFIOB7YF-spi4XGsLBHaaJ5uUq">
+			<m:MapItemsControl ItemsSource="{Binding pushpins}">
+				<DataTemplate>
+					<m:Pushpin Location="{Binding}"/>
+				</DataTemplate>
+			</m:MapItemsControl>
+		</m:Map>
+	</Grid>
 </Page>

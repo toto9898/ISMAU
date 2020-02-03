@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ISMAU.FUNCTIONALITY;
+using Microsoft.Maps.MapControl.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +22,13 @@ namespace ISMAU
 	/// </summary>
 	public partial class MapPage : Page
 	{
-		public MapPage()
+
+		private List<Pushpin> pushpins;
+
+		public MapPage(SensorLogic sensorLogic)
 		{
+			pushpins = sensorLogic.initializePins();
+
 			InitializeComponent();
 		}
 	}

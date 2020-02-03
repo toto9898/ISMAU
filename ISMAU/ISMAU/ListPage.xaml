@@ -1,12 +1,27 @@
-﻿<Page x:Class="ISMAU.ListPage"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ISMAU"
-      mc:Ignorable="d" 
+	  xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.GridView"
+	  xmlns:telerik1="http://schemas.telerik.com/2008/xaml/presentation" x:Class="ISMAU.ListPage"
+	  mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ListPage">
+	
+	<Grid>
+		<telerik:RadGridView x:Name="RadGridView1" GroupRenderMode="Flat"
+							 AutoGenerateColumns="True"
+							 CanUserFreezeColumns="False"
+							 RowIndicatorVisibility="Collapsed">
+			<telerik:RadGridView.Columns>
+				<telerik:GridViewDataColumn Header="Name" Width="*" />
+				<telerik:GridViewDataColumn Header="Description" Width="*" />
+				<telerik:GridViewDataColumn Header="Value" Width="*" />
+			</telerik:RadGridView.Columns>
+			
+		</telerik:RadGridView>
+	</Grid>
 
-	<TextBlock Text="Hello 1" FontSize="32"/>
 </Page>

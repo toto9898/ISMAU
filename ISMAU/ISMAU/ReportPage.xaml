@@ -9,6 +9,6 @@
       Title="ReportPage">
 
     <Grid>
-        
-    </Grid>
+		<TextBlock Text="Hello2"/>
+	</Grid>
 </Page>

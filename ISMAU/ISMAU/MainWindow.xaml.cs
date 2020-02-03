@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace ISMAU
 {
@@ -37,11 +38,11 @@ namespace ISMAU
 
 			sensorLogic = new SensorLogic();
 
-			sensorLogic.AddSensor("s1", "this is sensor 1", new Location(11d, 18d), 5f, "DoorSensor", "1", "5");
-			sensorLogic.AddSensor("s2", "this is sensor 2", new Location(12d, 18d), 5f, "ElPowerSensor", "2", "4");
-			sensorLogic.AddSensor("s3", "this is sensor 3", new Location(13d, 18d), 5f, "HumiditySensor", "3", "3");
-			sensorLogic.AddSensor("s4", "this is sensor 4", new Location(14d, 18d), 5f, "NoiseSensor", "4", "2");
-			sensorLogic.AddSensor("s5", "this is sensor 5", new Location(15d, 18d), 5f, "TemperatureSensor", "5", "1");
+			sensorLogic.AddSensor("s1", "this is sensor 1", new ISMAU.DATA.Location(11d, 18d), 5f, "DoorSensor", "1", "5");
+			sensorLogic.AddSensor("s2", "this is sensor 2", new ISMAU.DATA.Location(12d, 18d), 5f, "ElPowerSensor", "2", "4");
+			sensorLogic.AddSensor("s3", "this is sensor 3", new ISMAU.DATA.Location(13d, 18d), 5f, "HumiditySensor", "3", "3");
+			sensorLogic.AddSensor("s4", "this is sensor 4", new ISMAU.DATA.Location(14d, 18d), 5f, "NoiseSensor", "4", "2");
+			sensorLogic.AddSensor("s5", "this is sensor 5", new ISMAU.DATA.Location(15d, 18d), 5f, "TemperatureSensor", "5", "1");
 
 			sensorLogic.SaveState();
 
@@ -51,6 +52,7 @@ namespace ISMAU
 
 			//delete later
 			currSensorType = 0;
+
 		}
 
 		private void btnHomePage_Click(object sender, RoutedEventArgs e)
@@ -80,7 +82,7 @@ namespace ISMAU
 
 		private void btnMapPage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new MapPage();
+			pageWindow.Content = new MapPage(sensorLogic);
 		}
 
 		private void btnReportPage_Click(object sender, RoutedEventArgs e)
@@ -94,7 +96,7 @@ namespace ISMAU
 			ApiOutput output = await ApiConnector.getCurrentValue(sensorTypes[currSensorType]);
 			if (output == null)
 				return;
-			txtTest.Text = output.TimeStamp + " " + output.Value;
+			//txtTest.Text = output.TimeStamp + " " + output.Value;
 			if (currSensorType < numberSensorTypes - 1)
 				++currSensorType;
 			else

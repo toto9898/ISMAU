@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ISMAU.DATA;
 using System.IO;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace ISMAU.FUNCTIONALITY
 {
@@ -60,7 +61,7 @@ namespace ISMAU.FUNCTIONALITY
 		(
 			string name,
 			string description,
-			Location location,
+			ISMAU.DATA.Location location,
 			float tickOff,
 			string type,
 			string boundariesMin,
@@ -114,6 +115,18 @@ namespace ISMAU.FUNCTIONALITY
 				sensors.Add(new TemperatureSensor(name, description, location, boundaries, tickOff, pollingInterval));
 			}
 			return success;
+		}
+
+		public List<Pushpin> initializePins()
+		{
+			List<Pushpin> output = new List<Pushpin>();
+			foreach(var elem in sensors)
+			{
+				Pushpin pin = new Pushpin();
+				pin.Location = new Microsoft.Maps.MapControl.WPF.Location(elem.Location.Latitude, elem.Location.Longtitude);
+				output.Add(pin);
+			}
+			return output;
 		}
 		#endregion
 	}
