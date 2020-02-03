@@ -5,7 +5,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -16,7 +18,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -31,7 +35,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -46,7 +52,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -61,7 +69,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -76,7 +86,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -87,7 +99,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -102,7 +116,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -117,7 +133,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -132,7 +150,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -147,7 +167,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -158,7 +180,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -173,7 +197,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -188,7 +214,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -203,7 +231,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -218,7 +248,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -229,7 +261,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -244,7 +278,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -259,7 +295,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -274,7 +312,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -289,7 +329,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -300,7 +342,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -315,7 +359,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -330,7 +376,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -345,7 +393,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -360,7 +410,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -371,7 +423,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -386,7 +440,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -401,7 +457,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -416,7 +474,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -431,7 +491,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -442,7 +504,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -457,7 +521,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -472,7 +538,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -487,7 +555,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -502,7 +572,9 @@
     <Description>this is sensor 1</Description>
     <Location>
       <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -513,7 +585,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -528,7 +602,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -543,7 +619,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -558,7 +636,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -572,8 +652,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>1001</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -584,7 +666,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -599,7 +683,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -614,7 +700,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -629,7 +717,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -643,8 +733,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>1001</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -655,7 +747,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -670,7 +764,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -685,7 +781,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -700,7 +798,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -714,8 +814,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>1001</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -726,7 +828,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -741,7 +845,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -756,7 +862,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -771,7 +879,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -785,8 +895,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>1001</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -797,7 +909,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -812,7 +926,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -827,7 +943,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -842,7 +960,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -856,8 +976,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>101</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -868,7 +990,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>100</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -883,7 +1007,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -898,7 +1024,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -913,7 +1041,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -927,8 +1057,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>101</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -939,7 +1071,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>100</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -954,7 +1088,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -969,7 +1105,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -984,7 +1122,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -998,8 +1138,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>101</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1010,7 +1152,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>100</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1025,7 +1169,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1040,7 +1186,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1055,7 +1203,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1069,8 +1219,10 @@
     <Name>s1</Name>
     <Description>this is sensor 1</Description>
     <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
+      <Latitude>101</Latitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1081,7 +1233,9 @@
     <Description>this is sensor 2</Description>
     <Location>
       <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>100</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1096,7 +1250,9 @@
     <Description>this is sensor 3</Description>
     <Location>
       <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1111,7 +1267,9 @@
     <Description>this is sensor 4</Description>
     <Location>
       <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>
@@ -1126,1569 +1284,9 @@
     <Description>this is sensor 5</Description>
     <Location>
       <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Degrees>-239</Degrees>
-    <SetBoundaries>
-      <Min>5</Min>
-      <Max>1</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>s1</Name>
-    <Description>this is sensor 1</Description>
-    <Location>
-      <Latitude>11</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>s2</Name>
-    <Description>this is sensor 2</Description>
-    <Location>
-      <Latitude>12</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Wats>-1</Wats>
-    <SetBoundaries>
-      <Min>2</Min>
-      <Max>4</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>s3</Name>
-    <Description>this is sensor 3</Description>
-    <Location>
-      <Latitude>13</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Humidity>-1</Humidity>
-    <SetBoundaries>
-      <Min>3</Min>
-      <Max>3</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>s4</Name>
-    <Description>this is sensor 4</Description>
-    <Location>
-      <Latitude>14</Latitude>
-      <Longtitude>18</Longtitude>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <Decibels>-1</Decibels>
-    <SetBoundaries>
-      <Min>4</Min>
-      <Max>2</Max>
-    </SetBoundaries>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>s5</Name>
-    <Description>this is sensor 5</Description>
-    <Location>
-      <Latitude>15</Latitude>
-      <Longtitude>18</Longtitude>
+      <Longitude>18</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>5</TickOff>
     <PollingInterval>1000</PollingInterval>

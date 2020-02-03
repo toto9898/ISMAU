@@ -9,14 +9,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MapPage">
 
+    
     <Grid>
 		<m:Map x:Name="locationMap" 
 			   CredentialsProvider="AlaHtwYsvTUbKopTDZEsj8GPpkDq6NpHg9vJT1qFIOB7YF-spi4XGsLBHaaJ5uUq">
-			<m:MapItemsControl ItemsSource="{Binding pushpins}">
-				<DataTemplate>
-					<m:Pushpin Location="{Binding}"/>
-				</DataTemplate>
-			</m:MapItemsControl>
 		</m:Map>
 	</Grid>
 </Page>

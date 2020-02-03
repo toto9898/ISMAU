@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ISMAU.DATA;
 using System.IO;
 using Microsoft.Maps.MapControl.WPF;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace ISMAU.FUNCTIONALITY
 {
@@ -61,7 +60,7 @@ namespace ISMAU.FUNCTIONALITY
 		(
 			string name,
 			string description,
-			ISMAU.DATA.Location location,
+			Location location,
 			float tickOff,
 			string type,
 			string boundariesMin,
@@ -123,7 +122,8 @@ namespace ISMAU.FUNCTIONALITY
 			foreach(var elem in sensors)
 			{
 				Pushpin pin = new Pushpin();
-				pin.Location = new Microsoft.Maps.MapControl.WPF.Location(elem.Location.Latitude, elem.Location.Longtitude);
+				pin.ToolTip = elem.GetData();
+				pin.Location = new Location(elem.Location.Latitude, elem.Location.Longitude);
 				output.Add(pin);
 			}
 			return output;

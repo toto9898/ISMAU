@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Maps.MapControl.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace ISMAU.DATA
 {
@@ -39,9 +41,13 @@ namespace ISMAU.DATA
             IsClosed = sensor.IsClosed;
         }
 
-        public override void GetData()
+        public override ToolTip GetData()
         {
-            throw new NotImplementedException();
+            ToolTip tip = new ToolTip();
+            string content = "Type: DoorSensor";
+            content += string.Format("\nName: {0}\nLatitude: {1},  Longitude: {2}", Name, Location.Latitude, Location.Longitude);
+            tip.Content = content;
+            return tip;
         }
     }
 }

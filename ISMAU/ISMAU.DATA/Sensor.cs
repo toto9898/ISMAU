@@ -3,26 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Xml.Serialization;
+using Microsoft.Maps.MapControl.WPF;
 
 namespace ISMAU.DATA
 {
-    public class Location
-    {
-        public Location(double latitude, double longtitude)
-        {
-            Latitude = latitude;
-            Longtitude = longtitude;
-        }
-
-        public Location() : this(0d, 0d)
-        {
-        }
-
-        public double Latitude { get; set; }
-        public double Longtitude { get; set; }
-    }
-
     public class RangeBoundaries<T>
         where T : struct
     {
@@ -73,7 +59,7 @@ namespace ISMAU.DATA
         }
         public Sensor() : this(string.Empty, string.Empty, new Location(), 0f)
         {
-
+            
         }
         public Sensor(Sensor sensor)
         {
@@ -84,6 +70,6 @@ namespace ISMAU.DATA
             PollingInterval = sensor.PollingInterval;
         }
 
-        public abstract void GetData();
+        public abstract ToolTip GetData();
     }
 }

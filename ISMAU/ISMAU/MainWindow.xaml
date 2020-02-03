@@ -81,7 +81,7 @@
 		
 		-->
 
-		<Frame x:Name="pageWindow" Width="auto" Margin="50 0 0 0" HorizontalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+		<Frame x:Name="pageWindow" Width="auto" Margin="69 10 10 10" HorizontalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
 
 		<telerik:RadNavigationView Width="auto" HorizontalAlignment="Left" Background="DarkGray">
 			<telerik:RadNavigationView.Items>
