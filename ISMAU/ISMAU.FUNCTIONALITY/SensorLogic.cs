@@ -41,23 +41,29 @@ namespace ISMAU.FUNCTIONALITY
 		#region Properties
 		public string DatabaseName
 		{
-			get { return DATABASE_NAME; }
+			get 
+			{ 
+			return DATABASE_NAME; 
+			}
 			private set { }
 		}
 
 		public string DatabasePath
 		{
-			get { return databasePath; }
+			get 
+			{ 
+				return databasePath; 
+			}
 			private set { }
 		}
 
 		public ObservableCollection<Sensor> Sensors
 		{
-			private set { }
 			get
 			{
 				return sensors;
 			}
+			private set { }
 		}
 		#endregion
 

@@ -11,14 +11,22 @@
       Title="ListPage">
 	
 	<Grid>
-		<telerik:RadGridView x:Name="sensorsGridView" AutoGenerateColumns="False">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="8*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<telerik:RadGridView x:Name="sensorsGridView" Grid.Row="0" AutoGenerateColumns="False">
 			<telerik:RadGridView.Columns>
-				<telerik:GridViewDataColumn Header="Name" DataMemberBinding="{Binding Name}" Width="*"/>
-				<telerik:GridViewDataColumn Header="Description" DataMemberBinding="{Binding Description}" Width="*" />
-				<telerik:GridViewDataColumn Header="Location" DataMemberBinding="{Binding Location}" Width="*"/>
+				<telerik:GridViewDataColumn Header="Name" DataMemberBinding="{Binding Name, Mode=TwoWay}" Width="*" 
+						IsReadOnly="True"/>
+				<telerik:GridViewDataColumn Header="Description" DataMemberBinding="{Binding Description, Mode=TwoWay}" Width="*" 
+						IsReadOnly="True"/>
+				<telerik:GridViewDataColumn Header="Location" DataMemberBinding="{Binding Location, Mode=TwoWay}" Width="*"
+						IsReadOnly="True"/>
 			</telerik:RadGridView.Columns>
-			
 		</telerik:RadGridView>
+		<Button Grid.Row="1" Margin="10" MaxWidth="100" MaxHeight="50" HorizontalAlignment="Left" Content="Modify" 
+				Click="Modify_Click"/>
 	</Grid>
 
 </Page>
