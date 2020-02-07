@@ -10,135 +10,130 @@ using System.Collections.ObjectModel;
 
 namespace ISMAU.FUNCTIONALITY
 {
-	public class SensorLogic : ViewModelBase
-	{
+    public class SensorLogic : ViewModelBase
+    {
 
-		#region Data Members
-		private ObservableCollection<Sensor> sensors;
-		private const string DATABASE_NAME = @"\data.xml";
-		private string databasePath;
+        #region Data Members
+        private ObservableCollection<Sensor> sensors;
+        private const string DATABASE_NAME = @"\data.xml";
+        private string databasePath;
 
-		#endregion
+        #endregion
 
-		#region Constructor
-		public SensorLogic()
-		{
-			string current = Environment.CurrentDirectory;
-			current = Directory.GetParent(current).Parent.Parent.FullName;
-			databasePath = current + DATABASE_NAME;
+        #region Constructor
+        public SensorLogic()
+        {
+            string current = Environment.CurrentDirectory;
+            current = Directory.GetParent(current).Parent.Parent.FullName;
+            databasePath = current + DATABASE_NAME;
 
-			try
-			{
-				sensors = sensors.Deserialize(databasePath);
-			}
-			catch (Exception)
-			{
-				sensors = new ObservableCollection<Sensor>();
-			}
-		} 
-		#endregion
 
-		#region Properties
-		public string DatabaseName
-		{
-			get { return DATABASE_NAME; }
-			private set { }
-		}
+            try
+            {
+                Sensors = sensors.Deserialize(databasePath);
+            }
+            catch (Exception)
+            {
+                Sensors = new ObservableCollection<Sensor>();
+            }
+            AddSensor("sensor sample", "this is door sensor samope", new Location(101d, 18d), 5f, "DoorSensor", "1", "5");
+        }
+        #endregion
 
-		public string DatabasePath
-		{
-			get { return databasePath; }
-			private set { }
-		}
+        #region Properties
+        public string DatabaseName
+        {
+            get { return DATABASE_NAME; }
+            private set { }
+        }
 
-		public ObservableCollection<Sensor> Sensors
-		{
-			private set { }
-			get
-			{
-				return sensors;
-			}
-		}
-		#endregion
+        public string DatabasePath
+        {
+            get { return databasePath; }
+            private set { }
+        }
 
-		#region Methods
-		public void SaveState()
-		{
-			sensors.Serialize(databasePath);
-		}
+        public ObservableCollection<Sensor> Sensors { get => sensors; private set => sensors = value; }
+        #endregion
 
-		public bool AddSensor
-		(
-			string name,
-			string description,
-			Location location,
-			float tickOff,
-			string type,
-			string boundariesMin,
-			string boundariesMax,
-			int pollingInterval = 1000)
-		{
-			bool success = true;
+        #region Methods
+        public void SaveState()
+        {
+            sensors.Serialize(databasePath);
+        }
 
-			if (type == "DoorSensor")
-				sensors.Add(new DoorSensor(name, description, location, tickOff, pollingInterval));
-			else if (type == "ElPowerSensor" || type == "NoiseSensor")
-			{
-				success = int.TryParse(boundariesMin, out int min);
-				if (!success) return false;
-				success = int.TryParse(boundariesMax, out int max);
-				if (!success) return false;
+        public bool AddSensor
+        (
+            string name,
+            string description,
+            Location location,
+            float tickOff,
+            string type,
+            string boundariesMin,
+            string boundariesMax,
+            int pollingInterval = 1000)
+        {
+            bool success = true;
 
-				RangeBoundaries<int> boundaries = new RangeBoundaries<int>();
-				boundaries.Min = min;
-				boundaries.Max = max;
+            if (type == "DoorSensor")
+                sensors.Add(new DoorSensor(name, description, location, tickOff, pollingInterval));
+            else if (type == "ElPowerSensor" || type == "NoiseSensor")
+            {
+                success = int.TryParse(boundariesMin, out int min);
+                if (!success) return false;
+                success = int.TryParse(boundariesMax, out int max);
+                if (!success) return false;
 
-				if (type == "ElPowerSensor")
-					sensors.Add(new ElPowerSensor(name, description, location, boundaries, tickOff, pollingInterval));
-				else
-					sensors.Add(new NoiseSensor(name, description, location, boundaries, tickOff, pollingInterval));
-			}
-			else if (type == "HumiditySensor")
-			{
-				success = float.TryParse(boundariesMin, out float min);
-				if (!success) return false;
-				success = float.TryParse(boundariesMax, out float max);
-				if (!success) return false;
+                RangeBoundaries<int> boundaries = new RangeBoundaries<int>();
+                boundaries.Min = min;
+                boundaries.Max = max;
 
-				RangeBoundaries<float> boundaries = new RangeBoundaries<float>();
-				boundaries.Min = min;
-				boundaries.Max = max;
+                if (type == "ElPowerSensor")
+                    sensors.Add(new ElPowerSensor(name, description, location, boundaries, tickOff, pollingInterval));
+                else
+                    sensors.Add(new NoiseSensor(name, description, location, boundaries, tickOff, pollingInterval));
+            }
+            else if (type == "HumiditySensor")
+            {
+                success = float.TryParse(boundariesMin, out float min);
+                if (!success) return false;
+                success = float.TryParse(boundariesMax, out float max);
+                if (!success) return false;
 
-				sensors.Add(new HumiditySensor(name, description, location, boundaries, tickOff, pollingInterval));
-			}
-			else if (type == "TemperatureSensor")
-			{
-				success = double.TryParse(boundariesMin, out double min);
-				if (!success) return false;
-				success = double.TryParse(boundariesMax, out double max);
-				if (!success) return false;
+                RangeBoundaries<float> boundaries = new RangeBoundaries<float>();
+                boundaries.Min = min;
+                boundaries.Max = max;
 
-				RangeBoundaries<double> boundaries = new RangeBoundaries<double>();
-				boundaries.Min = min;
-				boundaries.Max = max;
+                sensors.Add(new HumiditySensor(name, description, location, boundaries, tickOff, pollingInterval));
+            }
+            else if (type == "TemperatureSensor")
+            {
+                success = double.TryParse(boundariesMin, out double min);
+                if (!success) return false;
+                success = double.TryParse(boundariesMax, out double max);
+                if (!success) return false;
 
-				sensors.Add(new TemperatureSensor(name, description, location, boundaries, tickOff, pollingInterval));
-			}
-			return success;
-		}
+                RangeBoundaries<double> boundaries = new RangeBoundaries<double>();
+                boundaries.Min = min;
+                boundaries.Max = max;
 
-		public List<Pushpin> initializePins()
-		{
-			List<Pushpin> output = new List<Pushpin>();
-			foreach(var elem in sensors)
-			{
-				Pushpin pin = new Pushpin();
-				pin.ToolTip = elem.GetData();
-				pin.Location = new Location(elem.Location.Latitude, elem.Location.Longitude);
-				output.Add(pin);
-			}
-			return output;
-		}
-		#endregion
-	}
+                sensors.Add(new TemperatureSensor(name, description, location, boundaries, tickOff, pollingInterval));
+            }
+            return success;
+        }
+
+        public List<Pushpin> initializePins()
+        {
+            List<Pushpin> output = new List<Pushpin>();
+            foreach (var elem in sensors)
+            {
+                Pushpin pin = new Pushpin();
+                pin.ToolTip = elem.GetData();
+                pin.Location = new Location(elem.Location.Latitude, elem.Location.Longitude);
+                output.Add(pin);
+            }
+            return output;
+        }
+        #endregion
+    }
 }
