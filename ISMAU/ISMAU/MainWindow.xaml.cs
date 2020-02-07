@@ -72,7 +72,7 @@ namespace ISMAU
 
 		private void btnListPage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new ListPage();
+			pageWindow.Content = new ListPage(sensorLogic);
 		}
 
 		private void btnViewPage_Click(object sender, RoutedEventArgs e)

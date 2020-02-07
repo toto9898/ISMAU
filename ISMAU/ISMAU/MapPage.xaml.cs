@@ -28,7 +28,7 @@ namespace ISMAU
 			foreach (var pin in pushpins)
 			{
 				pin.SetBinding(Pushpin.HeadingProperty, binding);
-
+				
 				locationMap.Children.Add(pin);
 			}
 		}

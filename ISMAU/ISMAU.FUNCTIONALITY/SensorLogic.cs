@@ -5,14 +5,16 @@ using System.IO;
 using Microsoft.Maps.MapControl.WPF;
 using System.Windows;
 using System.Windows.Controls;
+using Telerik.Windows.Controls;
+using System.Collections.ObjectModel;
 
 namespace ISMAU.FUNCTIONALITY
 {
-	public class SensorLogic
+	public class SensorLogic : ViewModelBase
 	{
 
 		#region Data Members
-		private List<Sensor> sensors;
+		private ObservableCollection<Sensor> sensors;
 		private const string DATABASE_NAME = @"\data.xml";
 		private string databasePath;
 
@@ -31,7 +33,7 @@ namespace ISMAU.FUNCTIONALITY
 			}
 			catch (Exception)
 			{
-				sensors = new List<Sensor>();
+				sensors = new ObservableCollection<Sensor>();
 			}
 		} 
 		#endregion
@@ -47,6 +49,15 @@ namespace ISMAU.FUNCTIONALITY
 		{
 			get { return databasePath; }
 			private set { }
+		}
+
+		public ObservableCollection<Sensor> Sensors
+		{
+			private set { }
+			get
+			{
+				return sensors;
+			}
 		}
 		#endregion
 

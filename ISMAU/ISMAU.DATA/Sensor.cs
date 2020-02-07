@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Xml.Serialization;
 using Microsoft.Maps.MapControl.WPF;
+using Telerik.Windows.Controls;
 
 namespace ISMAU.DATA
 {
@@ -22,7 +23,7 @@ namespace ISMAU.DATA
     [XmlInclude(typeof(HumiditySensor))]
     [XmlInclude(typeof(NoiseSensor))]
     [XmlInclude(typeof(TemperatureSensor))]
-    public abstract class Sensor
+    public abstract class Sensor : ViewModelBase
     {
         private string name;
         private string description;

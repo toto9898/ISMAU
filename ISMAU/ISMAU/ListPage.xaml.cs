@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ISMAU.DATA;
+using ISMAU.FUNCTIONALITY;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +23,17 @@ namespace ISMAU
 	/// </summary>
 	public partial class ListPage : Page
 	{
-		public ListPage()
+		private SensorLogic sensorsBase;
+		public ListPage(SensorLogic sensors)
 		{
 			InitializeComponent();
+			sensorsBase = sensors;
+			initializeGrid();
+		}
+
+		private void initializeGrid()
+		{
+			sensorsGridView.ItemsSource = sensorsBase.Sensors;
 		}
 	}
 }

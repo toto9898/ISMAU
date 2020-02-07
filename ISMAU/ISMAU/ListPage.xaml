@@ -11,14 +11,11 @@
       Title="ListPage">
 	
 	<Grid>
-		<telerik:RadGridView x:Name="RadGridView1" GroupRenderMode="Flat"
-							 AutoGenerateColumns="True"
-							 CanUserFreezeColumns="False"
-							 RowIndicatorVisibility="Collapsed">
+		<telerik:RadGridView x:Name="sensorsGridView" AutoGenerateColumns="False">
 			<telerik:RadGridView.Columns>
-				<telerik:GridViewDataColumn Header="Name" Width="*" />
-				<telerik:GridViewDataColumn Header="Description" Width="*" />
-				<telerik:GridViewDataColumn Header="Value" Width="*" />
+				<telerik:GridViewDataColumn Header="Name" DataMemberBinding="{Binding Name}" Width="*"/>
+				<telerik:GridViewDataColumn Header="Description" DataMemberBinding="{Binding Description}" Width="*" />
+				<telerik:GridViewDataColumn Header="Location" DataMemberBinding="{Binding Location}" Width="*"/>
 			</telerik:RadGridView.Columns>
 			
 		</telerik:RadGridView>
