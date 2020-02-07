@@ -24,22 +24,27 @@ namespace ISMAU
 	/// </summary>
 	public partial class ListPage : Page
 	{
-		private SensorLogic sensorsBase;
+		public SensorLogic sensorLogic;
+
 		public ListPage(SensorLogic sensors)
 		{
 			InitializeComponent();
-			sensorsBase = sensors;
+			sensorLogic = sensors;
 			initializeGrid();
+
+
 		}
+
 
 		private void initializeGrid()
 		{
-			sensorsGridView.ItemsSource = sensorsBase.Sensors;
+			sensorsGridView.ItemsSource = sensorLogic.Sensors;
 		}
 
 		private void Modify_Click(object sender, RoutedEventArgs e)
 		{
-
+			var cellInfos = sensorsGridView.SelectedCells;
+			Sensor sensor = cellInfos[0].Item as Sensor;
 		}
 	}
 }

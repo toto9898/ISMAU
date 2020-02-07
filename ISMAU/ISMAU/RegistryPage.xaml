@@ -62,19 +62,22 @@
 			<telerik:RadComboBoxItem Content="TemperatureSensor"/>
 		</telerik:RadComboBox>
 		<Label Grid.Row="1" Grid.Column="0" Content="Enter Name" Style="{StaticResource lblStyle}"/>
-		<telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Style="{StaticResource txtInputStyle}"/>
+        <telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Style="{StaticResource txtInputStyle}" 
+				Placeholder=" "/>
 		<Label Grid.Row="2" Grid.Column="0" Content="Enter Description" Style="{StaticResource lblStyle}"/>
-		<telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="1" Style="{StaticResource txtInputStyle}"/>
+		<telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="1" Style="{StaticResource txtInputStyle}"
+                Placeholder=" "/>
 		<Label Grid.Row="3" Grid.Column="0" Content="Enter Polling interval" Style="{StaticResource lblStyle}"/>
-		<telerik:RadMaskedNumericInput x:Name="numPoll" Grid.Row="3" Grid.Column="1" Style="{StaticResource intInput}"/>
+        <telerik:RadMaskedNumericInput x:Name="numPoll" Grid.Row="3" Grid.Column="1" Style="{StaticResource intInput}" 
+				Placeholder=" " AutoFillNumberGroupSeparators="False"/>
 		<Label Grid.Row="4" Grid.Column="0" Content="Enter Latitude" Style="{StaticResource lblStyle}"/>
 		<telerik:RadMaskedNumericInput x:Name="numLat" Grid.Row="4" Grid.Column="1" Style="{StaticResource coordinatesInput}"
 				maskedInput:MaskedInputExtensions.Minimum="-90" maskedInput:MaskedInputExtensions.Maximum="90"
-				Mask="#2.2"/>
+				Mask="#2.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
 		<Label Grid.Row="5" Grid.Column="0" Content="Enter Longtitude" Style="{StaticResource lblStyle}"/>
 		<telerik:RadMaskedNumericInput x:Name="numLong" Grid.Row="5" Grid.Column="1" Style="{StaticResource coordinatesInput}"
 				maskedInput:MaskedInputExtensions.Minimum="-180" maskedInput:MaskedInputExtensions.Maximum="180"
-				Mask="#3.2"/>
+				Mask="#3.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
 		<Label Grid.Row="6" Grid.Column="0" Content="Enter Maximum Value" Style="{StaticResource lblStyle}"
 			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
 		<telerik:RadMaskedNumericInput x:Name="numMaxVal" Grid.Row="6" Grid.Column="1" Margin="10" 
@@ -84,7 +87,8 @@
 				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource maxAllowedValue}}"
 				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
-				Converter={StaticResource minAllowedValue}}"/>
+				Converter={StaticResource minAllowedValue}}"
+                Placeholder=" " AutoFillNumberGroupSeparators="False"/>
 		<Label Grid.Row="7" Grid.Column="0" Content="Enter Minimum Value" Style="{StaticResource lblStyle}"
 			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
 		<telerik:RadMaskedNumericInput x:Name="numMinVal" Grid.Row="7" Grid.Column="1" Margin="10"
@@ -94,7 +98,8 @@
 				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource minAllowedValue}}"
 				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
-				Converter={StaticResource maxAllowedValue}}"/>
+				Converter={StaticResource maxAllowedValue}}"
+                Placeholder=" " AutoFillNumberGroupSeparators="False"/>
 		<Button Grid.Row="8" Grid.Column="0" Margin="10" Content="Add" Click="Add_Click"/>
 	</Grid>
 </Page>

@@ -50,7 +50,7 @@ namespace ISMAU
 
 		private void btnRegisterPage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new RegistryPage();
+			pageWindow.Content = new RegistryPage(sensorLogic);
 		}
 
 		private void btnModifyPage_Click(object sender, RoutedEventArgs e)

@@ -28,6 +28,10 @@ namespace ISMAU.DATA
         private string name;
         private string description;
 
+        private static UInt64 sensorCounter = 0;
+        
+        private readonly UInt64 id;
+
         public string Name
         {
             get => name;
@@ -44,6 +48,7 @@ namespace ISMAU.DATA
 
         public int PollingInterval { get; set; } = 1000;
 
+        public ulong Id => id;
 
         public Sensor(
             string name,
@@ -52,6 +57,7 @@ namespace ISMAU.DATA
             float tickOff, 
             int pollingInterval = 1000)
         {
+            id = sensorCounter++;
             Name = name;
             Description = description;
             Location = location;

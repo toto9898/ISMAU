@@ -32,26 +32,28 @@ namespace ISMAU
 
 		private void Add_Click(object sender, RoutedEventArgs e)
 		{
-			string name = trim(txtName.Text);
-			string description = trim(txtDesc.Text);
+			string name = txtName.Text;
+			string description = txtDesc.Text;
 			Location location = new Location();
-			location.Latitude = double.Parse(trim(numLat.Text));
-			location.Longitude = double.Parse(trim(numLong.Text));
+			location.Latitude = double.Parse(numLat.Text);
+			location.Longitude = double.Parse(numLong.Text);
 			float tickOff = 0;
 			string type = sensorTypeChooser.Text;
-			string boundariesMin = trim(numMinVal.Text);
-			string boundariesMax = trim(numMaxVal.Text);
-			int pollingInterval = Int32.Parse(trim(numPoll.Text));
-			logic.AddSensor(name, description, location, tickOff, type, boundariesMin, boundariesMax, pollingInterval);
+			string boundariesMin = numMinVal.Text;
+			string boundariesMax = numMaxVal.Text;
+			int pollingInterval = Int32.Parse(numPoll.Text);
+			if (logic.AddSensor(name, description, location, tickOff, type, boundariesMin, boundariesMax, pollingInterval))
+				logic.SaveState();
 		}
 
-		private string trim(string input)
-		{
-			string output = "";
-			for (int i = 0; i < input.Length; ++i)
-				if (input[i] != '_' && input[i] !=',')
-					output += input[i];
-			return output;
-		}
+		//private string trim(string input)
+		//{
+		//	string output = "";
+		//	for (int i = 0; i < input.Length; ++i)
+		//		if (input[i] != '_' && input[i] !=',')
+		//			output += input[i];
+		//	return output;
+		//}
 	}
 }
+
