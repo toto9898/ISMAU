@@ -59,7 +59,7 @@
 			<telerik:RadComboBoxItem Content="ElPowerSensor"/>
 			<telerik:RadComboBoxItem Content="NoiseSensor"/>
 			<telerik:RadComboBoxItem Content="HumiditySensor"/>
-			<telerik:RadComboBoxItem Content="TemperatureSensor"/>
+			<telerik:RadComboBoxItem Content="TemperatureSensor" Margin="0"/>
 		</telerik:RadComboBox>
 		<Label Grid.Row="1" Grid.Column="0" Content="Enter Name" Style="{StaticResource lblStyle}"/>
         <telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Style="{StaticResource txtInputStyle}" 

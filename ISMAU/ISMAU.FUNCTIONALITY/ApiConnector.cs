@@ -11,12 +11,35 @@ namespace ISMAU.FUNCTIONALITY
 {
 	public class ApiOutput
 	{
-		public string TimeStamp { get; set; }
+		private string timeStamp;
+		private string apiValue;
 
-		public string Value { get; set; }
+		public string TimeStamp
+		{
+			get { return timeStamp; }
+			set
+			{
+				if (value != null)
+					timeStamp = value;
+				else
+					timeStamp = "";
+			}
+		}
+
+		public string ApiValue
+		{
+			get { return apiValue; }
+			set
+			{
+				if (value != null)
+					apiValue = value;
+				else
+					apiValue = "";
+			}
+		}
 	}
 
-	public static class ApiConnector
+	public class ApiConnector
 	{
 		#region Data Members
 		private const string API_BASE_PATH

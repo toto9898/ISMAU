@@ -17,7 +17,10 @@ namespace ISMAU.FUNCTIONALITY
         private ObservableCollection<Sensor> sensors;
         private const string DATABASE_NAME = @"\data.xml";
         private string databasePath;
-
+		public delegate void Modifier(Sensor input, SensorLogic logic);
+		public Modifier modifier;
+		public delegate void ShowList(SensorLogic logic);
+		public ShowList showList;
         #endregion
 
         #region Constructor
@@ -27,7 +30,6 @@ namespace ISMAU.FUNCTIONALITY
             current = Directory.GetParent(current).Parent.Parent.FullName;
             databasePath = current + DATABASE_NAME;
 
-
             try
             {
                 Sensors = sensors.Deserialize(databasePath);
@@ -36,7 +38,6 @@ namespace ISMAU.FUNCTIONALITY
             {
                 Sensors = new ObservableCollection<Sensor>();
             }
-            AddSensor("sensor sample", "this is door sensor samope", new Location(101d, 18d), 5f, "DoorSensor", "1", "5");
         }
         #endregion
 
@@ -134,6 +135,32 @@ namespace ISMAU.FUNCTIONALITY
             }
             return output;
         }
+
+		public async void getValuesForAllSensorsFromAPI()
+		{
+			foreach(var elem in sensors)
+			{
+				ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(elem));
+				apiOutput.ApiValue = apiOutput.ApiValue;
+				elem.DataAsString = apiOutput.ApiValue;
+				elem.ConvertValueString();
+			}
+		}
+
+		private string sensorTypeForAPICall(Sensor sensor)
+		{
+			if (sensor is DoorSensor)
+				return "window";
+			if (sensor is ElPowerSensor)
+				return "electric power";
+			if (sensor is HumiditySensor)
+				return "humidity";
+			if (sensor is NoiseSensor)
+				return "noise";
+			if (sensor is TemperatureSensor)
+				return "temperature";
+			return "invalid";
+		}
         #endregion
     }
 }

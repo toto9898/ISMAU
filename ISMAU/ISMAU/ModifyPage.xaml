@@ -1,14 +1,98 @@
-﻿<Page x:Class="ISMAU.ModifyPage"
+﻿<Page xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"  x:Class="ISMAU.ModifyPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ISMAU"
+	  xmlns:maskedInput="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ModifyPage">
 
-    <Grid>
-        
-    </Grid>
+	<Page.Resources>
+		<Style TargetType="Label" x:Key="lblStyle">
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="FontSize" Value="26"/>
+		</Style>
+		<Style TargetType="telerik:RadMaskedTextInput" x:Key="txtInputStyle">
+			<Setter Property="Margin" Value="10"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		</Style>
+		<Style TargetType="telerik:RadMaskedNumericInput" x:Key="intInput">
+			<Setter Property="Margin" Value="10"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="Mask" Value="d6"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+		</Style>
+		<Style TargetType="telerik:RadMaskedNumericInput" x:Key="coordinatesInput">
+			<Setter Property="Margin" Value="10"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+		</Style>
+		<local:SensorTypeToRangesVisibilityConverter x:Key="rangesVisibilityConverter"/>
+		<local:SensorTypeToMaskTypeConverter x:Key="maskTypeConverter"/>
+		<local:SensorTypeToMaximumAllowedValueConverter x:Key="maxAllowedValue"/>
+		<local:SensorTypeToMinimumAllowedValueConverter x:Key="minAllowedValue"/>
+	</Page.Resources>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Label Grid.Row="0" Grid.Column="0" Content="Sensor Type" Style="{StaticResource lblStyle}"/>
+		<TextBlock x:Name="sensorTypeChooser" Grid.Row="0" Grid.Column="1" Margin="10"/>
+		<Label Grid.Row="1" Grid.Column="0" Content="Enter Name" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Style="{StaticResource txtInputStyle}" 
+				Placeholder=" "/>
+		<Label Grid.Row="2" Grid.Column="0" Content="Enter Description" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="1" Style="{StaticResource txtInputStyle}"
+                Placeholder=" "/>
+		<Label Grid.Row="3" Grid.Column="0" Content="Enter Polling interval" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedNumericInput x:Name="numPoll" Grid.Row="3" Grid.Column="1" Style="{StaticResource intInput}" 
+				Placeholder=" " AutoFillNumberGroupSeparators="False"/>
+		<Label Grid.Row="4" Grid.Column="0" Content="Enter Latitude" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedNumericInput x:Name="numLat" Grid.Row="4" Grid.Column="1" Style="{StaticResource coordinatesInput}"
+				maskedInput:MaskedInputExtensions.Minimum="-90" maskedInput:MaskedInputExtensions.Maximum="90"
+				Mask="#2.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
+		<Label Grid.Row="5" Grid.Column="0" Content="Enter Longtitude" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedNumericInput x:Name="numLong" Grid.Row="5" Grid.Column="1" Style="{StaticResource coordinatesInput}"
+				maskedInput:MaskedInputExtensions.Minimum="-180" maskedInput:MaskedInputExtensions.Maximum="180"
+				Mask="#3.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
+		<Label Grid.Row="6" Grid.Column="0" Content="Enter Maximum Value" Style="{StaticResource lblStyle}"
+			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
+		<telerik:RadMaskedNumericInput x:Name="numMaxVal" Grid.Row="6" Grid.Column="1" Margin="10" 
+				HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+				Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"
+				Mask="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource maskTypeConverter}}"
+				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
+				Converter={StaticResource maxAllowedValue}}"
+				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
+				Converter={StaticResource minAllowedValue}}"
+                Placeholder=" " AutoFillNumberGroupSeparators="False"/>
+		<Label Grid.Row="7" Grid.Column="0" Content="Enter Minimum Value" Style="{StaticResource lblStyle}"
+			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
+		<telerik:RadMaskedNumericInput x:Name="numMinVal" Grid.Row="7" Grid.Column="1" Margin="10"
+				HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+				Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"
+				Mask="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource maskTypeConverter}}"
+				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
+				Converter={StaticResource minAllowedValue}}"
+				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
+				Converter={StaticResource maxAllowedValue}}"
+                Placeholder=" " AutoFillNumberGroupSeparators="False"/>
+		<Button Grid.Row="8" Grid.Column="0" Margin="10" Content="Modify" Click="Modify_Click"/>
+	</Grid>
 </Page>

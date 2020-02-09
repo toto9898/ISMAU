@@ -19,10 +19,12 @@ namespace ISMAU.DATA
             get => decibels;
             set
             {
-                if (value >= Boundaries.Min && value <= Boundaries.Max)
-                    decibels = value;
-                else
-                    decibels = INVALID_VALUE;
+				if (value >= Boundaries.Min && value <= Boundaries.Max)
+				{
+					decibels = value;
+				}
+				else
+					decibels = INVALID_VALUE;
             }
         }
 
@@ -51,8 +53,9 @@ namespace ISMAU.DATA
             RangeBoundaries<int> acceptableRange, 
             float tickOff, 
             int pollingInterval = 1000) 
-            : base(name, description, location, tickOff, pollingInterval)
-        {
+            : base(name, description, location, tickOff, "NoiseSensor", pollingInterval)
+
+		{
             Boundaries = acceptableRange;
             Decibels = INVALID_VALUE;
         }
@@ -78,5 +81,10 @@ namespace ISMAU.DATA
             tip.Content = content;
             return tip;
         }
-    }
+
+		public override void ConvertValueString()
+		{
+			Int32.TryParse(DataAsString, out decibels);
+		}
+	}
 }

@@ -25,7 +25,6 @@ namespace ISMAU
     {
 		private SensorLogic sensorLogic;
 
-
 		//test data will be deleted
 		string[] sensorTypes = { "temperature", "humidity", "electric power", "window", "noise" };
 		const int numberSensorTypes = 5;
@@ -38,6 +37,8 @@ namespace ISMAU
 			pageWindow.Content = new HomePage();
 
 			sensorLogic = new SensorLogic();
+			sensorLogic.modifier += openModifyPage;
+			sensorLogic.showList += openListPage;
 
 			//delete later
 			currSensorType = 0;
@@ -51,11 +52,6 @@ namespace ISMAU
 		private void btnRegisterPage_Click(object sender, RoutedEventArgs e)
 		{
 			pageWindow.Content = new RegistryPage(sensorLogic);
-		}
-
-		private void btnModifyPage_Click(object sender, RoutedEventArgs e)
-		{
-			pageWindow.Content = new ModifyPage();
 		}
 
 		private void btnListPage_Click(object sender, RoutedEventArgs e)
@@ -79,16 +75,26 @@ namespace ISMAU
 		}
 
 		//delete in final version
-		private async void btnTest_Click(object sender, RoutedEventArgs e)
-		{
-			ApiOutput output = await ApiConnector.getCurrentValue(sensorTypes[currSensorType]);
-			if (output == null)
-				return;
+		//private async void btnTest_Click(object sender, RoutedEventArgs e)
+		//{
+		//	ApiOutput output = await ApiConnector.getCurrentValue(sensorTypes[currSensorType]);
+		//	if (output == null)
+		//		return;
 			//txtTest.Text = output.TimeStamp + " " + output.Value;
-			if (currSensorType < numberSensorTypes - 1)
-				++currSensorType;
-			else
-				currSensorType = 0;
+		//	if (currSensorType < numberSensorTypes - 1)
+		//		++currSensorType;
+		//	else
+		//		currSensorType = 0;
+		//}
+
+		private void openModifyPage(Sensor sensor, SensorLogic logic) 
+		{
+			pageWindow.Content = new ModifyPage(sensor, logic);
+		}
+
+		private void openListPage(SensorLogic logic)
+		{
+			pageWindow.Content = new ListPage(logic);
 		}
 	}
 }

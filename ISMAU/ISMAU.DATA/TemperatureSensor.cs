@@ -19,10 +19,12 @@ namespace ISMAU.DATA
             get => degrees;
             set
             {
-                if (value >= Boundaries.Min && value <= Boundaries.Max)
-                    degrees = value;
-                else
-                    degrees = INVALID_VALUE;
+				if (value >= Boundaries.Min && value <= Boundaries.Max)
+				{
+					degrees = value;
+				}
+				else
+					degrees = INVALID_VALUE;
             }
         }
 
@@ -52,8 +54,9 @@ namespace ISMAU.DATA
             RangeBoundaries<double> acceptableRange,
             float tickOff,
             int pollingInterval = 1000)
-            : base(name, description, location, tickOff, pollingInterval)
-        {
+            : base(name, description, location, tickOff, "TemperatureSensor", pollingInterval)
+
+		{
             Boundaries = acceptableRange;
             Degrees = INVALID_VALUE;
         }
@@ -79,5 +82,10 @@ namespace ISMAU.DATA
             tip.Content = content;
             return tip;
         }
-    }
+
+		public override void ConvertValueString()
+		{
+			double.TryParse(DataAsString, out degrees);
+		}
+	}
 }

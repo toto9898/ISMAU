@@ -19,10 +19,12 @@ namespace ISMAU.DATA
             get => wats;
             set 
             {
-                if (value >= Boundaries.Min && value <= Boundaries.Max)
-                    wats = value;
-                else
-                    wats = INVALID_VALUE;
+				if (value >= Boundaries.Min && value <= Boundaries.Max)
+				{
+					wats = value;
+				}
+				else
+					wats = INVALID_VALUE;
             }
         }
 
@@ -51,7 +53,7 @@ namespace ISMAU.DATA
             RangeBoundaries<int> acceptableRange,
             float tickOff,
             int pollingInterval = 1000)
-            : base(name, description, location, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, "ElPowerSensor", pollingInterval)
         {
 			Boundaries = acceptableRange;
             Wats = INVALID_VALUE;
@@ -69,7 +71,6 @@ namespace ISMAU.DATA
             Wats = sensor.Wats;
         }
 
-
         public override ToolTip GetData()
         {
             ToolTip tip = new ToolTip();
@@ -78,5 +79,10 @@ namespace ISMAU.DATA
             tip.Content = content;
             return tip;
         }
-    }
+
+		public override void ConvertValueString()
+		{
+			Int32.TryParse(DataAsString, out wats);
+		}
+	}
 }

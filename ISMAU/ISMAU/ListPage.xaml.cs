@@ -30,9 +30,8 @@ namespace ISMAU
 		{
 			InitializeComponent();
 			sensorLogic = sensors;
+			sensorLogic.getValuesForAllSensorsFromAPI();
 			initializeGrid();
-
-
 		}
 
 
@@ -44,7 +43,12 @@ namespace ISMAU
 		private void Modify_Click(object sender, RoutedEventArgs e)
 		{
 			var cellInfos = sensorsGridView.SelectedCells;
-			Sensor sensor = cellInfos[0].Item as Sensor;
+			Sensor sensor;
+			if (cellInfos.Count > 0)
+			{
+				sensor = cellInfos[0].Item as Sensor;
+				sensorLogic.modifier(sensor, sensorLogic);
+			}
 		}
 	}
 }

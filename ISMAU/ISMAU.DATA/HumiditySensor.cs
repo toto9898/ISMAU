@@ -19,10 +19,12 @@ namespace ISMAU.DATA
             get => humidity;
             set
             {
-                if (value >= Boundaries.Min && value <= Boundaries.Max)
-                    humidity = value;
-                else
-                    humidity = INVALID_VALUE;
+				if (value >= Boundaries.Min && value <= Boundaries.Max)
+				{
+					humidity = value;
+				}
+				else
+					humidity = INVALID_VALUE;
             }
         }
 
@@ -52,8 +54,9 @@ namespace ISMAU.DATA
             RangeBoundaries<float> acceptableRange,
             float tickOff,
             int pollingInterval = 1000)
-            : base(name, description, location, tickOff, pollingInterval)
-        {
+            : base(name, description, location, tickOff, "HumiditySensor", pollingInterval)
+
+		{
             Boundaries = acceptableRange;
             Humidity = INVALID_VALUE;
         }
@@ -70,7 +73,6 @@ namespace ISMAU.DATA
             Humidity = sensor.Humidity;
         }
 
-
         public override ToolTip GetData()
         {
             ToolTip tip = new ToolTip();
@@ -79,5 +81,10 @@ namespace ISMAU.DATA
             tip.Content = content;
             return tip;
         }
-    }
+
+		public override void ConvertValueString()
+		{
+			double.TryParse(DataAsString, out humidity);
+		}
+	}
 }

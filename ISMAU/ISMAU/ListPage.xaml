@@ -17,13 +17,13 @@
 		</Grid.RowDefinitions>
 		<telerik:RadGridView x:Name="sensorsGridView" Grid.Row="0" AutoGenerateColumns="False">
 			<telerik:RadGridView.Columns>
-                <telerik:GridViewDataColumn Header="ID" DataMemberBinding="{Binding Id}" Width="*"
-						IsReadOnly="True"/>
 				<telerik:GridViewDataColumn Header="Name" DataMemberBinding="{Binding Name}" Width="*" 
 						IsReadOnly="True"/>
 				<telerik:GridViewDataColumn Header="Description" DataMemberBinding="{Binding Description}" Width="*" 
 						IsReadOnly="True"/>
 				<telerik:GridViewDataColumn Header="Location" DataMemberBinding="{Binding Location}" Width="*"
+						IsReadOnly="True"/>
+				<telerik:GridViewDataColumn Header="Current Values" DataMemberBinding="{Binding DataAsString}" Width="*"
 						IsReadOnly="True"/>
 			</telerik:RadGridView.Columns>
 		</telerik:RadGridView>

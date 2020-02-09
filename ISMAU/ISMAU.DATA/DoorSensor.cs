@@ -16,7 +16,10 @@ namespace ISMAU.DATA
 		public bool IsClosed
 		{
 			get { return isClosed; }
-			set { isClosed = value; }
+			set 
+			{ 
+				isClosed = value;
+			}
 		}
 
         public DoorSensor(
@@ -25,7 +28,7 @@ namespace ISMAU.DATA
             Location location,
             float tickOff,
             int pollingInterval = 1000) 
-            : base(name, description, location, tickOff, pollingInterval)
+            : base(name, description, location, tickOff, "DoorSensor", pollingInterval)
         {
             // true will be the default state of the door/window
             IsClosed = true;
@@ -49,5 +52,13 @@ namespace ISMAU.DATA
             tip.Content = content;
             return tip;
         }
-    }
+
+		public override void ConvertValueString()
+		{
+			if (DataAsString.Equals("1"))
+				isClosed = true;
+			else
+				isClosed = false;
+		}
+	}
 }

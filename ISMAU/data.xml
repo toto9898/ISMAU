@@ -1,29 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSensor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Sensor xsi:type="DoorSensor">
-    <Name>sensor sample</Name>
-    <Description>this is door sensor samope</Description>
+  <Sensor xsi:type="NoiseSensor">
+    <Name>aa                  </Name>
+    <Description>aa                  </Description>
     <Location>
-      <Latitude>101</Latitude>
-      <Longitude>18</Longitude>
-      <Altitude>0</Altitude>
-      <AltitudeReference>Ground</AltitudeReference>
-    </Location>
-    <TickOff>5</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>ddd                 </Name>
-    <Description>dsasadasd           </Description>
-    <Location>
-      <Latitude>0.2</Latitude>
-      <Longitude>4</Longitude>
+      <Latitude>4</Latitude>
+      <Longitude>-2</Longitude>
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
-    <PollingInterval>21331</PollingInterval>
-    <IsClosed>true</IsClosed>
+    <PollingInterval>6</PollingInterval>
+    <Type>NoiseSensor</Type>
+    <DataAsString />
+    <Decibels>0</Decibels>
+    <SetBoundaries>
+      <Min>1</Min>
+      <Max>5</Max>
+    </SetBoundaries>
+  </Sensor>
+  <Sensor xsi:type="HumiditySensor">
+    <Name>bb                  </Name>
+    <Description>bb                  </Description>
+    <Location>
+      <Latitude>3</Latitude>
+      <Longitude>-6</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
+    </Location>
+    <TickOff>0</TickOff>
+    <PollingInterval>5</PollingInterval>
+    <Type>HumiditySensor</Type>
+    <Humidity>-1</Humidity>
+    <SetBoundaries>
+      <Min>0.03</Min>
+      <Max>1</Max>
+    </SetBoundaries>
+  </Sensor>
+  <Sensor xsi:type="TemperatureSensor">
+    <Name>cc                  </Name>
+    <Description>cc                  </Description>
+    <Location>
+      <Latitude>2.99</Latitude>
+      <Longitude>-5.96</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
+    </Location>
+    <TickOff>0</TickOff>
+    <PollingInterval>7</PollingInterval>
+    <Type>TemperatureSensor</Type>
+    <Degrees>-239</Degrees>
+    <SetBoundaries>
+      <Min>-0.1</Min>
+      <Max>1.3</Max>
+    </SetBoundaries>
   </Sensor>
 </ArrayOfSensor>
