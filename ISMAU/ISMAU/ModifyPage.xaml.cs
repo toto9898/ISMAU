@@ -36,7 +36,7 @@ namespace ISMAU
 
 		private void initialize()
 		{
-			sensorTypeChooser.Text = sensorToModify.Type;
+			sensorTypeChooser.Text = sensorToModify.Name;
 			txtName.Value = sensorToModify.Name;
 			txtDesc.Value = sensorToModify.Description;
 			numPoll.Value = sensorToModify.PollingInterval;
@@ -44,23 +44,23 @@ namespace ISMAU
 			numLong.Value = sensorToModify.Location.Longitude;
 			if(sensorToModify is ElPowerSensor)
 			{
-				numMaxVal.Value = ((ElPowerSensor)sensorToModify).SetBoundaries.Max;
-				numMinVal.Value = ((ElPowerSensor)sensorToModify).SetBoundaries.Min;
+				numMaxVal.Value = ((ElPowerSensor)sensorToModify).Boundaries.Max;
+				numMinVal.Value = ((ElPowerSensor)sensorToModify).Boundaries.Min;
 			}
 			if(sensorToModify is HumiditySensor)
 			{
-				numMaxVal.Value = ((HumiditySensor)sensorToModify).SetBoundaries.Max;
-				numMinVal.Value = ((HumiditySensor)sensorToModify).SetBoundaries.Min;
+				numMaxVal.Value = ((HumiditySensor)sensorToModify).Boundaries.Max;
+				numMinVal.Value = ((HumiditySensor)sensorToModify).Boundaries.Min;
 			}
 			if (sensorToModify is NoiseSensor)
 			{
-				numMaxVal.Value = ((NoiseSensor)sensorToModify).SetBoundaries.Max;
-				numMinVal.Value = ((NoiseSensor)sensorToModify).SetBoundaries.Min;
+				numMaxVal.Value = ((NoiseSensor)sensorToModify).Boundaries.Max;
+				numMinVal.Value = ((NoiseSensor)sensorToModify).Boundaries.Min;
 			}
 			if (sensorToModify is TemperatureSensor)
 			{
-				numMaxVal.Value = ((TemperatureSensor)sensorToModify).SetBoundaries.Max;
-				numMinVal.Value = ((TemperatureSensor)sensorToModify).SetBoundaries.Min;
+				numMaxVal.Value = ((TemperatureSensor)sensorToModify).Boundaries.Max;
+				numMinVal.Value = ((TemperatureSensor)sensorToModify).Boundaries.Min;
 			}
 		}
 
@@ -73,23 +73,23 @@ namespace ISMAU
 			sensorToModify.Location.Longitude = double.Parse(numLong.Text);
 			if (sensorToModify is ElPowerSensor)
 			{
-				((ElPowerSensor)sensorToModify).SetBoundaries.Max = Int32.Parse(numMaxVal.Text);
-				((ElPowerSensor)sensorToModify).SetBoundaries.Min = Int32.Parse(numMinVal.Text);
+				((ElPowerSensor)sensorToModify).Boundaries.Max = Int32.Parse(numMaxVal.Text);
+				((ElPowerSensor)sensorToModify).Boundaries.Min = Int32.Parse(numMinVal.Text);
 			}
 			if (sensorToModify is HumiditySensor)
 			{
-				((HumiditySensor)sensorToModify).SetBoundaries.Max = float.Parse(numMaxVal.Text);
-				((HumiditySensor)sensorToModify).SetBoundaries.Min = float.Parse(numMinVal.Text);
+				((HumiditySensor)sensorToModify).Boundaries.Max = float.Parse(numMaxVal.Text);
+				((HumiditySensor)sensorToModify).Boundaries.Min = float.Parse(numMinVal.Text);
 			}
 			if (sensorToModify is NoiseSensor)
 			{
-				((NoiseSensor)sensorToModify).SetBoundaries.Max = Int32.Parse(numMaxVal.Text);
-				((NoiseSensor)sensorToModify).SetBoundaries.Min = Int32.Parse(numMinVal.Text);
+				((NoiseSensor)sensorToModify).Boundaries.Max = Int32.Parse(numMaxVal.Text);
+				((NoiseSensor)sensorToModify).Boundaries.Min = Int32.Parse(numMinVal.Text);
 			}
 			if (sensorToModify is TemperatureSensor)
 			{
-				((TemperatureSensor)sensorToModify).SetBoundaries.Max = double.Parse(numMaxVal.Text);
-				((TemperatureSensor)sensorToModify).SetBoundaries.Min = double.Parse(numMinVal.Text);
+				((TemperatureSensor)sensorToModify).Boundaries.Max = double.Parse(numMaxVal.Text);
+				((TemperatureSensor)sensorToModify).Boundaries.Min = double.Parse(numMinVal.Text);
 			}
 			sensorLogic.SaveState();
 			sensorLogic.showList(sensorLogic);

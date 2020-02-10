@@ -8,84 +8,37 @@ using System.Windows.Controls;
 
 namespace ISMAU.DATA
 {
-    public class TemperatureSensor : Sensor
+    public class TemperatureSensor : BoundedSensor<double>
     {
-        private const double INVALID_VALUE = -239.0;
-        private double degrees;
-        private RangeBoundaries<double> Boundaries;
+        public double Degrees { get; set; }
 
-        public double Degrees
+        public TemperatureSensor(SensorData data, RangeBoundaries<double> rangeBoundaries)
+            : base(data, rangeBoundaries)
         {
-            get => degrees;
-            set
-            {
-				if (value >= Boundaries.Min && value <= Boundaries.Max)
-				{
-					degrees = value;
-				}
-				else
-					degrees = INVALID_VALUE;
-            }
+            Degrees = -239.0;
         }
 
-		public RangeBoundaries<double> SetBoundaries
-		{
-			get { return Boundaries; }
-			set
-			{
-				Boundaries = new RangeBoundaries<double>();
-				if (value != null)
-				{
-					Boundaries.Max = value.Max;
-					Boundaries.Min = value.Min;
-				}
-				else
-				{
-					Boundaries.Max = Boundaries.Min = 0;
-				}
-			}
-		}
-
-
-		public TemperatureSensor(
-            string name,
-            string description,
-            Location location,
-            RangeBoundaries<double> acceptableRange,
-            float tickOff,
-            int pollingInterval = 1000)
-            : base(name, description, location, tickOff, "TemperatureSensor", pollingInterval)
-
-		{
-            Boundaries = acceptableRange;
-            Degrees = INVALID_VALUE;
-        }
-
-        public TemperatureSensor() : base()
+        public TemperatureSensor()
+            : base()
         {
-            Boundaries = new RangeBoundaries<double>();
-            Degrees = INVALID_VALUE;
+            Degrees = -239.0;
         }
 
         public TemperatureSensor(TemperatureSensor sensor)
+            : base(sensor)
         {
-            Boundaries.Min = sensor.Boundaries.Min;
-            Boundaries.Max = sensor.Boundaries.Max;
             Degrees = sensor.Degrees;
         }
 
-        public override ToolTip GetData()
+        public override void GetData()
         {
-            ToolTip tip = new ToolTip();
-            string content = "Type: TemperatureSensor";
-            content += string.Format("\nName: {0}\nLatitude: {1},  Longitude: {2}", Name, Location.Latitude, Location.Longitude);
-            tip.Content = content;
-            return tip;
-        }
 
-		public override void ConvertValueString()
+        }
+        public override void ConvertValueString()
 		{
-			double.TryParse(DataAsString, out degrees);
+            double temp = 0d;
+			double.TryParse(DataAsString, out temp);
+            Degrees = temp;
 		}
 	}
 }

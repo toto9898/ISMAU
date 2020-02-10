@@ -10,6 +10,8 @@
     public abstract class BoundedSensor<T> : Sensor
         where T: struct
     {
+        private RangeBoundaries<T> boundaries;
+
         public BoundedSensor(SensorData data, RangeBoundaries<T> rangeBoundaries)
             : base(data)
         {
@@ -27,7 +29,6 @@
             Boundaries.Max = sensor.Boundaries.Max;
         }
 
-        private RangeBoundaries<T> boundaries;
         public RangeBoundaries<T> Boundaries
         {
             get { return boundaries; }

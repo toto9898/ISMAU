@@ -10,12 +10,16 @@ using Telerik.Windows.Controls;
 
 namespace ISMAU.DATA
 {
-    public class RangeBoundaries<T>
-        where T : struct
+    public class SensorData
     {
-        public T Min { get; set; }
-        public T Max { get; set; }
+        public string Name = string.Empty;
+        public string Description = string.Empty;
+        public Location Location = new Location();
+        public float TickOff = 0f;
+        public string Type = string.Empty;
+        public int PollingInterval = 1000;
     }
+
 
     [Serializable]
     [XmlInclude(typeof(DoorSensor))]
@@ -27,17 +31,19 @@ namespace ISMAU.DATA
     {
         private string name;
         private string description;
-        public string dataAsString;
+        private static UInt64 sensorCounter = 0;
+
+        private readonly UInt64 id;
 
         public string Name
         {
             get => name;
-			set => name = value ?? "NoName";
+            set => name = value ?? "NoName";
         }
         public string Description
         {
             get => description;
-			set => description = value ?? "NoDescription";
+            set => description = value ?? "NoDescription";
         }
         public Location Location { get; set; }
 
@@ -45,29 +51,22 @@ namespace ISMAU.DATA
 
         public int PollingInterval { get; set; } = 1000;
 
-		public string Type { get; set; }
+        public ulong Id => id;
+        public string DataAsString { get; set; }
 
-		public string DataAsString { get => dataAsString; set => dataAsString = (value == null || value == "" ? "UnDef" : value); }
-
-        public Sensor(
-            string name,
-            string description, 
-            Location location, 
-            float tickOff,
-			string type,
-			int pollingInterval = 1000)
+        public Sensor(SensorData data)
         {
-            Name = name;
-            Description = description;
-            Location = location;
-            TickOff = tickOff;
-            PollingInterval = pollingInterval;
-			Type = type;
-            DataAsString = "UnDef";
+            id = sensorCounter++;
+            Name = data.Name;
+            Description = data.Description;
+            Location = data.Location;
+            TickOff = data.TickOff;
+            PollingInterval = data.PollingInterval;
         }
-        public Sensor() : this(string.Empty, string.Empty, new Location(), 0f, "Invalid")
+        public Sensor()
+            : this(new SensorData())
         {
-            
+
         }
         public Sensor(Sensor sensor)
         {
@@ -78,8 +77,17 @@ namespace ISMAU.DATA
             PollingInterval = sensor.PollingInterval;
         }
 
-        public abstract ToolTip GetData();
+        public abstract void GetData();
 
-		public abstract void ConvertValueString();
+        public ToolTip GetToolTip()
+        {
+            ToolTip tip = new ToolTip();
+            string content = "Type: " + GetType().Name;
+            content += string.Format("\nName: {0}\nLatitude: {1},  Longitude: {2}", Name, Location.Latitude, Location.Longitude);
+            tip.Content = content;
+            return tip;
+        }
+
+        public abstract void ConvertValueString();
     }
 }

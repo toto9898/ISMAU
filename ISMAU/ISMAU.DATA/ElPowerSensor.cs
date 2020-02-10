@@ -8,81 +8,38 @@ using System.Windows.Controls;
 
 namespace ISMAU.DATA
 {
-    public class ElPowerSensor : Sensor
+    public class ElPowerSensor : BoundedSensor<int>
     {
-        private const int INVALID_VALUE = -1;
-        private int wats;
-		private RangeBoundaries<int> Boundaries;
 
-		public int Wats
+		public int Wats { get; set; }
+
+        public ElPowerSensor(SensorData data, RangeBoundaries<int> rangeBoundaries)
+            : base(data, rangeBoundaries)
         {
-            get => wats;
-            set 
-            {
-				if (value >= Boundaries.Min && value <= Boundaries.Max)
-				{
-					wats = value;
-				}
-				else
-					wats = INVALID_VALUE;
-            }
+            Wats = -1;
         }
 
-		public RangeBoundaries<int> SetBoundaries
-		{
-			get { return Boundaries; }
-			set
-			{
-				Boundaries = new RangeBoundaries<int>();
-				if (value != null)
-				{
-					Boundaries.Max = value.Max;
-					Boundaries.Min = value.Min;
-				}
-				else
-				{
-					Boundaries.Max = Boundaries.Min = 0;
-				}
-			}
-		}
-
-        public ElPowerSensor(
-            string name,
-            string description,
-            Location location,
-            RangeBoundaries<int> acceptableRange,
-            float tickOff,
-            int pollingInterval = 1000)
-            : base(name, description, location, tickOff, "ElPowerSensor", pollingInterval)
+        public ElPowerSensor()
+            : base()
         {
-			Boundaries = acceptableRange;
-            Wats = INVALID_VALUE;
+            Wats = -1;
         }
 
-        public ElPowerSensor() : base()
+        public ElPowerSensor(ElPowerSensor sensor)
+            : base(sensor)
         {
-            Boundaries = new RangeBoundaries<int>();
-            Wats = INVALID_VALUE;
-        }
-        public ElPowerSensor(ElPowerSensor sensor) :base(sensor)
-        {
-            Boundaries.Min = sensor.Boundaries.Min;
-            Boundaries.Max = sensor.Boundaries.Max;
             Wats = sensor.Wats;
         }
 
-        public override ToolTip GetData()
+        public override void GetData()
         {
-            ToolTip tip = new ToolTip();
-            string content = "Type: ElPowerSensor";
-            content += string.Format("\nName: {0}\nLatitude: {1},  Longitude: {2}", Name, Location.Latitude, Location.Longitude);
-            tip.Content = content;
-            return tip;
-        }
 
-		public override void ConvertValueString()
+        }
+        public override void ConvertValueString()
 		{
-			Int32.TryParse(DataAsString, out wats);
+            int temp = 0;
+			Int32.TryParse(DataAsString, out temp);
+            Wats = temp;
 		}
 	}
 }

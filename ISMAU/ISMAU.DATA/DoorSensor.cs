@@ -10,55 +10,38 @@ namespace ISMAU.DATA
 {
     public class DoorSensor : Sensor
     {
+        public bool IsClosed { get; set; }
 
-		private bool isClosed;
-
-		public bool IsClosed
-		{
-			get { return isClosed; }
-			set 
-			{ 
-				isClosed = value;
-			}
-		}
-
-        public DoorSensor(
-            string name, 
-            string description, 
-            Location location,
-            float tickOff,
-            int pollingInterval = 1000) 
-            : base(name, description, location, tickOff, "DoorSensor", pollingInterval)
+        public DoorSensor(SensorData data)
+            : base(data)
         {
             // true will be the default state of the door/window
             IsClosed = true;
         }
 
-        public DoorSensor() : base()
+        public DoorSensor()
+            : base()
         {
             IsClosed = true;
         }
 
-        public DoorSensor(DoorSensor sensor) : base(sensor)
+        public DoorSensor(DoorSensor sensor)
+            : base(sensor)
         {
             IsClosed = sensor.IsClosed;
         }
 
-        public override ToolTip GetData()
+        public override void GetData()
         {
-            ToolTip tip = new ToolTip();
-            string content = "Type: DoorSensor";
-            content += string.Format("\nName: {0}\nLatitude: {1},  Longitude: {2}", Name, Location.Latitude, Location.Longitude);
-            tip.Content = content;
-            return tip;
+
         }
 
-		public override void ConvertValueString()
+        public override void ConvertValueString()
 		{
 			if (DataAsString.Equals("1"))
-				isClosed = true;
+				IsClosed = true;
 			else
-				isClosed = false;
+				IsClosed = false;
 		}
 	}
 }

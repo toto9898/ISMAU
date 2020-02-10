@@ -62,10 +62,10 @@
 			<telerik:RadComboBoxItem Content="TemperatureSensor" Margin="0"/>
 		</telerik:RadComboBox>
 		<Label Grid.Row="1" Grid.Column="0" Content="Enter Name" Style="{StaticResource lblStyle}"/>
-        <telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Style="{StaticResource txtInputStyle}" 
+        <telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Mask="a50" Style="{StaticResource txtInputStyle}" 
 				Placeholder=" "/>
 		<Label Grid.Row="2" Grid.Column="0" Content="Enter Description" Style="{StaticResource lblStyle}"/>
-		<telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="1" Style="{StaticResource txtInputStyle}"
+        <telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="1" Mask="a50" Style="{StaticResource txtInputStyle}"
                 Placeholder=" "/>
 		<Label Grid.Row="3" Grid.Column="0" Content="Enter Polling interval" Style="{StaticResource lblStyle}"/>
         <telerik:RadMaskedNumericInput x:Name="numPoll" Grid.Row="3" Grid.Column="1" Style="{StaticResource intInput}" 
@@ -100,6 +100,7 @@
 				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource maxAllowedValue}}"
                 Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Button Grid.Row="8" Grid.Column="0" Margin="10" Content="Add" Click="Add_Click"/>
-	</Grid>
+        <Button x:Name="AddBtn"		Grid.Row="8" Grid.Column="0" Margin="10" Content="Add" Click="Add_Click"/>
+        <Button x:Name="ModifyBtn"	Grid.Row="8" Grid.Column="0" Margin="10" Content="Modify" Click="Modify_Click"/>
+    </Grid>
 </Page>

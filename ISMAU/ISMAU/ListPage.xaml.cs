@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
+using Telerik.Windows.Controls;
+using Telerik.Windows.Controls.GridView;
 
 namespace ISMAU
 {
@@ -26,20 +28,36 @@ namespace ISMAU
 	{
 		public SensorLogic sensorLogic;
 
-		public ListPage(SensorLogic sensors)
+		public ListPage(SensorLogic sensors,
+			Action<ulong> openDetailsDelegate,
+			Action<ulong> openEditDelegate)
 		{
 			InitializeComponent();
 			sensorLogic = sensors;
 
-			// sensorLogic.getValuesForAllSensorsFromAPI();
-			initializeGrid();
+			initializeGrid(openDetailsDelegate, openEditDelegate);
+
 		}
 
-
-		private void initializeGrid()
+		private void initializeGrid(
+			Action<ulong> openDetails,
+			Action<ulong> openEdit)
 		{
+			sensorsGridView.Columns.Add(new DetailsButtonColumn
+			{
+				Header = "Details",
+				OnClickDelegate = openDetails
+			});
+
+			sensorsGridView.Columns.Add(new DetailsButtonColumn
+			{
+				Header = "Edit",
+				OnClickDelegate = openEdit
+			});
+
 			sensorsGridView.ItemsSource = sensorLogic.Sensors;
 		}
+
 
 		private void Modify_Click(object sender, RoutedEventArgs e)
 		{
@@ -51,5 +69,34 @@ namespace ISMAU
 				sensorLogic.modifier(sensor, sensorLogic);
 			}
 		}
+
+
+		public class DetailsButtonColumn : GridViewDataColumn
+		{
+			public Action<ulong> OnClickDelegate { get; set; }
+
+			public override FrameworkElement CreateCellElement(GridViewCell cell, object dataItem)
+			{
+				RadButton button = cell.Content as RadButton;
+				if (button == null)
+				{
+					button = new RadButton();
+					button.Content = Header;
+					button.Click += DetailsButton_Click;
+				}
+
+				button.CommandParameter = dataItem;
+
+				return button;
+			}
+
+			public void DetailsButton_Click(object sender, RoutedEventArgs e)
+			{
+				var button = sender as RadButton;
+				var sensor = button.CommandParameter as Sensor;
+				OnClickDelegate(sensor.Id);
+			}
+		}
+
 	}
 }

@@ -57,7 +57,10 @@ namespace ISMAU
 		private	async void btnListPage_Click(object sender, RoutedEventArgs e)
 		{
 			await sensorLogic.getValuesForAllSensorsFromAPI();
-			pageWindow.Content = new ListPage(sensorLogic);
+			pageWindow.Content = new ListPage(
+							sensorLogic,
+							id => OpenDetails(id),
+							id => OpenEdit(id));
 		}
 
 		private void btnViewPage_Click(object sender, RoutedEventArgs e)
@@ -81,12 +84,24 @@ namespace ISMAU
 		//	ApiOutput output = await ApiConnector.getCurrentValue(sensorTypes[currSensorType]);
 		//	if (output == null)
 		//		return;
-			//txtTest.Text = output.TimeStamp + " " + output.Value;
+		//txtTest.Text = output.TimeStamp + " " + output.Value;
 		//	if (currSensorType < numberSensorTypes - 1)
 		//		++currSensorType;
 		//	else
 		//		currSensorType = 0;
 		//}
+
+		public void OpenDetails(ulong id)
+		{
+			pageWindow.Content = new RegistryPage(sensorLogic);
+			//pageWindow.Content = new DetailsPage(id);
+		}
+
+		public void OpenEdit(ulong id)
+		{
+			pageWindow.Content = new RegistryPage(sensorLogic, sensorLogic.Sensors.Find(s => s.Id == id));
+		}
+
 
 		private void openModifyPage(Sensor sensor, SensorLogic logic) 
 		{
@@ -95,7 +110,10 @@ namespace ISMAU
 
 		private void openListPage(SensorLogic logic)
 		{
-			pageWindow.Content = new ListPage(logic);
+			pageWindow.Content = new ListPage(
+							logic,
+							id => OpenDetails(id),
+							id => OpenEdit(id));
 		}
 	}
 }
