@@ -54,8 +54,9 @@ namespace ISMAU
 			pageWindow.Content = new RegistryPage(sensorLogic);
 		}
 
-		private void btnListPage_Click(object sender, RoutedEventArgs e)
+		private	async void btnListPage_Click(object sender, RoutedEventArgs e)
 		{
+			await sensorLogic.getValuesForAllSensorsFromAPI();
 			pageWindow.Content = new ListPage(sensorLogic);
 		}
 

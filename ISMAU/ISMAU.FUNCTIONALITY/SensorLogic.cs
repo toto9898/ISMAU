@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Controls;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace ISMAU.FUNCTIONALITY
 {
@@ -136,13 +137,13 @@ namespace ISMAU.FUNCTIONALITY
             return output;
         }
 
-		public async void getValuesForAllSensorsFromAPI()
+		public async Task getValuesForAllSensorsFromAPI()
 		{
 			foreach(var elem in sensors)
 			{
 				ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(elem));
-				apiOutput.ApiValue = apiOutput.ApiValue;
-				elem.DataAsString = apiOutput.ApiValue;
+				// apiOutput.ApiValue = apiOutput.ApiValue;
+				elem.DataAsString = apiOutput.Value.ToString();
 				elem.ConvertValueString();
 			}
 		}

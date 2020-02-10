@@ -30,7 +30,8 @@ namespace ISMAU
 		{
 			InitializeComponent();
 			sensorLogic = sensors;
-			sensorLogic.getValuesForAllSensorsFromAPI();
+
+			// sensorLogic.getValuesForAllSensorsFromAPI();
 			initializeGrid();
 		}
 

@@ -66,12 +66,12 @@ namespace ISMAU.DATA
             Decibels = INVALID_VALUE;
         }
 
-        public NoiseSensor(NoiseSensor sensor)
-        {
-            Boundaries.Min = sensor.Boundaries.Min;
-            Boundaries.Max = sensor.Boundaries.Max;
-            Decibels = sensor.Decibels;
-        }
+        //public NoiseSensor(NoiseSensor sensor) : base (sensor)
+        //{
+        //    Boundaries.Min = sensor.Boundaries.Min;
+        //    Boundaries.Max = sensor.Boundaries.Max;
+        //    Decibels = sensor.Decibels;
+        //}
 
         public override ToolTip GetData()
         {

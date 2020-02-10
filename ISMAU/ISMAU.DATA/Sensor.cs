@@ -27,6 +27,7 @@ namespace ISMAU.DATA
     {
         private string name;
         private string description;
+        public string dataAsString;
 
         public string Name
         {
@@ -46,7 +47,7 @@ namespace ISMAU.DATA
 
 		public string Type { get; set; }
 
-		public string DataAsString { get; set; }
+		public string DataAsString { get => dataAsString; set => dataAsString = (value == null || value == "" ? "UnDef" : value); }
 
         public Sensor(
             string name,
@@ -62,6 +63,7 @@ namespace ISMAU.DATA
             TickOff = tickOff;
             PollingInterval = pollingInterval;
 			Type = type;
+            DataAsString = "UnDef";
         }
         public Sensor() : this(string.Empty, string.Empty, new Location(), 0f, "Invalid")
         {

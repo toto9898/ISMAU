@@ -11,32 +11,9 @@ namespace ISMAU.FUNCTIONALITY
 {
 	public class ApiOutput
 	{
-		private string timeStamp;
-		private string apiValue;
+		public string TimeStamp	{ get; set; }
 
-		public string TimeStamp
-		{
-			get { return timeStamp; }
-			set
-			{
-				if (value != null)
-					timeStamp = value;
-				else
-					timeStamp = "";
-			}
-		}
-
-		public string ApiValue
-		{
-			get { return apiValue; }
-			set
-			{
-				if (value != null)
-					apiValue = value;
-				else
-					apiValue = "";
-			}
-		}
+		public string Value { get; set; }
 	}
 
 	public class ApiConnector
