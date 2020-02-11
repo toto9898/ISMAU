@@ -11,12 +11,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>6</PollingInterval>
-    <DataAsString>125</DataAsString>
+    <DataAsString>91</DataAsString>
+    <Data>91</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Decibels>125</Decibels>
+    <Decibels>91</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>bb                  </Name>
@@ -29,16 +30,17 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>5</PollingInterval>
-    <DataAsString>60</DataAsString>
+    <DataAsString>64</DataAsString>
+    <Data>64</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Humidity>60</Humidity>
+    <Humidity>64</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>cc                  </Name>
-    <Description>changed                                           </Description>
+    <Description>changed again                                     </Description>
     <Location>
       <Latitude>2.99</Latitude>
       <Longitude>-5.96</Longitude>
@@ -47,11 +49,12 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>7</PollingInterval>
-    <DataAsString>0</DataAsString>
+    <DataAsString>17</DataAsString>
+    <Data>17</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Degrees>0</Degrees>
+    <Degrees>17</Degrees>
   </Sensor>
 </ArrayOfSensor>

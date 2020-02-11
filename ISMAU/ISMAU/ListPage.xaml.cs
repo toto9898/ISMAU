@@ -29,8 +29,8 @@ namespace ISMAU
 		public List<Sensor> Sensors { get; set; }
 
 		public ListPage(List<Sensor> sensors,
-			Action<ulong> openDetailsDelegate,
-			Action<ulong> openEditDelegate)
+			Action<Sensor> openDetailsDelegate,
+			Action<Sensor> openEditDelegate)
 		{
 			InitializeComponent();
 			Sensors = sensors;
@@ -40,8 +40,8 @@ namespace ISMAU
 		}
 
 		private void initializeGrid(
-			Action<ulong> openDetails,
-			Action<ulong> openEdit)
+			Action<Sensor> openDetails,
+			Action<Sensor> openEdit)
 		{
 			sensorsGridView.Columns.Add(new DetailsButtonColumn
 			{
@@ -60,7 +60,7 @@ namespace ISMAU
 
 		public class DetailsButtonColumn : GridViewDataColumn
 		{
-			public Action<ulong> OnClickDelegate { get; set; }
+			public Action<Sensor> OnClickDelegate { get; set; }
 
 			public override FrameworkElement CreateCellElement(GridViewCell cell, object dataItem)
 			{
@@ -81,7 +81,7 @@ namespace ISMAU
 			{
 				var button = sender as RadButton;
 				var sensor = button.CommandParameter as Sensor;
-				OnClickDelegate(sensor.Id);
+				OnClickDelegate(sensor);
 			}
 		}
 

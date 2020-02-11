@@ -4,6 +4,17 @@ namespace ISMAU.DATA
 {
     public class RangeBoundaries<T>
     {
+        public RangeBoundaries()
+        {
+            Min = default;
+            Max = default;
+        }
+        public RangeBoundaries(T min, T max)
+        {
+            Min = min;
+            Max = max;
+        }
+
         public T Min { get; set; }
         public T Max { get; set; }
     }

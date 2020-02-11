@@ -25,11 +25,6 @@ namespace ISMAU
     {
 		private SensorLogic sensorLogic;
 
-		//test data will be deleted
-		string[] sensorTypes = { "temperature", "humidity", "electric power", "window", "noise" };
-		const int numberSensorTypes = 5;
-		int currSensorType;
-
         public MainWindow()
         {
 			InitializeComponent();
@@ -37,9 +32,6 @@ namespace ISMAU
 			pageWindow.Content = new HomePage();
 
 			sensorLogic = new SensorLogic();
-
-			//delete later
-			currSensorType = 0;
 		}
 
 		private void btnHomePage_Click(object sender, RoutedEventArgs e)
@@ -49,44 +41,45 @@ namespace ISMAU
 
 		private void btnRegisterPage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new RegistryPage(sensorLogic);
+			pageWindow.Content = new RegisterPage(sensorLogic);
 		}
 
 		private	async void btnListPage_Click(object sender, RoutedEventArgs e)
 		{
 			await sensorLogic.getValuesForAllSensorsFromAPI();
 			pageWindow.Content = new ListPage(
-							sensorLogic.Sensors,
-							id => OpenDetails(id),
-							id => OpenEdit(id));
-		}
-
-		private void btnViewPage_Click(object sender, RoutedEventArgs e)
-		{
-			pageWindow.Content = new ViewPage();
+				sensorLogic.Sensors,
+				OpenDetails,
+				OpenEdit);
 		}
 
 		private void btnMapPage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new MapPage(sensorLogic);
+			pageWindow.Content = new MapPage(sensorLogic, OpenEditById);
 		}
 
 		private void btnReportPage_Click(object sender, RoutedEventArgs e)
 		{
 			pageWindow.Content = new ListPage(
 				sensorLogic.GetOutOfBoundsSensors(),
-				id => OpenDetails(id),
-				id => OpenEdit(id));
+				OpenDetails,
+				OpenEdit);
 		}
 
-		public void OpenDetails(ulong id)
+		public void OpenDetails(Sensor sensor)
 		{
-			pageWindow.Content = new RegistryPage(sensorLogic);
+			pageWindow.Content = new ViewPage(sensor, sensorLogic.UpdadeSensor);
 		}
 
-		public void OpenEdit(ulong id)
+		public void OpenEdit(Sensor sensor)
 		{
-			pageWindow.Content = new RegistryPage(sensorLogic, sensorLogic.Sensors.Find(s => s.Id == id));
+			pageWindow.Content = new RegisterPage(sensorLogic, sensor);
 		}
+
+		public void OpenEditById(ulong id)
+		{
+			pageWindow.Content = new RegisterPage(sensorLogic, sensorLogic.Sensors.Find(s => s.Id == id));
+		}
+
 	}
 }

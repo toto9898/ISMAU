@@ -11,6 +11,16 @@ using System.Threading.Tasks;
 
 namespace ISMAU.FUNCTIONALITY
 {
+    public struct PushpinMetadata
+    {
+        public string Type;
+        public string Name;
+        public Location Location;
+        public ulong Id;
+    }
+
+
+
     public class SensorLogic : ViewModelBase
     {
 
@@ -69,44 +79,16 @@ namespace ISMAU.FUNCTIONALITY
                     sensor = new DoorSensor(data);
                     break;
                 case "ElPowerSensor":
+                        sensor = new ElPowerSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
+                    break;
                 case "NoiseSensor":
-                    success = int.TryParse(rangeBoundaries.Min, out int min);
-                    if (!success) return false;
-                    success = int.TryParse(rangeBoundaries.Max, out int max);
-                    if (!success) return false;
-
-                    RangeBoundaries<int> boundaries = new RangeBoundaries<int>();
-                    boundaries.Min = min;
-                    boundaries.Max = max;
-
-                    if (data.Type == "ElPowerSensor")
-                        sensor = new ElPowerSensor(data, boundaries);
-                    else
-                        sensor = new NoiseSensor(data, boundaries);
+                        sensor = new NoiseSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
                     break;
                 case "HumiditySensor":
-                    success = float.TryParse(rangeBoundaries.Min, out float min2);
-                    if (!success) return false;
-                    success = float.TryParse(rangeBoundaries.Min, out float max2);
-                    if (!success) return false;
-
-                    RangeBoundaries<float> boundaries2 = new RangeBoundaries<float>();
-                    boundaries2.Min = min2;
-                    boundaries2.Max = max2;
-
-                    sensor = new HumiditySensor(data, boundaries2);
+                    sensor = new HumiditySensor(data, new RangeBoundaries<float>(float.Parse(rangeBoundaries.Min), float.Parse(rangeBoundaries.Max)));
                     break;
                 case "TemperatureSensor":
-                    success = double.TryParse(rangeBoundaries.Min, out double min3);
-                    if (!success) return false;
-                    success = double.TryParse(rangeBoundaries.Min, out double max3);
-                    if (!success) return false;
-
-                    RangeBoundaries<double> boundaries3 = new RangeBoundaries<double>();
-                    boundaries3.Min = min3;
-                    boundaries3.Max = max3;
-
-                    sensor = new TemperatureSensor(data, boundaries3);
+                    sensor = new TemperatureSensor(data, new RangeBoundaries<double>(double.Parse(rangeBoundaries.Min), double.Parse(rangeBoundaries.Max)));
                     break;
                 default:
                     break;
@@ -122,6 +104,7 @@ namespace ISMAU.FUNCTIONALITY
             foreach (var elem in Sensors)
             {
                 Pushpin pin = new Pushpin();
+                pin.Tag = new PushpinMetadata { Type = elem.GetType().Name, Name = elem.Name, Location = elem.Location, Id = elem.Id };
                 pin.ToolTip = elem.GetToolTip();
                 pin.Location = new Location(elem.Location.Latitude, elem.Location.Longitude);
                 output.Add(pin);

@@ -18,15 +18,15 @@ using System.Windows.Shapes;
 
 namespace ISMAU
 {
-	/// <summary>
-	/// Interaction logic for RegistryPage.xaml
-	/// </summary>
-	public partial class RegistryPage : Page
-	{
-		private SensorLogic logic;
-		private Sensor sensor;
+    /// <summary>
+    /// Interaction logic for RegisterPage.xaml
+    /// </summary>
+    public partial class RegisterPage : Page
+    {
+        private SensorLogic logic;
+        private Sensor sensor;
 
-        public RegistryPage(SensorLogic sensorLogic, Sensor currentSensor = null)
+        public RegisterPage(SensorLogic sensorLogic, Sensor currentSensor = null)
         {
             InitializeComponent();
             logic = sensorLogic;
@@ -48,24 +48,24 @@ namespace ISMAU
             }
         }
 
-		private void Add_Click(object sender, RoutedEventArgs e)
-		{
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
             SensorData data = new SensorData
             {
                 Name = txtName.Text,
                 Description = txtDesc.Text,
-                Location = new Location(double.Parse(numLat.Text), double.Parse(numLong.Text)),
+                Location = new Location((double)numLat.Value, (double)numLong.Value),
                 Type = sensorTypeChooser.Text,
-                PollingInterval = Int32.Parse(numPoll.Text)
+                PollingInterval = (int)numPoll.Value
             };
 
             RangeBoundaries<string> boundaries = new RangeBoundaries<string>();
             boundaries.Min = numMinVal.Text;
             boundaries.Max = numMaxVal.Text;
 
-            if (logic.AddSensor(data, boundaries))
-                logic.SaveState();
-		}
+            logic.AddSensor(data, boundaries);
+            logic.SaveState();
+        }
 
         private void InitializeTextFields(Sensor sensor)
         {
@@ -106,7 +106,7 @@ namespace ISMAU
                 PollingInterval = Int32.Parse(numPoll.Text)
             };
 
-        sensor = logic.Sensors.Find(sen => sen.Id == sensor.Id);
+            sensor = logic.Sensors.Find(sen => sen.Id == sensor.Id);
             sensor.Description = data.Description;
             sensor.Location = data.Location;
             sensor.PollingInterval = data.PollingInterval;
@@ -129,14 +129,14 @@ namespace ISMAU
         }
 
 
-  //      private string trimSpace(string input)
-		//{
-		//	string output = "";
-		//	for (int i = 0; i < input.Length; ++i)
-		//		if (input[i] != ' ')
-		//			output += input[i];
-		//	return output;
-		//}
-	}
+        //      private string trimSpace(string input)
+        //{
+        //	string output = "";
+        //	for (int i = 0; i < input.Length; ++i)
+        //		if (input[i] != ' ')
+        //			output += input[i];
+        //	return output;
+        //}
+    }
 }
 
