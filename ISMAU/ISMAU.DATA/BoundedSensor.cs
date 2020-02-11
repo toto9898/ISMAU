@@ -1,4 +1,6 @@
-﻿namespace ISMAU.DATA
+﻿using System;
+
+namespace ISMAU.DATA
 {
     public class RangeBoundaries<T>
     {
@@ -8,9 +10,10 @@
 
 
     public abstract class BoundedSensor<T> : Sensor
-        where T: struct
+        where T: IComparable
     {
         private RangeBoundaries<T> boundaries;
+        public T Data;
 
         public BoundedSensor(SensorData data, RangeBoundaries<T> rangeBoundaries)
             : base(data)
@@ -45,6 +48,11 @@
                     boundaries.Max = boundaries.Min = default;
                 }
             }
+        }
+
+        public override bool OutOfBounds()
+        {
+            return Data.CompareTo(Boundaries.Min) < 0 || Data.CompareTo(Boundaries.Max) > 0;
         }
     }
 }

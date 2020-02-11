@@ -10,7 +10,7 @@ namespace ISMAU.DATA
 {
     public class NoiseSensor : BoundedSensor<int>
     {
-		public int Decibels { get; set; }
+		public int Decibels { get => Data; set => Data = value; }
 
         public NoiseSensor(SensorData data, RangeBoundaries<int> rangeBoundaries)
             : base(data, rangeBoundaries)

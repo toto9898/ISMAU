@@ -89,5 +89,6 @@ namespace ISMAU.DATA
         }
 
         public abstract void ConvertValueString();
+        public abstract bool OutOfBounds();
     }
 }

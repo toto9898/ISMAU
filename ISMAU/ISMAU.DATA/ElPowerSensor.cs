@@ -11,7 +11,7 @@ namespace ISMAU.DATA
     public class ElPowerSensor : BoundedSensor<int>
     {
 
-		public int Wats { get; set; }
+		public int Wats { get => Data; set => Data = value; }
 
         public ElPowerSensor(SensorData data, RangeBoundaries<int> rangeBoundaries)
             : base(data, rangeBoundaries)

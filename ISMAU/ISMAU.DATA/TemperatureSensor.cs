@@ -10,7 +10,7 @@ namespace ISMAU.DATA
 {
     public class TemperatureSensor : BoundedSensor<double>
     {
-        public double Degrees { get; set; }
+        public double Degrees { get => Data; set => Data = value; }
 
         public TemperatureSensor(SensorData data, RangeBoundaries<double> rangeBoundaries)
             : base(data, rangeBoundaries)

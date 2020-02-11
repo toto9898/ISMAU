@@ -26,14 +26,14 @@ namespace ISMAU
 	/// </summary>
 	public partial class ListPage : Page
 	{
-		public SensorLogic sensorLogic;
+		public List<Sensor> Sensors { get; set; }
 
-		public ListPage(SensorLogic sensors,
+		public ListPage(List<Sensor> sensors,
 			Action<ulong> openDetailsDelegate,
 			Action<ulong> openEditDelegate)
 		{
 			InitializeComponent();
-			sensorLogic = sensors;
+			Sensors = sensors;
 
 			initializeGrid(openDetailsDelegate, openEditDelegate);
 
@@ -55,21 +55,8 @@ namespace ISMAU
 				OnClickDelegate = openEdit
 			});
 
-			sensorsGridView.ItemsSource = sensorLogic.Sensors;
+			sensorsGridView.ItemsSource = Sensors;
 		}
-
-
-		private void Modify_Click(object sender, RoutedEventArgs e)
-		{
-			var cellInfos = sensorsGridView.SelectedCells;
-			Sensor sensor;
-			if (cellInfos.Count > 0)
-			{
-				sensor = cellInfos[0].Item as Sensor;
-				sensorLogic.modifier(sensor, sensorLogic);
-			}
-		}
-
 
 		public class DetailsButtonColumn : GridViewDataColumn
 		{

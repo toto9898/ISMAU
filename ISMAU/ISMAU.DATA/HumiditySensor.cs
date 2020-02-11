@@ -10,7 +10,7 @@ namespace ISMAU.DATA
 {
     public class HumiditySensor : BoundedSensor<float>
     {
-        public float Humidity { get; set; }
+        public float Humidity { get => Data; set => Data = value; }
 
         public HumiditySensor(SensorData data, RangeBoundaries<float> rangeBoundaries)
             : base(data, rangeBoundaries)

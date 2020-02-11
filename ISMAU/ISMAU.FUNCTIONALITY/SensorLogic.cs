@@ -17,10 +17,6 @@ namespace ISMAU.FUNCTIONALITY
         #region Data Members
         private const string DATABASE_NAME = @"\data.xml";
         private string databasePath;
-		public delegate void Modifier(Sensor input, SensorLogic logic);
-		public Modifier modifier;
-		public delegate void ShowList(SensorLogic logic);
-		public ShowList showList;
         #endregion
 
         #region Constructor
@@ -135,14 +131,16 @@ namespace ISMAU.FUNCTIONALITY
 
 		public async Task getValuesForAllSensorsFromAPI()
 		{
-			foreach(var elem in Sensors)
-			{
-				ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(elem));
-				// apiOutput.ApiValue = apiOutput.ApiValue;
-				elem.DataAsString = apiOutput.Value.ToString();
-				elem.ConvertValueString();
-			}
+			foreach(var sensor in Sensors)
+                await UpdadeSensor(sensor);
 		}
+
+        public async Task UpdadeSensor(Sensor sensor)
+        {
+            ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(sensor));
+            sensor.DataAsString = apiOutput.Value.ToString();
+            sensor.ConvertValueString();
+        }
 
 		private string sensorTypeForAPICall(Sensor sensor)
 		{
@@ -158,6 +156,17 @@ namespace ISMAU.FUNCTIONALITY
 				return "temperature";
 			return "invalid";
 		}
+        
+        public List<Sensor> GetOutOfBoundsSensors()
+        {
+            List<Sensor> OBSensors = new List<Sensor>();
+            foreach (var s in Sensors)
+                if (s.OutOfBounds())
+                    OBSensors.Add(s);
+
+            return OBSensors;
+        }
+        
         #endregion
     }
 }

@@ -2,7 +2,7 @@
 <ArrayOfSensor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Sensor xsi:type="NoiseSensor">
     <Name>aa                  </Name>
-    <Description>aa                  </Description>
+    <Description>gigidi                                            </Description>
     <Location>
       <Latitude>4</Latitude>
       <Longitude>-2</Longitude>
@@ -11,12 +11,12 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>6</PollingInterval>
-    <DataAsString>48</DataAsString>
+    <DataAsString>125</DataAsString>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Decibels>48</Decibels>
+    <Decibels>125</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>bb                  </Name>
@@ -29,12 +29,12 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>5</PollingInterval>
-    <DataAsString>2</DataAsString>
+    <DataAsString>60</DataAsString>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Humidity>2</Humidity>
+    <Humidity>60</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>cc                  </Name>
@@ -47,11 +47,11 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>7</PollingInterval>
-    <DataAsString>36</DataAsString>
+    <DataAsString>0</DataAsString>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Degrees>36</Degrees>
+    <Degrees>0</Degrees>
   </Sensor>
 </ArrayOfSensor>

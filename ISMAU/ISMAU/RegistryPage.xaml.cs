@@ -36,6 +36,7 @@ namespace ISMAU
             {
                 InitializeTextFields(sensor);
                 ModifyBtn.IsEnabled = true;
+                sensorTypeChooser.IsEnabled = false;
                 AddBtn.IsEnabled = false;
                 txtName.Focusable = false;
             }

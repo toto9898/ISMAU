@@ -43,5 +43,10 @@ namespace ISMAU.DATA
 			else
 				IsClosed = false;
 		}
-	}
+
+        public override bool OutOfBounds()
+        {
+            return false;
+        }
+    }
 }

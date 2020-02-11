@@ -76,14 +76,8 @@
     <Compile Include="MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ModifyPage.xaml.cs">
-      <DependentUpon>ModifyPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="RegistryPage.xaml.cs">
       <DependentUpon>RegistryPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ReportPage.xaml.cs">
-      <DependentUpon>ReportPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="SensorTypeToMaskTypeConverter.cs" />
     <Compile Include="SensorTypeToMaximumAllowedValueConverter.cs" />
@@ -119,15 +113,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ModifyPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="RegistryPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ReportPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
