@@ -17,11 +17,16 @@ namespace ISMAU
 
 		public List<Pushpin> pushpins;
 		Action<ulong> ModifySensorDelegate;
+		Action<SensorData> AddSensorDelegate;
 
-		public MapPage(SensorLogic sensorLogic, Action<ulong> modifySensorDelegate)
+		public MapPage(SensorLogic sensorLogic, Action<SensorData> addSensorDelegate, Action<ulong> modifySensorDelegate)
 		{
 			InitializeComponent();
+
+			locationMap.MouseDoubleClick += AddSensorOnClick;
+
 			ModifySensorDelegate = modifySensorDelegate;
+			AddSensorDelegate = addSensorDelegate;
 
 			pushpins = sensorLogic.initializePins();
 
@@ -44,6 +49,16 @@ namespace ISMAU
 			PushpinMetadata metadata = (PushpinMetadata)p.Tag;
 
 			ModifySensorDelegate(metadata.Id);
+		}
+
+		public void AddSensorOnClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+		{
+			Map map = sender as Map;
+
+			Point mousePosition = e.GetPosition(map);
+			Location mouseGeocode = map.ViewportPointToLocation(mousePosition);
+
+			AddSensorDelegate(new SensorData { Location = mouseGeocode });
 		}
 
 	}

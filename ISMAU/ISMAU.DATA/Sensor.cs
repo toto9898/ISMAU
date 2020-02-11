@@ -79,6 +79,20 @@ namespace ISMAU.DATA
 
         public abstract void GetData();
 
+        public SensorData GetSensorData()
+        {
+            SensorData data = new SensorData();
+
+            data.Name = Name;
+            data.Description = Description;
+            data.Location = Location;
+            data.TickOff = TickOff;
+            data.Type = GetType().Name;
+            data.PollingInterval = PollingInterval;
+
+            return data;
+        }
+
         public ToolTip GetToolTip()
         {
             ToolTip tip = new ToolTip();

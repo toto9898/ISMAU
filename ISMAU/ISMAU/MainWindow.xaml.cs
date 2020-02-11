@@ -55,7 +55,10 @@ namespace ISMAU
 
 		private void btnMapPage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new MapPage(sensorLogic, OpenEditById);
+			pageWindow.Content = new MapPage(
+				sensorLogic, 
+				OpenDetails, 
+				id => OpenEdit(sensorLogic.Sensors.Find(sensor => sensor.Id == id)));
 		}
 
 		private void btnReportPage_Click(object sender, RoutedEventArgs e)
@@ -71,15 +74,14 @@ namespace ISMAU
 			pageWindow.Content = new ViewPage(sensor, sensorLogic.UpdadeSensor);
 		}
 
+		public void OpenDetails(SensorData data)
+		{
+			pageWindow.Content = new RegisterPage(sensorLogic, data);
+		}
+
 		public void OpenEdit(Sensor sensor)
 		{
 			pageWindow.Content = new RegisterPage(sensorLogic, sensor);
 		}
-
-		public void OpenEditById(ulong id)
-		{
-			pageWindow.Content = new RegisterPage(sensorLogic, sensorLogic.Sensors.Find(s => s.Id == id));
-		}
-
 	}
 }

@@ -48,6 +48,16 @@ namespace ISMAU
             }
         }
 
+        public RegisterPage(SensorLogic sensorLogic, SensorData knownData) : this(sensorLogic)
+        {
+            txtName.Value = knownData.Name;
+            txtDesc.Value = knownData.Description;
+            numLat.Value = knownData.Location.Latitude;
+            numLong.Value = knownData.Location.Longitude;
+            sensorTypeChooser.Text = knownData.Type;
+            numPoll.Value = knownData.PollingInterval;
+        }
+
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SensorData data = new SensorData
