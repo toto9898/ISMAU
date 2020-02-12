@@ -9,10 +9,15 @@
         Title="ISMAU" MinHeight="450" Height="450" MinWidth="800" Width="800">
 
 	<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        
+		<Frame Grid.Column="1" x:Name="pageWindow" Width="auto" Margin="10" HorizontalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
 
-		<Frame x:Name="pageWindow" Width="auto" Margin="69 10 10 10" HorizontalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
-
-		<telerik:RadNavigationView Width="auto" HorizontalAlignment="Left" Background="DarkGray">
+		<telerik:RadNavigationView Grid.Column="0" Width="auto" HorizontalAlignment="Left" Background="DarkGray">
 			<telerik:RadNavigationView.Items>
 				<telerik:RadNavigationViewItem Content="Home" Click="btnHomePage_Click"/>
 				<telerik:RadNavigationViewItem Content="Map" Click="btnMapPage_Click"/>

@@ -29,14 +29,25 @@ namespace ISMAU
         {
 			InitializeComponent();
 
-			pageWindow.Content = new HomePage();
-
 			sensorLogic = new SensorLogic();
+			
+			pageWindow.Content = new HomePage( 
+				new MapPage(
+				sensorLogic,
+				OpenDetails,
+				id => OpenEdit(sensorLogic.Sensors.Find(sensor => sensor.Id == id)))
+				);
+
 		}
 
 		private void btnHomePage_Click(object sender, RoutedEventArgs e)
 		{
-			pageWindow.Content = new HomePage();
+			pageWindow.Content = new HomePage(
+				new MapPage(
+				sensorLogic,
+				OpenDetails,
+				id => OpenEdit(sensorLogic.Sensors.Find(sensor => sensor.Id == id)))
+				);
 		}
 
 		private void btnRegisterPage_Click(object sender, RoutedEventArgs e)

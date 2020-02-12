@@ -20,9 +20,10 @@ namespace ISMAU
 	/// </summary>
 	public partial class HomePage : Page
 	{
-		public HomePage()
+		public HomePage(MapPage mapPage)
 		{
 			InitializeComponent();
+			map.Content = mapPage;
 		}
 	}
 }

@@ -6,8 +6,23 @@
       xmlns:local="clr-namespace:ISMAU"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="HomePage">
-	
+      Title="HomePage"
+      Background="White">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            
+        </Grid>
+        <Grid Grid.Row="1">
+            <Frame  x:Name="map" Width="auto" HorizontalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Grid>
 	
 	
 </Page>
