@@ -11,13 +11,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>6</PollingInterval>
-    <DataAsString>91</DataAsString>
-    <Data>91</Data>
+    <DataAsString>112</DataAsString>
+    <Data>112</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Decibels>91</Decibels>
+    <Decibels>112</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>bb                  </Name>
@@ -30,13 +30,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>5</PollingInterval>
-    <DataAsString>64</DataAsString>
-    <Data>64</Data>
+    <DataAsString>13</DataAsString>
+    <Data>13</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Humidity>64</Humidity>
+    <Humidity>13</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>cc                  </Name>
@@ -49,17 +49,17 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>7</PollingInterval>
-    <DataAsString>17</DataAsString>
-    <Data>17</Data>
+    <DataAsString>16</DataAsString>
+    <Data>16</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Degrees>17</Degrees>
+    <Degrees>16</Degrees>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
     <Name>new one                                           </Name>
-    <Description>pushpin test                                      </Description>
+    <Description>pushpintest 12312                                 </Description>
     <Location>
       <Latitude>43.01</Latitude>
       <Longitude>24.09</Longitude>
@@ -68,6 +68,7 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1000</PollingInterval>
+    <DataAsString>1</DataAsString>
     <IsClosed>true</IsClosed>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
@@ -81,6 +82,7 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1000</PollingInterval>
+    <DataAsString>1</DataAsString>
     <IsClosed>true</IsClosed>
   </Sensor>
 </ArrayOfSensor>

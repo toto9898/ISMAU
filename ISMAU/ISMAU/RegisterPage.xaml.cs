@@ -35,14 +35,12 @@ namespace ISMAU
             if (sensor != null)
             {
                 InitializeTextFields(sensor);
-                ModifyBtn.IsEnabled = true;
                 sensorTypeChooser.IsEnabled = false;
-                AddBtn.IsEnabled = false;
-                txtName.Focusable = false;
+                AddBtn.Visibility = Visibility.Hidden;
+                txtName.IsEnabled = false;
             }
             else
             {
-                ModifyBtn.IsEnabled = false;
                 ModifyBtn.Visibility = Visibility.Hidden;
                 AddBtn.IsEnabled = true;
             }
