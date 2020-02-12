@@ -73,8 +73,8 @@ namespace ISMAU
             boundaries.Min = numMinVal.Text;
             boundaries.Max = numMaxVal.Text;
 
-            logic.AddSensor(data, boundaries);
-            logic.SaveState();
+            if (logic.AddSensor(data, boundaries))
+                logic.SaveState();
         }
 
         private void InitializeTextFields(Sensor sensor)

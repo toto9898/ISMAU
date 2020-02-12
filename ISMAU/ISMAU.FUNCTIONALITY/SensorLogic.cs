@@ -73,27 +73,37 @@ namespace ISMAU.FUNCTIONALITY
         {
             bool success = true;
             Sensor sensor = null;
-            switch (data.Type)
+
+            try
             {
-                case "DoorSensor":
-                    sensor = new DoorSensor(data);
-                    break;
-                case "ElPowerSensor":
-                        sensor = new ElPowerSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
-                    break;
-                case "NoiseSensor":
-                        sensor = new NoiseSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
-                    break;
-                case "HumiditySensor":
-                    sensor = new HumiditySensor(data, new RangeBoundaries<float>(float.Parse(rangeBoundaries.Min), float.Parse(rangeBoundaries.Max)));
-                    break;
-                case "TemperatureSensor":
-                    sensor = new TemperatureSensor(data, new RangeBoundaries<double>(double.Parse(rangeBoundaries.Min), double.Parse(rangeBoundaries.Max)));
-                    break;
-                default:
-                    break;
+                switch (data.Type)
+                {
+                    case "DoorSensor":
+                        sensor = new DoorSensor(data);
+                        break;
+                    case "ElPowerSensor":
+                            sensor = new ElPowerSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
+                        break;
+                    case "NoiseSensor":
+                            sensor = new NoiseSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
+                        break;
+                    case "HumiditySensor":
+                        sensor = new HumiditySensor(data, new RangeBoundaries<float>(float.Parse(rangeBoundaries.Min), float.Parse(rangeBoundaries.Max)));
+                        break;
+                    case "TemperatureSensor":
+                        sensor = new TemperatureSensor(data, new RangeBoundaries<double>(double.Parse(rangeBoundaries.Min), double.Parse(rangeBoundaries.Max)));
+                        break;
+                    default:
+                        break;
+                }
+                Sensors.Add(sensor);
+                SaveState();
             }
-            Sensors.Add(sensor);
+            catch (Exception)
+            {
+                MessageBox.Show("Failed to add the sensor!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                success = false;
+            }
 
             return success;
         }
