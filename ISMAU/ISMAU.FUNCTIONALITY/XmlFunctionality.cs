@@ -9,8 +9,18 @@ using System.Xml.Serialization;
 
 namespace ISMAU.FUNCTIONALITY
 {
+    /// <summary>
+    /// Holds the logic for serializing and deserializing of objects
+    /// </summary>
     public static class XmlFunctionality
     {
+        /// <summary>
+        /// Serializes the object a the file
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj">object for serialization</param>
+        /// <param name="filePath">the path to the file for the serialization</param>
+        /// <returns>True if the serialization is successful and False otherwise</returns>
         public static bool Serialize<T>(this T obj, string filePath)
         {
             if (obj == null) return false;
@@ -31,6 +41,14 @@ namespace ISMAU.FUNCTIONALITY
 
             return true;
         }
+
+        /// <summary>
+        /// Serializes the object a the file
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj">object for serialization</param>
+        /// <param name="filePath">the path to the file for the serialization</param>
+        /// <returns>True if the serialization is successful and False otherwise</returns>
         public static T Deserialize<T>(this T obj, string filePath)
         {
             try

@@ -23,7 +23,9 @@ namespace ISMAU.FUNCTIONALITY
     }
 
 
-
+    /// <summary>
+    /// This class is handles the logic with the sensors
+    /// </summary>
     public class SensorLogic : ViewModelBase
     {
 
@@ -32,7 +34,10 @@ namespace ISMAU.FUNCTIONALITY
         private string databasePath;
         #endregion
 
-        #region Constructor
+        #region Constructors
+        /// <summary>
+        /// This constructor deserializes the sensors from the save(data.xml) file
+        /// </summary>
         public SensorLogic()
         {
             string current = Environment.CurrentDirectory;
@@ -51,27 +56,45 @@ namespace ISMAU.FUNCTIONALITY
         #endregion
 
         #region Properties
+        /// <summary>
+        /// Holds the name of the save file
+        /// </summary>
         public string DatabaseName
         {
             get { return DATABASE_NAME; }
             private set { }
         }
 
+        /// <summary>
+        /// Holds the path to the save file
+        /// </summary>
         public string DatabasePath
         {
             get { return databasePath; }
             private set { }
         }
 
+        /// <summary>
+        /// Holds all the sensors
+        /// </summary>
         public List<Sensor> Sensors { get; set; }
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Serializes the sensors
+        /// </summary>
         public void SaveState()
         {
             Sensors.Serialize(databasePath);
         }
 
+        /// <summary>
+        /// Adds sensor with the given "data" to the Sensors List
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="rangeBoundaries"></param>
+        /// <returns>True if the sensor is added successfully, False otherwise</returns>
         public bool AddSensor(SensorData data, RangeBoundaries<string> rangeBoundaries)
         {
             bool success = true;
@@ -111,6 +134,10 @@ namespace ISMAU.FUNCTIONALITY
             return success;
         }
 
+        /// <summary>
+        /// Creates pushpins with data from the sensors
+        /// </summary>
+        /// <returns>Collections of pushpins of the sensors</returns>
         public List<Pushpin> initializePins()
         {
             List<Pushpin> output = new List<Pushpin>();
@@ -125,12 +152,21 @@ namespace ISMAU.FUNCTIONALITY
             return output;
         }
 
+        /// <summary>
+        /// Updates the data of the sensors with current data, received from the API
+        /// </summary>
+        /// <returns></returns>
 		public async Task getValuesForAllSensorsFromAPI()
 		{
 			foreach(var sensor in Sensors)
                 await UpdadeSensor(sensor);
 		}
 
+        /// <summary>
+        /// Updates the data of the sensor with current data, received from the API
+        /// </summary>
+        /// <param name="sensor"></param>
+        /// <returns></returns>
         public async Task UpdadeSensor(Sensor sensor)
         {
             ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(sensor));
@@ -138,6 +174,11 @@ namespace ISMAU.FUNCTIONALITY
             sensor.ConvertValueString();
         }
 
+        /// <summary>
+        /// Returns string representing the sensor type
+        /// </summary>
+        /// <param name="sensor"></param>
+        /// <returns>String representing the sensor type</returns>
 		private string sensorTypeForAPICall(Sensor sensor)
 		{
 			if (sensor is DoorSensor)
@@ -152,7 +193,11 @@ namespace ISMAU.FUNCTIONALITY
 				return "temperature";
 			return "invalid";
 		}
-        
+
+        /// <summary>
+        /// Returns List with only the sensors which are out of bounds
+        /// </summary>
+        /// <returns>List with only the sensors which are out of bounds</returns>
         public List<Sensor> GetOutOfBoundsSensors()
         {
             List<Sensor> OBSensors = new List<Sensor>();

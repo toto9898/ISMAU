@@ -9,6 +9,9 @@ using System.Net.Http.Headers;
 
 namespace ISMAU.FUNCTIONALITY
 {
+	/// <summary>
+	/// Holds the output from the API
+	/// </summary>
 	public class ApiOutput
 	{
 		public string TimeStamp	{ get; set; }
@@ -16,6 +19,9 @@ namespace ISMAU.FUNCTIONALITY
 		public string Value { get; set; }
 	}
 
+	/// <summary>
+	/// This class does the API work
+	/// </summary>
 	public class ApiConnector
 	{
 		#region Data Members
@@ -24,6 +30,11 @@ namespace ISMAU.FUNCTIONALITY
 		#endregion
 
 		#region Methods
+		/// <summary>
+		/// Gets the current value of a sensor with type "type", using the API
+		/// </summary>
+		/// <param name="type"></param>
+		/// <returns></returns>
 		public static async Task<ApiOutput> getCurrentValue(string type)
 		{
 			string url = API_BASE_PATH + type;
