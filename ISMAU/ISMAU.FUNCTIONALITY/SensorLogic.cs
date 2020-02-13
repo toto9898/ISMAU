@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace ISMAU.FUNCTIONALITY
 {
     /// <summary>
-    /// Holds the data to initialize the 
+    /// Holds the data to initialize a pushpin
     /// </summary>
     public struct PushpinMetadata
     {
