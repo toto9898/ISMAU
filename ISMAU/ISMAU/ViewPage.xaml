@@ -22,7 +22,7 @@
                     <telerik:Pinpoint />
                 </telerik:RadialScale.Indicators>
             </telerik:RadialScale>
-            <telerik:Label HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Margin="0 0 0 30"/>
+            <telerik:Label x:Name="ValueLbl" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Margin="0 0 0 30"/>
         </telerik:RadRadialGauge>
     </Grid>
 </Page>

@@ -10,14 +10,14 @@
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
-    <PollingInterval>6</PollingInterval>
-    <DataAsString>106</DataAsString>
-    <Data>106</Data>
+    <PollingInterval>1000</PollingInterval>
+    <DataAsString>10</DataAsString>
+    <Data>10</Data>
     <Boundaries>
       <Min>99</Min>
       <Max>100</Max>
     </Boundaries>
-    <Decibels>106</Decibels>
+    <Decibels>10</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>bb                  </Name>
@@ -30,13 +30,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>5</PollingInterval>
-    <DataAsString>89</DataAsString>
-    <Data>89</Data>
+    <DataAsString>5</DataAsString>
+    <Data>5</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Humidity>89</Humidity>
+    <Humidity>5</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>cc                  </Name>
@@ -49,13 +49,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>7</PollingInterval>
-    <DataAsString>4</DataAsString>
-    <Data>4</Data>
+    <DataAsString>6</DataAsString>
+    <Data>6</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Degrees>4</Degrees>
+    <Degrees>6</Degrees>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
     <Name>new one                                           </Name>
@@ -68,8 +68,8 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1000</PollingInterval>
-    <DataAsString>0</DataAsString>
-    <IsClosed>false</IsClosed>
+    <DataAsString>1</DataAsString>
+    <IsClosed>true</IsClosed>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
     <Name>one more new                                      </Name>
@@ -95,13 +95,13 @@
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <DataAsString>101</DataAsString>
-    <Data>101</Data>
+    <PollingInterval>1</PollingInterval>
+    <DataAsString>6</DataAsString>
+    <Data>6</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>100</Max>
     </Boundaries>
-    <Decibels>101</Decibels>
+    <Decibels>6</Decibels>
   </Sensor>
 </ArrayOfSensor>

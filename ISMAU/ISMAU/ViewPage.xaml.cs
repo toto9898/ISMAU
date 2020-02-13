@@ -48,18 +48,23 @@ namespace ISMAU
             Sensor = sensor;
             updadeSensor = update;
 
-            
 
+            ValueLbl.Content = 100;
 
             SetBoundaries();
 
             var startTimeSpan = TimeSpan.Zero;
-            var periodTimeSpan = TimeSpan.FromMilliseconds(sensor.PollingInterval);
+            var periodTimeSpan = TimeSpan.FromSeconds(sensor.PollingInterval);
 
-            timer = new System.Threading.Timer(async (e) =>
-            {
-               await updadeSensor(sensor);
-            }, null, startTimeSpan, periodTimeSpan);
+            timer = new System.Threading.Timer(
+                async (e) =>
+                {
+                    await updadeSensor(sensor);
+                    Application.Current.Dispatcher.Invoke(() => ValueLbl.Content = sensor.DataAsString);
+                    Application.Current.Dispatcher.Invoke(SetNeedleData);
+                },
+                null,
+                startTimeSpan, periodTimeSpan);
 
         }
 
@@ -90,6 +95,17 @@ namespace ISMAU
             }
         }
 
+        private void SetNeedleData()
+        {
+            if (Sensor is ElPowerSensor e)
+                needle.Value = e.Data;
+            else if (Sensor is HumiditySensor h)
+                needle.Value = h.Data;
+            else if (Sensor is NoiseSensor n)
+                needle.Value = n.Data;
+            else if (Sensor is TemperatureSensor t)
+                needle.Value = t.Data;
+        }
 
     }
 }

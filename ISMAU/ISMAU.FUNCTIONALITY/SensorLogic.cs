@@ -169,9 +169,16 @@ namespace ISMAU.FUNCTIONALITY
         /// <returns></returns>
         public async Task UpdadeSensor(Sensor sensor)
         {
-            ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(sensor));
-            sensor.DataAsString = apiOutput.Value.ToString();
-            sensor.ConvertValueString();
+            try
+            {
+                ApiOutput apiOutput = await ApiConnector.getCurrentValue(sensorTypeForAPICall(sensor));
+                sensor.DataAsString = apiOutput.Value.ToString();
+                sensor.ConvertValueString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Exception occured!");
+            }
         }
 
         /// <summary>
