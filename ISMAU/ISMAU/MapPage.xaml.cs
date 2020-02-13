@@ -14,11 +14,27 @@ namespace ISMAU
 	/// </summary>
 	public partial class MapPage : Page
 	{
-
+		/// <summary>
+		/// Collection of the pushpins for the map
+		/// </summary>
 		public List<Pushpin> pushpins;
+		/// <summary>
+		/// Delegate for navigating to the register page in "modify sensor" mode
+		/// </summary>
 		Action<ulong> ModifySensorDelegate;
+		/// <summary>
+		/// Delegate for navigating to the register page in "add sensor" mode
+		/// </summary>
 		Action<SensorData> AddSensorDelegate;
 
+		/// <summary>
+		/// - Initializeng the delegates, 
+		/// - Adding a function to the map double click event, for adding a new sensor,
+		/// - Binding the pushpins with the map
+		/// </summary>
+		/// <param name="sensorLogic"></param>
+		/// <param name="addSensorDelegate"></param>
+		/// <param name="modifySensorDelegate"></param>
 		public MapPage(SensorLogic sensorLogic, Action<SensorData> addSensorDelegate, Action<ulong> modifySensorDelegate)
 		{
 			InitializeComponent();
@@ -43,6 +59,11 @@ namespace ISMAU
 			}
 		}
 
+		/// <summary>
+		/// Switches to the register page in "modifying sensor" mode when a pushpin is clicked
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		public void ModifyPinClicked(object sender, System.Windows.Input.MouseButtonEventArgs e)
 		{
 			Pushpin p = sender as Pushpin;
@@ -51,6 +72,11 @@ namespace ISMAU
 			ModifySensorDelegate(metadata.Id);
 		}
 
+		/// <summary>
+		/// Switches to the register page in "adding sensor" mode when a pushpin is clicked
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		public void AddSensorOnClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
 		{
 			Map map = sender as Map;

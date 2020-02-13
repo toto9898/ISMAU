@@ -11,13 +11,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>6</PollingInterval>
-    <DataAsString>112</DataAsString>
-    <Data>112</Data>
+    <DataAsString>106</DataAsString>
+    <Data>106</Data>
     <Boundaries>
-      <Min>0</Min>
-      <Max>0</Max>
+      <Min>99</Min>
+      <Max>100</Max>
     </Boundaries>
-    <Decibels>112</Decibels>
+    <Decibels>106</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>bb                  </Name>
@@ -30,13 +30,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>5</PollingInterval>
-    <DataAsString>13</DataAsString>
-    <Data>13</Data>
+    <DataAsString>89</DataAsString>
+    <Data>89</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Humidity>13</Humidity>
+    <Humidity>89</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>cc                  </Name>
@@ -49,13 +49,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>7</PollingInterval>
-    <DataAsString>16</DataAsString>
-    <Data>16</Data>
+    <DataAsString>4</DataAsString>
+    <Data>4</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>0</Max>
     </Boundaries>
-    <Degrees>16</Degrees>
+    <Degrees>4</Degrees>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
     <Name>new one                                           </Name>
@@ -68,8 +68,8 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1000</PollingInterval>
-    <DataAsString>1</DataAsString>
-    <IsClosed>true</IsClosed>
+    <DataAsString>0</DataAsString>
+    <IsClosed>false</IsClosed>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
     <Name>one more new                                      </Name>
@@ -84,5 +84,24 @@
     <PollingInterval>1000</PollingInterval>
     <DataAsString>1</DataAsString>
     <IsClosed>true</IsClosed>
+  </Sensor>
+  <Sensor xsi:type="NoiseSensor">
+    <Name>Kyustendil                                        </Name>
+    <Description>Alex                                              </Description>
+    <Location>
+      <Latitude>42.28</Latitude>
+      <Longitude>22.69</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
+    </Location>
+    <TickOff>0</TickOff>
+    <PollingInterval>1000</PollingInterval>
+    <DataAsString>101</DataAsString>
+    <Data>101</Data>
+    <Boundaries>
+      <Min>0</Min>
+      <Max>0</Max>
+    </Boundaries>
+    <Decibels>101</Decibels>
   </Sensor>
 </ArrayOfSensor>

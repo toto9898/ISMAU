@@ -18,8 +18,17 @@ namespace ISMAU
 	/// <summary>
 	/// Interaction logic for HomePage.xaml
 	/// </summary>
+	/// <remarks>
+	/// This is the starting page of the app.
+	/// It will contain a map with all the sensors 
+	/// and a short description of the purpose of the app
+	/// </remarks>
 	public partial class HomePage : Page
 	{
+		/// <summary>
+		/// Sets the map in this page to the given mapPage
+		/// </summary>
+		/// <param name="mapPage"></param>
 		public HomePage(MapPage mapPage)
 		{
 			InitializeComponent();

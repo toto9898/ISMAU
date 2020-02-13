@@ -8,22 +8,40 @@ using System.Windows.Controls;
 
 namespace ISMAU.DATA
 {
+    /// <summary>
+    /// This class represents a noise sensor
+    /// </summary>
     public class NoiseSensor : BoundedSensor<int>
     {
+        /// <summary>
+        /// Holds the decibels measured from the sensor
+        /// </summary>
 		public int Decibels { get => Data; set => Data = value; }
 
+        /// <summary>
+        /// Constructs the object with the given data
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="rangeBoundaries"></param>
         public NoiseSensor(SensorData data, RangeBoundaries<int> rangeBoundaries)
             : base(data, rangeBoundaries)
         {
             Decibels = 0;
         }
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public NoiseSensor()
             : base()
         {
             Decibels = 0;
         }
 
+        /// <summary>
+        /// Copy constructor
+        /// </summary>
+        /// <param name="sensor"></param>
         public NoiseSensor(NoiseSensor sensor)
             : base(sensor)
         {

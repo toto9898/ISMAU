@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace ISMAU.FUNCTIONALITY
 {
+    /// <summary>
+    /// Holds the data to initialize the 
+    /// </summary>
     public struct PushpinMetadata
     {
         public string Type;

@@ -8,10 +8,20 @@ using System.Windows.Controls;
 
 namespace ISMAU.DATA
 {
+    /// <summary>
+    /// This class represents a door sensor
+    /// </summary>
     public class DoorSensor : Sensor
     {
+        /// <summary>
+        /// It's true iff the door is closed
+        /// </summary>
         public bool IsClosed { get; set; }
 
+        /// <summary>
+        /// Constructs the object with the given data
+        /// </summary>
+        /// <param name="data"></param>
         public DoorSensor(SensorData data)
             : base(data)
         {
@@ -19,12 +29,19 @@ namespace ISMAU.DATA
             IsClosed = true;
         }
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public DoorSensor()
             : base()
         {
             IsClosed = true;
         }
 
+        /// <summary>
+        /// Copy constructor
+        /// </summary>
+        /// <param name="sensor"></param>
         public DoorSensor(DoorSensor sensor)
             : base(sensor)
         {

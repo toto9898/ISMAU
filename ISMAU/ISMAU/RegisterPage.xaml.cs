@@ -21,31 +21,42 @@ namespace ISMAU
     /// <summary>
     /// Interaction logic for RegisterPage.xaml
     /// </summary>
+    /// <remarks>
+    /// This page has fields for the sensor members.
+    /// Depending on the used consrtuctor, 
+    /// the page will have the option to add or modify the sensor
+    /// with the data in the fields
+    /// </remarks>
     public partial class RegisterPage : Page
     {
+        /// <summary>
+        /// Refference to the sensorLogic from the MainWndow.
+        /// </summary>
         private SensorLogic logic;
+        /// <summary>
+        /// The sensor
+        /// </summary>
         private Sensor sensor;
 
-        public RegisterPage(SensorLogic sensorLogic, Sensor currentSensor = null)
+        /// <summary>
+        /// Constructor which sets the page for adding a sensor
+        /// </summary>
+        /// <param name="sensorLogic"></param>
+        public RegisterPage(SensorLogic sensorLogic)
         {
             InitializeComponent();
             logic = sensorLogic;
-            sensor = currentSensor;
 
-            if (sensor != null)
-            {
-                InitializeTextFields(sensor);
-                sensorTypeChooser.IsEnabled = false;
-                AddBtn.Visibility = Visibility.Hidden;
-                txtName.IsEnabled = false;
-            }
-            else
-            {
-                ModifyBtn.Visibility = Visibility.Hidden;
-                AddBtn.IsEnabled = true;
-            }
+            ModifyBtn.Visibility = Visibility.Hidden;
+            AddBtn.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Constructor which sets the page for adding a sensor,
+        /// but with some already known data, which is filled in the fields
+        /// </summary>
+        /// <param name="sensorLogic"></param>
+        /// <param name="knownData"></param>
         public RegisterPage(SensorLogic sensorLogic, SensorData knownData) : this(sensorLogic)
         {
             txtName.Value = knownData.Name;
@@ -56,6 +67,29 @@ namespace ISMAU
             numPoll.Value = knownData.PollingInterval;
         }
 
+        /// <summary>
+        /// Constructor which sets the page for modifying a sensor
+        /// </summary>
+        /// <param name="sensorLogic"></param>
+        /// <param name="currentSensor"></param>
+        public RegisterPage(SensorLogic sensorLogic, Sensor currentSensor)
+        {
+            InitializeComponent();
+            logic = sensorLogic;
+            sensor = currentSensor;
+
+            InitializeTextFields(sensor);
+
+            sensorTypeChooser.IsEnabled = false;
+            AddBtn.Visibility = Visibility.Hidden;
+            txtName.IsEnabled = false;
+        }
+
+        /// <summary>
+        /// This function adds a sensor with the data from the fields to the collection of sensors
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SensorData data = new SensorData
@@ -75,6 +109,10 @@ namespace ISMAU
                 logic.SaveState();
         }
 
+        /// <summary>
+        /// Initializes the text fields with the sensor data
+        /// </summary>
+        /// <param name="sensor"></param>
         private void InitializeTextFields(Sensor sensor)
         {
             if (sensor != null)
@@ -103,6 +141,11 @@ namespace ISMAU
             }
         }
 
+        /// <summary>
+        /// This function modifies the sensor with the new data from the fields
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Modify_Click(object sender, RoutedEventArgs e)
         {
             SensorData data = new SensorData

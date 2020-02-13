@@ -8,23 +8,40 @@ using System.Windows.Controls;
 
 namespace ISMAU.DATA
 {
+    /// <summary>
+    /// This class represents a el power sensor
+    /// </summary>
     public class ElPowerSensor : BoundedSensor<int>
     {
+        /// <summary>
+        /// Holds the wats measured from the sensor
+        /// </summary>
+        public int Wats { get => Data; set => Data = value; }
 
-		public int Wats { get => Data; set => Data = value; }
-
+        /// <summary>
+        /// Constructs the object with the given data
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="rangeBoundaries"></param>
         public ElPowerSensor(SensorData data, RangeBoundaries<int> rangeBoundaries)
             : base(data, rangeBoundaries)
         {
             Wats = -1;
         }
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public ElPowerSensor()
             : base()
         {
             Wats = -1;
         }
 
+        /// <summary>
+        /// Copy constructor
+        /// </summary>
+        /// <param name="sensor"></param>
         public ElPowerSensor(ElPowerSensor sensor)
             : base(sensor)
         {

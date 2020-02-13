@@ -19,23 +19,53 @@ namespace ISMAU
     /// <summary>
     /// Interaction logic for ViewPage.xaml
     /// </summary>
+    /// <remarks>
+    /// This page shows live visual representation of a sensor
+    /// </remarks>
     public partial class ViewPage : Page
     {
+        /// <summary>
+        /// The function which will call the API and update the data the sensor passed
+        /// </summary>
         private Func<Sensor, Task> updadeSensor;
-
+        /// <summary>
+        /// The sensor for visualization
+        /// </summary>
         public Sensor Sensor { get; set; }
 
+        private System.Threading.Timer timer;
+
+        /// <summary>
+        /// This constructor
+        /// - Sets the sensor and the function for the updating of a sensor
+        /// - Sets the XAML values with the sensor's data
+        /// </summary>
+        /// <param name="sensor"></param>
+        /// <param name="update"></param>
         public ViewPage(Sensor sensor, Func<Sensor, Task> update)
         {
             InitializeComponent();
             Sensor = sensor;
             updadeSensor = update;
 
+            
+
+
             SetBoundaries();
 
+            var startTimeSpan = TimeSpan.Zero;
+            var periodTimeSpan = TimeSpan.FromMilliseconds(sensor.PollingInterval);
+
+            timer = new System.Threading.Timer(async (e) =>
+            {
+               await updadeSensor(sensor);
+            }, null, startTimeSpan, periodTimeSpan);
 
         }
 
+        /// <summary>
+        /// Sets the bounds of the gauge with the sensor Boundaries
+        /// </summary>
         private void SetBoundaries()
         {
             if (Sensor is ElPowerSensor e)
