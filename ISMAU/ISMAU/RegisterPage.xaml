@@ -8,13 +8,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RegisterPage"
-	  Background="DarkGray">
+	  Background="White">
 
 	<Page.Resources>
 		<Style TargetType="Label" x:Key="lblStyle">
-			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="HorizontalAlignment" Value="Left"/>
 			<Setter Property="VerticalAlignment" Value="Center"/>
-			<Setter Property="FontSize" Value="26"/>
+			<Setter Property="FontSize" Value="16"/>
 		</Style>
 		<Style TargetType="telerik:RadMaskedTextInput" x:Key="txtInputStyle">
 			<Setter Property="Margin" Value="10"/>
@@ -37,7 +37,7 @@
 		<local:SensorTypeToMinimumAllowedValueConverter x:Key="minAllowedValue"/>
 	</Page.Resources>
 
-	<Grid>
+	<Grid Margin="15">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="*"/>
@@ -52,35 +52,37 @@
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
 			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
-		<Label Grid.Row="0" Grid.Column="0" Content="Choose Type" Style="{StaticResource lblStyle}"/>
-		<telerik:RadComboBox x:Name="sensorTypeChooser" Grid.Row="0" Grid.Column="1" Margin="10">
+		<Label Grid.Row="0" Grid.Column="1" Content="Choose Type" Style="{StaticResource lblStyle}"/>
+		<telerik:RadComboBox x:Name="sensorTypeChooser" Grid.Row="0" Grid.Column="2" Margin="10">
 			<telerik:RadComboBoxItem Content="DoorSensor"/>
 			<telerik:RadComboBoxItem Content="ElPowerSensor"/>
 			<telerik:RadComboBoxItem Content="NoiseSensor"/>
 			<telerik:RadComboBoxItem Content="HumiditySensor"/>
 			<telerik:RadComboBoxItem Content="TemperatureSensor" Margin="0"/>
 		</telerik:RadComboBox>
-		<Label Grid.Row="1" Grid.Column="0" Content="Enter Name" Style="{StaticResource lblStyle}"/>
-        <telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="1" Mask="a50" Style="{StaticResource txtInputStyle}" 
+		<Label Grid.Row="1" Grid.Column="1" Content="Enter Name" Style="{StaticResource lblStyle}"/>
+        <telerik:RadMaskedTextInput x:Name="txtName" Grid.Row="1" Grid.Column="2" Mask="a50" Style="{StaticResource txtInputStyle}" 
 				Placeholder=" "/>
-		<Label Grid.Row="2" Grid.Column="0" Content="Enter Description" Style="{StaticResource lblStyle}"/>
-        <telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="1" Mask="a50" Style="{StaticResource txtInputStyle}"
+		<Label Grid.Row="2" Grid.Column="1" Content="Enter Description" Style="{StaticResource lblStyle}"/>
+        <telerik:RadMaskedTextInput x:Name="txtDesc" Grid.Row="2" Grid.Column="2" Mask="a50" Style="{StaticResource txtInputStyle}"
                 Placeholder=" "/>
-		<Label Grid.Row="3" Grid.Column="0" Content="Enter Polling interval" Style="{StaticResource lblStyle}"/>
-        <telerik:RadMaskedNumericInput x:Name="numPoll" Grid.Row="3" Grid.Column="1" Style="{StaticResource intInput}" 
+		<Label Grid.Row="3" Grid.Column="1" Content="Enter Polling interval" Style="{StaticResource lblStyle}"/>
+        <telerik:RadMaskedNumericInput x:Name="numPoll" Grid.Row="3" Grid.Column="2" Style="{StaticResource intInput}" 
 				Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Label Grid.Row="4" Grid.Column="0" Content="Enter Latitude" Style="{StaticResource lblStyle}"/>
-		<telerik:RadMaskedNumericInput x:Name="numLat" Grid.Row="4" Grid.Column="1" Style="{StaticResource coordinatesInput}"
+		<Label Grid.Row="4" Grid.Column="1" Content="Enter Latitude" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedNumericInput x:Name="numLat" Grid.Row="4" Grid.Column="2" Style="{StaticResource coordinatesInput}"
 				maskedInput:MaskedInputExtensions.Minimum="-90" maskedInput:MaskedInputExtensions.Maximum="90"
 				Mask="#2.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Label Grid.Row="5" Grid.Column="0" Content="Enter Longtitude" Style="{StaticResource lblStyle}"/>
-		<telerik:RadMaskedNumericInput x:Name="numLong" Grid.Row="5" Grid.Column="1" Style="{StaticResource coordinatesInput}"
+		<Label Grid.Row="5" Grid.Column="1" Content="Enter Longtitude" Style="{StaticResource lblStyle}"/>
+		<telerik:RadMaskedNumericInput x:Name="numLong" Grid.Row="5" Grid.Column="2" Style="{StaticResource coordinatesInput}"
 				maskedInput:MaskedInputExtensions.Minimum="-180" maskedInput:MaskedInputExtensions.Maximum="180"
 				Mask="#3.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Label Grid.Row="6" Grid.Column="0" Content="Enter Maximum Value" Style="{StaticResource lblStyle}"
+		<Label Grid.Row="6" Grid.Column="1" Content="Enter Maximum Value" Style="{StaticResource lblStyle}"
 			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
-		<telerik:RadMaskedNumericInput x:Name="numMaxVal" Grid.Row="6" Grid.Column="1" Margin="10" 
+		<telerik:RadMaskedNumericInput x:Name="numMaxVal" Grid.Row="6" Grid.Column="2" Margin="10" 
 				HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
 				Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"
 				Mask="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource maskTypeConverter}}"
@@ -89,9 +91,9 @@
 				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource minAllowedValue}}"
                 Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Label Grid.Row="7" Grid.Column="0" Content="Enter Minimum Value" Style="{StaticResource lblStyle}"
+		<Label Grid.Row="7" Grid.Column="1" Content="Enter Minimum Value" Style="{StaticResource lblStyle}"
 			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
-		<telerik:RadMaskedNumericInput x:Name="numMinVal" Grid.Row="7" Grid.Column="1" Margin="10"
+		<telerik:RadMaskedNumericInput x:Name="numMinVal" Grid.Row="7" Grid.Column="2" Margin="10"
 				HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
 				Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"
 				Mask="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource maskTypeConverter}}"
@@ -100,7 +102,7 @@
 				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource maxAllowedValue}}"
                 Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-        <Button x:Name="AddBtn"		Grid.Row="8" Grid.Column="0" Margin="10" Content="Add" Click="Add_Click"/>
-        <Button x:Name="ModifyBtn"	Grid.Row="8" Grid.Column="0" Margin="10" Content="Modify" Click="Modify_Click"/>
+        <Button x:Name="AddBtn"		Grid.Row="8" Grid.Column="2" Margin="10" Content="Add" Click="Add_Click"/>
+        <Button x:Name="ModifyBtn"	Grid.Row="8" Grid.Column="2" Margin="10" Content="Modify" Click="Modify_Click"/>
     </Grid>
 </Page>

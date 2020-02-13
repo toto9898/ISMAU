@@ -100,7 +100,7 @@
     <Data>101</Data>
     <Boundaries>
       <Min>0</Min>
-      <Max>0</Max>
+      <Max>100</Max>
     </Boundaries>
     <Decibels>101</Decibels>
   </Sensor>
