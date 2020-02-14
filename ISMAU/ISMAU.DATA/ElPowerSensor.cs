@@ -16,7 +16,7 @@ namespace ISMAU.DATA
         /// <summary>
         /// Holds the wats measured from the sensor
         /// </summary>
-        public int Wats { get => Data; set => Data = value; }
+        public int Watts { get => Data; set => Data = value; }
 
         /// <summary>
         /// Constructs the object with the given data
@@ -26,7 +26,7 @@ namespace ISMAU.DATA
         public ElPowerSensor(SensorData data, RangeBoundaries<int> rangeBoundaries)
             : base(data, rangeBoundaries)
         {
-            Wats = -1;
+            Watts = -1;
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace ISMAU.DATA
         public ElPowerSensor()
             : base()
         {
-            Wats = -1;
+            Watts = -1;
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace ISMAU.DATA
         public ElPowerSensor(ElPowerSensor sensor)
             : base(sensor)
         {
-            Wats = sensor.Wats;
+            Watts = sensor.Watts;
         }
 
         public override void GetData()
@@ -56,7 +56,7 @@ namespace ISMAU.DATA
 		{
             int temp = 0;
 			Int32.TryParse(DataAsString, out temp);
-            Wats = temp;
+            Watts = temp;
 		}
 	}
 }

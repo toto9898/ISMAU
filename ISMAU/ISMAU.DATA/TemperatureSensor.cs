@@ -1,12 +1,4 @@
-﻿using Microsoft.Maps.MapControl.WPF;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-
-namespace ISMAU.DATA
+﻿namespace ISMAU.DATA
 {
     /// <summary>
     /// This class represents a temperature sensor
@@ -16,7 +8,7 @@ namespace ISMAU.DATA
         /// <summary>
         /// Holds the decibels measured from the sensor
         /// </summary>
-        public double Degrees { get => Data; set => Data = value; }
+        public double Celsius { get => Data; set => Data = value; }
 
         /// <summary>
         /// Constructs the object with the given data
@@ -26,7 +18,7 @@ namespace ISMAU.DATA
         public TemperatureSensor(SensorData data, RangeBoundaries<double> rangeBoundaries)
             : base(data, rangeBoundaries)
         {
-            Degrees = -239.0;
+            Celsius = -239.0;
         }
 
         /// <summary>
@@ -35,7 +27,7 @@ namespace ISMAU.DATA
         public TemperatureSensor()
             : base()
         {
-            Degrees = -239.0;
+            Celsius = -239.0;
         }
 
         /// <summary>
@@ -45,7 +37,7 @@ namespace ISMAU.DATA
         public TemperatureSensor(TemperatureSensor sensor)
             : base(sensor)
         {
-            Degrees = sensor.Degrees;
+            Celsius = sensor.Celsius;
         }
 
         public override void GetData()
@@ -56,7 +48,7 @@ namespace ISMAU.DATA
 		{
             double temp = 0d;
 			double.TryParse(DataAsString, out temp);
-            Degrees = temp;
+            Celsius = temp;
 		}
 	}
 }
