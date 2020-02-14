@@ -14,7 +14,7 @@
 		<Style TargetType="Label" x:Key="lblStyle">
 			<Setter Property="HorizontalAlignment" Value="Left"/>
 			<Setter Property="VerticalAlignment" Value="Center"/>
-			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="FontSize" Value="15"/>
 		</Style>
 		<Style TargetType="telerik:RadMaskedTextInput" x:Key="txtInputStyle">
 			<Setter Property="Margin" Value="10"/>
@@ -80,27 +80,27 @@
 		<telerik:RadMaskedNumericInput x:Name="numLong" Grid.Row="5" Grid.Column="2" Style="{StaticResource coordinatesInput}"
 				maskedInput:MaskedInputExtensions.Minimum="-180" maskedInput:MaskedInputExtensions.Maximum="180"
 				Mask="#3.2" Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Label Grid.Row="6" Grid.Column="1" Content="Enter Maximum Value" Style="{StaticResource lblStyle}"
+		<Label Grid.Row="6" Grid.Column="1" Content="Enter Minimum Value" Style="{StaticResource lblStyle}"
 			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
-		<telerik:RadMaskedNumericInput x:Name="numMaxVal" Grid.Row="6" Grid.Column="2" Margin="10" 
+		<telerik:RadMaskedNumericInput x:Name="numMinVal" Grid.Row="6" Grid.Column="2" Margin="10"
 				HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
 				Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"
 				Mask="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource maskTypeConverter}}"
-				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
-				Converter={StaticResource maxAllowedValue}}"
 				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource minAllowedValue}}"
+				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
+				Converter={StaticResource maxAllowedValue}}"
                 Placeholder=" " AutoFillNumberGroupSeparators="False"/>
-		<Label Grid.Row="7" Grid.Column="1" Content="Enter Minimum Value" Style="{StaticResource lblStyle}"
+		<Label Grid.Row="7" Grid.Column="1" Content="Enter Maximum Value" Style="{StaticResource lblStyle}"
 			   Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"/>
-		<telerik:RadMaskedNumericInput x:Name="numMinVal" Grid.Row="7" Grid.Column="2" Margin="10"
+		<telerik:RadMaskedNumericInput x:Name="numMaxVal" Grid.Row="7" Grid.Column="2" Margin="10" 
 				HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
 				Visibility="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource rangesVisibilityConverter}}"
 				Mask="{Binding ElementName=sensorTypeChooser, Path=Text, Converter={StaticResource maskTypeConverter}}"
-				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
-				Converter={StaticResource minAllowedValue}}"
 				maskedInput:MaskedInputExtensions.Maximum="{Binding ElementName=sensorTypeChooser, Path=Text,
 				Converter={StaticResource maxAllowedValue}}"
+				maskedInput:MaskedInputExtensions.Minimum="{Binding ElementName=sensorTypeChooser, Path=Text,
+				Converter={StaticResource minAllowedValue}}"
                 Placeholder=" " AutoFillNumberGroupSeparators="False"/>
         <Button x:Name="AddBtn"		Grid.Row="8" Grid.Column="2" Margin="10" Content="Add" Click="Add_Click"/>
         <Button x:Name="ModifyBtn"	Grid.Row="8" Grid.Column="2" Margin="10" Content="Modify" Click="Modify_Click"/>

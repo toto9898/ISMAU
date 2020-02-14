@@ -10,37 +10,37 @@
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <DataAsString>10</DataAsString>
-    <Data>10</Data>
+    <PollingInterval>2</PollingInterval>
+    <DataAsString>3</DataAsString>
+    <Data>3</Data>
     <Boundaries>
-      <Min>99</Min>
+      <Min>0</Min>
       <Max>100</Max>
     </Boundaries>
-    <Decibels>10</Decibels>
+    <Decibels>3</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>bb                  </Name>
-    <Description>bb                  </Description>
+    <Description>bb                                                </Description>
     <Location>
-      <Latitude>3</Latitude>
+      <Latitude>1</Latitude>
       <Longitude>-6</Longitude>
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
-    <PollingInterval>5</PollingInterval>
-    <DataAsString>5</DataAsString>
-    <Data>5</Data>
+    <PollingInterval>1</PollingInterval>
+    <DataAsString>25</DataAsString>
+    <Data>25</Data>
     <Boundaries>
       <Min>0</Min>
-      <Max>0</Max>
+      <Max>50</Max>
     </Boundaries>
-    <Humidity>5</Humidity>
+    <Humidity>25</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>cc                  </Name>
-    <Description>changed again                                     </Description>
+    <Description>changedagain                                      </Description>
     <Location>
       <Latitude>2.99</Latitude>
       <Longitude>-5.96</Longitude>
@@ -49,13 +49,13 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>7</PollingInterval>
-    <DataAsString>6</DataAsString>
-    <Data>6</Data>
+    <DataAsString>17</DataAsString>
+    <Data>17</Data>
     <Boundaries>
-      <Min>0</Min>
-      <Max>0</Max>
+      <Min>14</Min>
+      <Max>58</Max>
     </Boundaries>
-    <Degrees>6</Degrees>
+    <Degrees>17</Degrees>
   </Sensor>
   <Sensor xsi:type="DoorSensor">
     <Name>new one                                           </Name>
@@ -82,8 +82,8 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1000</PollingInterval>
-    <DataAsString>1</DataAsString>
-    <IsClosed>true</IsClosed>
+    <DataAsString>0</DataAsString>
+    <IsClosed>false</IsClosed>
   </Sensor>
   <Sensor xsi:type="NoiseSensor">
     <Name>Kyustendil                                        </Name>
@@ -96,12 +96,31 @@
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1</PollingInterval>
-    <DataAsString>6</DataAsString>
-    <Data>6</Data>
+    <DataAsString>0</DataAsString>
+    <Data>0</Data>
     <Boundaries>
       <Min>0</Min>
       <Max>100</Max>
     </Boundaries>
-    <Decibels>6</Decibels>
+    <Decibels>0</Decibels>
+  </Sensor>
+  <Sensor xsi:type="ElPowerSensor">
+    <Name>El power                                          </Name>
+    <Description>El                                                </Description>
+    <Location>
+      <Latitude>44</Latitude>
+      <Longitude>75</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
+    </Location>
+    <TickOff>0</TickOff>
+    <PollingInterval>0</PollingInterval>
+    <DataAsString>775</DataAsString>
+    <Data>775</Data>
+    <Boundaries>
+      <Min>111111</Min>
+      <Max>100</Max>
+    </Boundaries>
+    <Wats>775</Wats>
   </Sensor>
 </ArrayOfSensor>
