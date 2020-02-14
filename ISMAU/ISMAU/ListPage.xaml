@@ -25,7 +25,8 @@
 						IsReadOnly="True"/>
 				<telerik:GridViewDataColumn Header="Current Values" DataMemberBinding="{Binding DataAsString}" Width="*"
 						IsReadOnly="True"/>
-			</telerik:RadGridView.Columns>
+                <telerik:GridViewCheckBoxColumn Header="Include in report" DataMemberBinding="{Binding TickOff}" Width="*"/>
+            </telerik:RadGridView.Columns>
 		</telerik:RadGridView>
 	</Grid>
 

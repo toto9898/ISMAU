@@ -208,7 +208,7 @@ namespace ISMAU.FUNCTIONALITY
         {
             List<Sensor> OBSensors = new List<Sensor>();
             foreach (var s in Sensors)
-                if (s.OutOfBounds())
+                if (s.TickOff && s.OutOfBounds())
                     OBSensors.Add(s);
 
             return OBSensors;
