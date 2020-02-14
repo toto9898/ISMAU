@@ -49,10 +49,15 @@ namespace ISMAU
             updadeSensor = update;
 
 
-            ValueLbl.Content = 100;
-
+            InitializeLabels();
             SetBoundaries();
+            StartTimer(sensor);
 
+        }
+
+
+        private void StartTimer(Sensor sensor)
+        {
             var startTimeSpan = TimeSpan.Zero;
             var periodTimeSpan = TimeSpan.FromSeconds(sensor.PollingInterval);
 
@@ -65,7 +70,6 @@ namespace ISMAU
                 },
                 null,
                 startTimeSpan, periodTimeSpan);
-
         }
 
         /// <summary>
@@ -105,6 +109,18 @@ namespace ISMAU
                 needle.Value = n.Data;
             else if (Sensor is TemperatureSensor t)
                 needle.Value = t.Data;
+        }
+
+        private void InitializeLabels()
+        {
+            SensorData data = Sensor.GetSensorData();
+
+            TypeLbl.Content = data.Type;
+            NameLbl.Content = data.Name;
+            DescriptionLbl.Content = data.Description;
+            PollingIntervalLbl.Content = data.PollingInterval;
+            LongLbl.Content = data.Location.Longitude;
+            LatLbl.Content = data.Location.Latitude;
         }
 
     }

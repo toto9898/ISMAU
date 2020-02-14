@@ -10,7 +10,20 @@
       Title="ViewPage"
       Background="White">
 
+    <Page.Resources>
+        <Style TargetType="Label" x:Key="lblStyle">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="0.75*"/>
+            <ColumnDefinition Width="1.25*"/>
+        </Grid.ColumnDefinitions>
         <telerik:RadRadialGauge Name="radialGauge" 
                     Width="300" 
                     Height="300">
@@ -24,5 +37,47 @@
             </telerik:RadialScale>
             <telerik:Label x:Name="ValueLbl" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Margin="0 0 0 30"/>
         </telerik:RadRadialGauge>
+
+        <Grid Grid.Column="1"  Margin="0 100">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Type:" Style="{StaticResource lblStyle}"/>
+            <Label Grid.Row="1" Content="Name:" Style="{StaticResource lblStyle}"/>
+            <Label Grid.Row="2" Content="Description:" Style="{StaticResource lblStyle}"/>
+            <Label Grid.Row="3" Content="Polling interval:" Style="{StaticResource lblStyle}"/>
+            <Label Grid.Row="4" Content="Location:" Style="{StaticResource lblStyle}"/>
+        </Grid>
+        <Grid Grid.Column="2" Margin="0 100">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Name="TypeLbl" Style="{StaticResource lblStyle}"/>
+            <Label Grid.Row="1" Name="NameLbl" Style="{StaticResource lblStyle}"/>
+            <Label Grid.Row="2" Name="DescriptionLbl" Style="{StaticResource lblStyle}" />
+            <Label Grid.Row="3" Name="PollingIntervalLbl" Style="{StaticResource lblStyle}"/>
+
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Long:" Style="{StaticResource lblStyle}"/>
+                <Label Grid.Column="1" Name="LongLbl" Style="{StaticResource lblStyle}"/>
+                <Label Grid.Column="2" Content="Lat:" Style="{StaticResource lblStyle}"/>
+                <Label Grid.Column="4" Name="LatLbl" Style="{StaticResource lblStyle}"/>
+
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
