@@ -9,8 +9,8 @@
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
-    <TickOff>0</TickOff>
-    <PollingInterval>1000</PollingInterval>
+    <TickOff>false</TickOff>
+    <PollingInterval>1</PollingInterval>
     <DataAsString>0</DataAsString>
     <IsClosed>false</IsClosed>
   </Sensor>
@@ -23,15 +23,15 @@
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
-    <TickOff>0</TickOff>
+    <TickOff>false</TickOff>
     <PollingInterval>1</PollingInterval>
-    <DataAsString>2551</DataAsString>
-    <Data>2551</Data>
+    <DataAsString>1894</DataAsString>
+    <Data>1894</Data>
     <Boundaries>
       <Min>10</Min>
       <Max>110</Max>
     </Boundaries>
-    <Wats>2551</Wats>
+    <Watts>1894</Watts>
   </Sensor>
   <Sensor xsi:type="NoiseSensor">
     <Name>Noise sensor                                      </Name>
@@ -42,15 +42,15 @@
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
-    <TickOff>0</TickOff>
+    <TickOff>false</TickOff>
     <PollingInterval>1</PollingInterval>
-    <DataAsString>6</DataAsString>
-    <Data>6</Data>
+    <DataAsString>74</DataAsString>
+    <Data>74</Data>
     <Boundaries>
       <Min>-60</Min>
       <Max>60</Max>
     </Boundaries>
-    <Decibels>6</Decibels>
+    <Decibels>74</Decibels>
   </Sensor>
   <Sensor xsi:type="HumiditySensor">
     <Name>Humidity sensor                                   </Name>
@@ -61,15 +61,15 @@
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
-    <TickOff>0</TickOff>
+    <TickOff>false</TickOff>
     <PollingInterval>1</PollingInterval>
-    <DataAsString>80</DataAsString>
-    <Data>80</Data>
+    <DataAsString>82</DataAsString>
+    <Data>82</Data>
     <Boundaries>
       <Min>15</Min>
       <Max>36</Max>
     </Boundaries>
-    <Humidity>80</Humidity>
+    <Humidity>82</Humidity>
   </Sensor>
   <Sensor xsi:type="TemperatureSensor">
     <Name>Temperature sensor                                </Name>
@@ -80,14 +80,14 @@
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
-    <TickOff>0</TickOff>
+    <TickOff>false</TickOff>
     <PollingInterval>1</PollingInterval>
-    <DataAsString>-6</DataAsString>
-    <Data>-6</Data>
+    <DataAsString>18</DataAsString>
+    <Data>18</Data>
     <Boundaries>
       <Min>-15</Min>
       <Max>54</Max>
     </Boundaries>
-    <Degrees>-6</Degrees>
+    <Celsius>18</Celsius>
   </Sensor>
 </ArrayOfSensor>

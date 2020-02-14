@@ -71,8 +71,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BasicMeter.xaml.cs">
+    <Compile Include="Data Visualization\BasicMeter.xaml.cs">
       <DependentUpon>BasicMeter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data Visualization\DoorDataVisualization.xaml.cs">
+      <DependentUpon>DoorDataVisualization.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListPage.xaml.cs">
       <DependentUpon>ListPage.xaml</DependentUpon>
@@ -90,7 +93,11 @@
     <Compile Include="ViewPage.xaml.cs">
       <DependentUpon>ViewPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="BasicMeter.xaml">
+    <Page Include="Data Visualization\BasicMeter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Data Visualization\DoorDataVisualization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,5 +174,6 @@
       <Name>ISMAU.FUNCTIONALITY</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

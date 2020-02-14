@@ -63,7 +63,7 @@ namespace ISMAU.DATA
         /// <summary>
         /// The time between each refresh of the sensor's data
         /// </summary>
-        public int PollingInterval { get; set; } = 1000;
+        public int PollingInterval { get; set; } = 1;
 
         public ulong Id { get; }
         public string DataAsString { get; set; }

@@ -24,7 +24,7 @@ namespace ISMAU
     /// This page shows live visual representation of a sensor
     /// </remarks>
     public partial class ViewPage : Page
-    {       
+    {
         /// <summary>
         /// This constructor
         /// - Sets the sensor and the function for the updating of a sensor
@@ -36,7 +36,16 @@ namespace ISMAU
         {
             InitializeComponent();
 
-            basicMeter.InitializeMeter(sensor, update);
+            if (sensor is DoorSensor doorSensor)
+            {
+                basicMeter.Visibility = Visibility.Hidden;
+                stateIndicator.InitializeData(doorSensor, update);
+            }
+            else
+            {
+                stateIndicator.Visibility = Visibility.Hidden;
+                basicMeter.InitializeMeter(sensor, update);
+            }
 
             InitializeLabels(sensor);
         }

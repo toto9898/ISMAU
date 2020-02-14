@@ -26,7 +26,8 @@
         </Grid.ColumnDefinitions>
         
         <local:BasicMeter x:Name="basicMeter"/>
-        
+        <local:DoorDataVisualization x:Name="stateIndicator" Margin="90 70"/>
+
         <Grid Grid.Column="1"  Margin="0 100">
             <Grid.RowDefinitions>
                 <RowDefinition/>
