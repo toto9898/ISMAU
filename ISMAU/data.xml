@@ -1,82 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSensor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Sensor xsi:type="NoiseSensor">
-    <Name>aa                  </Name>
-    <Description>gigidi                                            </Description>
-    <Location>
-      <Latitude>4</Latitude>
-      <Longitude>-2</Longitude>
-      <Altitude>0</Altitude>
-      <AltitudeReference>Ground</AltitudeReference>
-    </Location>
-    <TickOff>0</TickOff>
-    <PollingInterval>2</PollingInterval>
-    <DataAsString>3</DataAsString>
-    <Data>3</Data>
-    <Boundaries>
-      <Min>0</Min>
-      <Max>100</Max>
-    </Boundaries>
-    <Decibels>3</Decibels>
-  </Sensor>
-  <Sensor xsi:type="HumiditySensor">
-    <Name>bb                  </Name>
-    <Description>bb                                                </Description>
-    <Location>
-      <Latitude>1</Latitude>
-      <Longitude>-6</Longitude>
-      <Altitude>0</Altitude>
-      <AltitudeReference>Ground</AltitudeReference>
-    </Location>
-    <TickOff>0</TickOff>
-    <PollingInterval>1</PollingInterval>
-    <DataAsString>25</DataAsString>
-    <Data>25</Data>
-    <Boundaries>
-      <Min>0</Min>
-      <Max>50</Max>
-    </Boundaries>
-    <Humidity>25</Humidity>
-  </Sensor>
-  <Sensor xsi:type="TemperatureSensor">
-    <Name>cc                  </Name>
-    <Description>changedagain                                      </Description>
-    <Location>
-      <Latitude>2.99</Latitude>
-      <Longitude>-5.96</Longitude>
-      <Altitude>0</Altitude>
-      <AltitudeReference>Ground</AltitudeReference>
-    </Location>
-    <TickOff>0</TickOff>
-    <PollingInterval>7</PollingInterval>
-    <DataAsString>17</DataAsString>
-    <Data>17</Data>
-    <Boundaries>
-      <Min>14</Min>
-      <Max>58</Max>
-    </Boundaries>
-    <Degrees>17</Degrees>
-  </Sensor>
   <Sensor xsi:type="DoorSensor">
-    <Name>new one                                           </Name>
-    <Description>pushpintest 12312                                 </Description>
+    <Name>door sensor                                       </Name>
+    <Description>doorsensor                                        </Description>
     <Location>
-      <Latitude>43.01</Latitude>
-      <Longitude>24.09</Longitude>
-      <Altitude>0</Altitude>
-      <AltitudeReference>Ground</AltitudeReference>
-    </Location>
-    <TickOff>0</TickOff>
-    <PollingInterval>1000</PollingInterval>
-    <DataAsString>1</DataAsString>
-    <IsClosed>true</IsClosed>
-  </Sensor>
-  <Sensor xsi:type="DoorSensor">
-    <Name>one more new                                      </Name>
-    <Description>pushpin test                                      </Description>
-    <Location>
-      <Latitude>42.82</Latitude>
-      <Longitude>25.72</Longitude>
+      <Latitude>33.42</Latitude>
+      <Longitude>-65.11</Longitude>
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
@@ -85,42 +14,80 @@
     <DataAsString>0</DataAsString>
     <IsClosed>false</IsClosed>
   </Sensor>
-  <Sensor xsi:type="NoiseSensor">
-    <Name>Kyustendil                                        </Name>
-    <Description>Alex                                              </Description>
+  <Sensor xsi:type="ElPowerSensor">
+    <Name>El power sensor                                   </Name>
+    <Description>Elpowersensor                                     </Description>
     <Location>
-      <Latitude>42.28</Latitude>
-      <Longitude>22.69</Longitude>
+      <Latitude>62.14</Latitude>
+      <Longitude>10.27</Longitude>
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
     <PollingInterval>1</PollingInterval>
-    <DataAsString>0</DataAsString>
-    <Data>0</Data>
+    <DataAsString>2551</DataAsString>
+    <Data>2551</Data>
     <Boundaries>
-      <Min>0</Min>
-      <Max>100</Max>
+      <Min>10</Min>
+      <Max>110</Max>
     </Boundaries>
-    <Decibels>0</Decibels>
+    <Wats>2551</Wats>
   </Sensor>
-  <Sensor xsi:type="ElPowerSensor">
-    <Name>El power                                          </Name>
-    <Description>El                                                </Description>
+  <Sensor xsi:type="NoiseSensor">
+    <Name>Noise sensor                                      </Name>
+    <Description>Noise sensor   ss</Description>
     <Location>
-      <Latitude>44</Latitude>
-      <Longitude>75</Longitude>
+      <Latitude>14</Latitude>
+      <Longitude>20</Longitude>
       <Altitude>0</Altitude>
       <AltitudeReference>Ground</AltitudeReference>
     </Location>
     <TickOff>0</TickOff>
-    <PollingInterval>0</PollingInterval>
-    <DataAsString>775</DataAsString>
-    <Data>775</Data>
+    <PollingInterval>1</PollingInterval>
+    <DataAsString>6</DataAsString>
+    <Data>6</Data>
     <Boundaries>
-      <Min>111111</Min>
-      <Max>100</Max>
+      <Min>-60</Min>
+      <Max>60</Max>
     </Boundaries>
-    <Wats>775</Wats>
+    <Decibels>6</Decibels>
+  </Sensor>
+  <Sensor xsi:type="HumiditySensor">
+    <Name>Humidity sensor                                   </Name>
+    <Description>Humiditysensor                                    </Description>
+    <Location>
+      <Latitude>55</Latitude>
+      <Longitude>22</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
+    </Location>
+    <TickOff>0</TickOff>
+    <PollingInterval>1</PollingInterval>
+    <DataAsString>80</DataAsString>
+    <Data>80</Data>
+    <Boundaries>
+      <Min>15</Min>
+      <Max>36</Max>
+    </Boundaries>
+    <Humidity>80</Humidity>
+  </Sensor>
+  <Sensor xsi:type="TemperatureSensor">
+    <Name>Temperature sensor                                </Name>
+    <Description>Temperaturesensor                                 </Description>
+    <Location>
+      <Latitude>52</Latitude>
+      <Longitude>34</Longitude>
+      <Altitude>0</Altitude>
+      <AltitudeReference>Ground</AltitudeReference>
+    </Location>
+    <TickOff>0</TickOff>
+    <PollingInterval>1</PollingInterval>
+    <DataAsString>-6</DataAsString>
+    <Data>-6</Data>
+    <Boundaries>
+      <Min>-15</Min>
+      <Max>54</Max>
+    </Boundaries>
+    <Degrees>-6</Degrees>
   </Sensor>
 </ArrayOfSensor>

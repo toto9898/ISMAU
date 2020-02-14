@@ -59,8 +59,8 @@ namespace ISMAU
         /// <param name="knownData"></param>
         public RegisterPage(SensorLogic sensorLogic, SensorData knownData) : this(sensorLogic)
         {
-            txtName.Value = knownData.Name;
-            txtDesc.Value = knownData.Description;
+            txtName.Text = knownData.Name;
+            txtDesc.Text = knownData.Description;
             numLat.Value = knownData.Location.Latitude;
             numLong.Value = knownData.Location.Longitude;
             sensorTypeChooser.Text = knownData.Type;
@@ -117,8 +117,8 @@ namespace ISMAU
         {
             if (sensor != null)
             {
-                txtName.Value = sensor.Name;
-                txtDesc.Value = sensor.Description;
+                txtName.Text = sensor.Name;
+                txtDesc.Text = sensor.Description;
                 numLat.Value = sensor.Location.Latitude;
                 numLong.Value = sensor.Location.Longitude;
                 sensorTypeChooser.Text = sensor.GetType().Name;
@@ -150,32 +150,12 @@ namespace ISMAU
         {
             SensorData data = new SensorData
             {
-                Name = txtName.Text,
                 Description = txtDesc.Text,
                 Location = new Location(numLat.Value ?? default(double), numLong.Value ?? default(double)),
-                Type = sensorTypeChooser.Text,
                 PollingInterval = Int32.Parse(numPoll.Text)
             };
 
-            sensor = logic.Sensors.Find(sen => sen.Id == sensor.Id);
-            sensor.Description = data.Description;
-            sensor.Location = data.Location;
-            sensor.PollingInterval = data.PollingInterval;
-            if (sensor is BoundedSensor<int> s)
-            {
-                s.Boundaries.Min = Convert.ToInt32(numMinVal.Value);
-                s.Boundaries.Max = Convert.ToInt32(numMaxVal.Value);
-            }
-            else if (sensor is BoundedSensor<float> s2)
-            {
-                s2.Boundaries.Min = (float)numMinVal.Value;
-                s2.Boundaries.Max = (float)numMaxVal.Value;
-            }
-            else if (sensor is BoundedSensor<double> s3)
-            {
-                s3.Boundaries.Min = numMinVal.Value ?? default(double);
-                s3.Boundaries.Max = numMaxVal.Value ?? default(double);
-            }
+            logic.ModifySensor(sensor, data, numMinVal.Text, numMaxVal.Text);
             logic.SaveState();
         }
 

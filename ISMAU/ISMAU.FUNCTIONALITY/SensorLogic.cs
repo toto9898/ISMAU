@@ -214,7 +214,60 @@ namespace ISMAU.FUNCTIONALITY
 
             return OBSensors;
         }
-        
+
+        /// <summary>
+        /// Modifies a sensor's data with the given data
+        /// </summary>
+        /// <param name="sensor">The sensor to be modified</param>
+        /// <param name="data">The new data</param>
+        /// <param name="minVal">The new minimal bounary value</param>
+        /// <param name="maxVal">The new maximal bounary value</param>
+        public void ModifySensor(Sensor sensor, SensorData data, string minVal, string maxVal)
+        {
+            sensor.Description = data.Description;
+            sensor.Location = data.Location;
+            sensor.PollingInterval = data.PollingInterval;
+
+            minVal = minVal.Trim();
+            maxVal = maxVal.Trim();
+            if (minVal[0] == '-' && minVal[1] == ' ')
+                minVal = minVal.Remove(1, 1);
+            if (maxVal[0] == '-' && maxVal[1] == ' ')
+                maxVal = maxVal.Remove(1, 1);
+
+            if (sensor is BoundedSensor<int> s)
+            {
+                s.Boundaries.Min = Int32.Parse(minVal);
+                s.Boundaries.Max = Int32.Parse(maxVal);
+            }
+            else if (sensor is BoundedSensor<float> s2)
+            {
+                s2.Boundaries.Min = float.Parse(minVal);
+                s2.Boundaries.Max = float.Parse(maxVal);
+            }
+            else if (sensor is BoundedSensor<double> s3)
+            {
+                s3.Boundaries.Min = Double.Parse(minVal);
+                s3.Boundaries.Max = Double.Parse(maxVal);
+            }
+
+            //if (sensor is BoundedSensor<int> s)
+            //{
+            //    s.Boundaries.Min = (int)(minVal ?? default);
+            //    s.Boundaries.Max = (int)(maxVal ?? default);
+            //}
+            //else if (sensor is BoundedSensor<float> s2)
+            //{
+            //    s2.Boundaries.Min = (float)(minVal ?? default);
+            //    s2.Boundaries.Max = (float)(maxVal ?? default);
+            //}
+            //else if (sensor is BoundedSensor<double> s3)
+            //{
+            //    s3.Boundaries.Min = minVal ?? default;
+            //    s3.Boundaries.Max = maxVal ?? default;
+            //}
+        }
+
         #endregion
     }
 }

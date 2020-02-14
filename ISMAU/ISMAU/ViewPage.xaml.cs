@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,12 +29,11 @@ namespace ISMAU
         /// The function which will call the API and update the data the sensor passed
         /// </summary>
         private Func<Sensor, Task> updadeSensor;
+        
         /// <summary>
-        /// The sensor for visualization
+        /// Timer for refreshing the sensor's data
         /// </summary>
-        public Sensor Sensor { get; set; }
-
-        private System.Threading.Timer timer;
+        public Timer Timer { get; set; }
 
         /// <summary>
         /// This constructor
@@ -45,28 +45,28 @@ namespace ISMAU
         public ViewPage(Sensor sensor, Func<Sensor, Task> update)
         {
             InitializeComponent();
-            Sensor = sensor;
             updadeSensor = update;
 
-
-            InitializeLabels();
-            SetBoundaries();
+            InitializeLabels(sensor);
+            SetBoundaries(sensor);
             StartTimer(sensor);
-
         }
 
-
+        /// <summary>
+        /// Starts a Timer for the updating of the sensor data 
+        /// </summary>
+        /// <param name="sensor"></param>
         private void StartTimer(Sensor sensor)
         {
             var startTimeSpan = TimeSpan.Zero;
             var periodTimeSpan = TimeSpan.FromSeconds(sensor.PollingInterval);
 
-            timer = new System.Threading.Timer(
+            Timer = new System.Threading.Timer(
                 async (e) =>
                 {
                     await updadeSensor(sensor);
                     Application.Current.Dispatcher.Invoke(() => ValueLbl.Content = sensor.DataAsString);
-                    Application.Current.Dispatcher.Invoke(SetNeedleData);
+                    Application.Current.Dispatcher.Invoke(() => SetNeedleData(sensor));
                 },
                 null,
                 startTimeSpan, periodTimeSpan);
@@ -75,45 +75,53 @@ namespace ISMAU
         /// <summary>
         /// Sets the bounds of the gauge with the sensor Boundaries
         /// </summary>
-        private void SetBoundaries()
+        private void SetBoundaries(Sensor sensor)
         {
-            if (Sensor is ElPowerSensor e)
+            if (sensor is ElPowerSensor e)
             {
                 scale.Min = e.Boundaries.Min;
                 scale.Max = e.Boundaries.Max;
             }
-            if (Sensor is HumiditySensor h)
+            if (sensor is HumiditySensor h)
             {
                 scale.Min = h.Boundaries.Min;
                 scale.Max = h.Boundaries.Max;
             }
-            if (Sensor is NoiseSensor n)
+            if (sensor is NoiseSensor n)
             {
                 scale.Min = n.Boundaries.Min;
                 scale.Max = n.Boundaries.Max;
             }
-            if (Sensor is TemperatureSensor t)
+            if (sensor is TemperatureSensor t)
             {
                 scale.Min = t.Boundaries.Min;
                 scale.Max = t.Boundaries.Max;
             }
         }
 
-        private void SetNeedleData()
+        /// <summary>
+        /// Sets the meter needle value to the sensor data
+        /// </summary>
+        /// <param name="sensor"></param>
+        private void SetNeedleData(Sensor sensor)
         {
-            if (Sensor is ElPowerSensor e)
+            if (sensor is ElPowerSensor e)
                 needle.Value = e.Data;
-            else if (Sensor is HumiditySensor h)
+            else if (sensor is HumiditySensor h)
                 needle.Value = h.Data;
-            else if (Sensor is NoiseSensor n)
+            else if (sensor is NoiseSensor n)
                 needle.Value = n.Data;
-            else if (Sensor is TemperatureSensor t)
+            else if (sensor is TemperatureSensor t)
                 needle.Value = t.Data;
         }
 
-        private void InitializeLabels()
+        /// <summary>
+        /// Initializes the labels with the data from the sensor
+        /// </summary>
+        /// <param name="sensor"></param>
+        private void InitializeLabels(Sensor sensor)
         {
-            SensorData data = Sensor.GetSensorData();
+            SensorData data = sensor.GetSensorData();
 
             TypeLbl.Content = data.Type;
             NameLbl.Content = data.Name;
@@ -122,6 +130,5 @@ namespace ISMAU
             LongLbl.Content = data.Location.Longitude;
             LatLbl.Content = data.Location.Latitude;
         }
-
     }
 }

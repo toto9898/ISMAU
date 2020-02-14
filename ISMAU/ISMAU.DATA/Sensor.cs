@@ -18,7 +18,7 @@ namespace ISMAU.DATA
         public string Name = string.Empty;
         public string Description = string.Empty;
         public Location Location = new Location();
-        public float TickOff = 0f;
+        public bool TickOff = false;
         public string Type = string.Empty;
         public int PollingInterval = 1000;
     }
@@ -44,9 +44,7 @@ namespace ISMAU.DATA
     {
         private string name;
         private string description;
-        private static UInt64 sensorCounter = 0;
-
-        private readonly UInt64 id;
+        private static ulong sensorCounter = 0;
 
         public string Name
         {
@@ -60,14 +58,14 @@ namespace ISMAU.DATA
         }
         public Location Location { get; set; }
 
-        public float TickOff { get; set; }
+        public bool TickOff { get; set; }
 
         /// <summary>
         /// The time between each refresh of the sensor's data
         /// </summary>
         public int PollingInterval { get; set; } = 1000;
 
-        public ulong Id => id;
+        public ulong Id { get; }
         public string DataAsString { get; set; }
 
         /// <summary>
@@ -76,7 +74,7 @@ namespace ISMAU.DATA
         /// <param name="data"></param>
         public Sensor(SensorData data)
         {
-            id = sensorCounter++;
+            Id = sensorCounter++;
             Name = data.Name;
             Description = data.Description;
             Location = data.Location;
@@ -90,7 +88,6 @@ namespace ISMAU.DATA
         public Sensor()
             : this(new SensorData())
         {
-
         }
 
         /// <summary>
@@ -124,6 +121,19 @@ namespace ISMAU.DATA
             data.PollingInterval = PollingInterval;
 
             return data;
+        }
+
+        /// <summary>
+        /// Sets the sensors data to "data"
+        /// </summary>
+        /// <param name="data">The new data</param>
+        public void SetSensorData(SensorData data)
+        {
+            Name = data.Name;
+            Description = data.Description;
+            Location = data.Location;
+            TickOff = data.TickOff;
+            PollingInterval = data.PollingInterval;
         }
 
         /// <summary>
