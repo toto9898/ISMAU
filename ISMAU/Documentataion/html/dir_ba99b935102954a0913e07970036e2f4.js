@@ -1,5 +1,6 @@
 var dir_ba99b935102954a0913e07970036e2f4 =
 [
+    [ "Data Visualization", "dir_99417eb0abf5609ea54f43d49617dde6.html", "dir_99417eb0abf5609ea54f43d49617dde6" ],
     [ "Views", "dir_835078818278977e741707e4e3e9af62.html", "dir_835078818278977e741707e4e3e9af62" ],
     [ "App.g.cs", "_app_8g_8cs.html", [
       [ "App", "class_i_s_m_a_u_1_1_app.html", "class_i_s_m_a_u_1_1_app" ]
@@ -7,9 +8,13 @@ var dir_ba99b935102954a0913e07970036e2f4 =
     [ "App.g.i.cs", "_app_8g_8i_8cs.html", [
       [ "App", "class_i_s_m_a_u_1_1_app.html", "class_i_s_m_a_u_1_1_app" ]
     ] ],
-    [ "GeneratedInternalTypeHelper.g.cs", "_generated_internal_type_helper_8g_8cs.html", [
-      [ "GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", "class_xaml_generated_namespace_1_1_generated_internal_type_helper" ]
+    [ "BasicMeter.g.i.cs", "_basic_meter_8g_8i_8cs.html", [
+      [ "BasicMeter", "class_i_s_m_a_u_1_1_basic_meter.html", "class_i_s_m_a_u_1_1_basic_meter" ]
     ] ],
+    [ "DoorDataVisualization.g.i.cs", "_door_data_visualization_8g_8i_8cs.html", [
+      [ "DoorDataVisualization", "class_i_s_m_a_u_1_1_door_data_visualization.html", "class_i_s_m_a_u_1_1_door_data_visualization" ]
+    ] ],
+    [ "GeneratedInternalTypeHelper.g.cs", "_generated_internal_type_helper_8g_8cs.html", null ],
     [ "GeneratedInternalTypeHelper.g.i.cs", "_generated_internal_type_helper_8g_8i_8cs.html", [
       [ "GeneratedInternalTypeHelper", "class_xaml_generated_namespace_1_1_generated_internal_type_helper.html", "class_xaml_generated_namespace_1_1_generated_internal_type_helper" ]
     ] ],
@@ -51,6 +56,9 @@ var dir_ba99b935102954a0913e07970036e2f4 =
     ] ],
     [ "ReportPage.g.i.cs", "_report_page_8g_8i_8cs.html", [
       [ "ReportPage", "class_i_s_m_a_u_1_1_report_page.html", "class_i_s_m_a_u_1_1_report_page" ]
+    ] ],
+    [ "UCSensorData.g.i.cs", "_u_c_sensor_data_8g_8i_8cs.html", [
+      [ "UCSensorData", "class_i_s_m_a_u_1_1_u_c_sensor_data.html", "class_i_s_m_a_u_1_1_u_c_sensor_data" ]
     ] ],
     [ "ViewPage.g.cs", "_view_page_8g_8cs.html", [
       [ "ViewPage", "class_i_s_m_a_u_1_1_view_page.html", "class_i_s_m_a_u_1_1_view_page" ]

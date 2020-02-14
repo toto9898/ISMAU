@@ -8,8 +8,19 @@ using System.Windows.Data;
 
 namespace ISMAU
 {
+	/// <summary>
+	/// Sets the input constrains of the mask
+	/// </summary>
 	public class SensorTypeToMaximumAllowedValueConverter : IValueConverter
 	{
+		/// <summary>
+		/// Returns the target value based on the sensor type, later used for constrains
+		/// </summary>
+		/// <param name="value"></param>
+		/// <param name="targetType"></param>
+		/// <param name="parameter"></param>
+		/// <param name="culture"></param>
+		/// <returns></returns>
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
 			if (value == null)

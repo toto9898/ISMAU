@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pollinginterval_285',['PollingInterval',['../class_i_s_m_a_u_1_1_d_a_t_a_1_1_sensor.html#a08482da77288a1d15d619aa0a7e6671e',1,'ISMAU::DATA::Sensor']]]
+  ['onclickdelegate_319',['OnClickDelegate',['../class_i_s_m_a_u_1_1_list_page_1_1_details_button_column.html#a60733569f4a45a6087f1f317c92e8cbc',1,'ISMAU::ListPage::DetailsButtonColumn']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wats_291',['Wats',['../class_i_s_m_a_u_1_1_d_a_t_a_1_1_el_power_sensor.html#ae84ea5ed62ff2c1dd8df3ca1a9dea1b4',1,'ISMAU::DATA::ElPowerSensor']]]
+  ['value_325',['Value',['../class_i_s_m_a_u_1_1_f_u_n_c_t_i_o_n_a_l_i_t_y_1_1_api_output.html#a5fbf49ac572cf9ff7c0933a884e1cd20',1,'ISMAU::FUNCTIONALITY::ApiOutput']]]
 ];

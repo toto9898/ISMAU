@@ -41,7 +41,6 @@ namespace ISMAU.FUNCTIONALITY
         public SensorLogic()
         {
             string current = Environment.CurrentDirectory;
-            current = Directory.GetParent(current).Parent.Parent.FullName;
             databasePath = current + DATABASE_NAME;
 
             try
@@ -250,22 +249,6 @@ namespace ISMAU.FUNCTIONALITY
                 s3.Boundaries.Min = Double.Parse(minVal);
                 s3.Boundaries.Max = Double.Parse(maxVal);
             }
-
-            //if (sensor is BoundedSensor<int> s)
-            //{
-            //    s.Boundaries.Min = (int)(minVal ?? default);
-            //    s.Boundaries.Max = (int)(maxVal ?? default);
-            //}
-            //else if (sensor is BoundedSensor<float> s2)
-            //{
-            //    s2.Boundaries.Min = (float)(minVal ?? default);
-            //    s2.Boundaries.Max = (float)(maxVal ?? default);
-            //}
-            //else if (sensor is BoundedSensor<double> s3)
-            //{
-            //    s3.Boundaries.Min = minVal ?? default;
-            //    s3.Boundaries.Max = maxVal ?? default;
-            //}
         }
 
         #endregion

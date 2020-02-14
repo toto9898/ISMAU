@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tickoff_288',['TickOff',['../class_i_s_m_a_u_1_1_d_a_t_a_1_1_sensor.html#afa25dacd48c536b7dc9d1ceb8a3b42ec',1,'ISMAU::DATA::Sensor']]],
-  ['timestamp_289',['TimeStamp',['../class_i_s_m_a_u_1_1_f_u_n_c_t_i_o_n_a_l_i_t_y_1_1_api_output.html#addc26997cff97f392e846548076a09ef',1,'ISMAU::FUNCTIONALITY::ApiOutput']]]
+  ['sensors_321',['Sensors',['../class_i_s_m_a_u_1_1_list_page.html#a34df6706c55dccde1d4cbd0d0b280946',1,'ISMAU.ListPage.Sensors()'],['../class_i_s_m_a_u_1_1_f_u_n_c_t_i_o_n_a_l_i_t_y_1_1_sensor_logic.html#ac485b79256d5ed3e035dabf60a0dca21',1,'ISMAU.FUNCTIONALITY.SensorLogic.Sensors()']]]
 ];

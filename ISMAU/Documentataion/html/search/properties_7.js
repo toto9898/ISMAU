@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['onclickdelegate_284',['OnClickDelegate',['../class_i_s_m_a_u_1_1_list_page_1_1_details_button_column.html#a60733569f4a45a6087f1f317c92e8cbc',1,'ISMAU::ListPage::DetailsButtonColumn']]]
+  ['name_318',['Name',['../class_i_s_m_a_u_1_1_d_a_t_a_1_1_sensor.html#a31e37e2d954da4ee693f83703e82cf0a',1,'ISMAU::DATA::Sensor']]]
 ];

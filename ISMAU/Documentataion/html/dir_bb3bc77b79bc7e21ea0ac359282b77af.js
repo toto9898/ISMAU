@@ -1,5 +1,6 @@
 var dir_bb3bc77b79bc7e21ea0ac359282b77af =
 [
+    [ "Data Visualization", "dir_f96311f6a9947a47a0807e44f1092a14.html", "dir_f96311f6a9947a47a0807e44f1092a14" ],
     [ "obj", "dir_ea90d118508cec64ec95f974e82bb228.html", "dir_ea90d118508cec64ec95f974e82bb228" ],
     [ "Properties", "dir_13a5e4c55727902876c5999d485add71.html", "dir_13a5e4c55727902876c5999d485add71" ],
     [ "App.xaml.cs", "_app_8xaml_8cs.html", [
@@ -32,6 +33,9 @@ var dir_bb3bc77b79bc7e21ea0ac359282b77af =
     ] ],
     [ "SensorTypeToRangesVisibilityConverter.cs", "_sensor_type_to_ranges_visibility_converter_8cs.html", [
       [ "SensorTypeToRangesVisibilityConverter", "class_i_s_m_a_u_1_1_sensor_type_to_ranges_visibility_converter.html", "class_i_s_m_a_u_1_1_sensor_type_to_ranges_visibility_converter" ]
+    ] ],
+    [ "UCSensorData.xaml.cs", "_u_c_sensor_data_8xaml_8cs.html", [
+      [ "UCSensorData", "class_i_s_m_a_u_1_1_u_c_sensor_data.html", "class_i_s_m_a_u_1_1_u_c_sensor_data" ]
     ] ],
     [ "ViewPage.xaml.cs", "_view_page_8xaml_8cs.html", [
       [ "ViewPage", "class_i_s_m_a_u_1_1_view_page.html", "class_i_s_m_a_u_1_1_view_page" ]

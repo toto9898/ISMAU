@@ -23,6 +23,7 @@ var hierarchy =
       [ "ISMAU.RegisterPage", "class_i_s_m_a_u_1_1_register_page.html", null ],
       [ "ISMAU.RegistryPage", "class_i_s_m_a_u_1_1_registry_page.html", null ],
       [ "ISMAU.ReportPage", "class_i_s_m_a_u_1_1_report_page.html", null ],
+      [ "ISMAU.UCSensorData", "class_i_s_m_a_u_1_1_u_c_sensor_data.html", null ],
       [ "ISMAU.ViewPage", "class_i_s_m_a_u_1_1_view_page.html", null ]
     ] ],
     [ "InternalTypeHelper", null, [
@@ -36,10 +37,10 @@ var hierarchy =
     ] ],
     [ "Page", null, [
       [ "ISMAU.HomePage", "class_i_s_m_a_u_1_1_home_page.html", null ],
-      [ "ISMAU.ListPage", "class_i_s_m_a_u_1_1_list_page.html", null ]
+      [ "ISMAU.ListPage", "class_i_s_m_a_u_1_1_list_page.html", null ],
+      [ "ISMAU.MapPage", "class_i_s_m_a_u_1_1_map_page.html", null ]
     ] ],
     [ "Page", null, [
-      [ "ISMAU.MapPage", "class_i_s_m_a_u_1_1_map_page.html", null ],
       [ "ISMAU.ModifyPage", "class_i_s_m_a_u_1_1_modify_page.html", null ],
       [ "ISMAU.RegisterPage", "class_i_s_m_a_u_1_1_register_page.html", null ],
       [ "ISMAU.RegistryPage", "class_i_s_m_a_u_1_1_registry_page.html", null ],
@@ -49,6 +50,13 @@ var hierarchy =
     [ "ISMAU.FUNCTIONALITY.PushpinMetadata", "struct_i_s_m_a_u_1_1_f_u_n_c_t_i_o_n_a_l_i_t_y_1_1_pushpin_metadata.html", null ],
     [ "ISMAU.DATA.RangeBoundaries< T >", "class_i_s_m_a_u_1_1_d_a_t_a_1_1_range_boundaries.html", null ],
     [ "ISMAU.DATA.SensorData", "class_i_s_m_a_u_1_1_d_a_t_a_1_1_sensor_data.html", null ],
+    [ "UserControl", null, [
+      [ "ISMAU.BasicMeter", "class_i_s_m_a_u_1_1_basic_meter.html", null ],
+      [ "ISMAU.DoorDataVisualization", "class_i_s_m_a_u_1_1_door_data_visualization.html", null ]
+    ] ],
+    [ "UserControl", null, [
+      [ "ISMAU.UCSensorData", "class_i_s_m_a_u_1_1_u_c_sensor_data.html", null ]
+    ] ],
     [ "ViewModelBase", null, [
       [ "ISMAU.DATA.Sensor", "class_i_s_m_a_u_1_1_d_a_t_a_1_1_sensor.html", [
         [ "ISMAU.DATA.BoundedSensor< T >", "class_i_s_m_a_u_1_1_d_a_t_a_1_1_bounded_sensor.html", null ],
