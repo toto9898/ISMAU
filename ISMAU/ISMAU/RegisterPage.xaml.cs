@@ -101,9 +101,7 @@ namespace ISMAU
                 PollingInterval = (int)numPoll.Value
             };
 
-            RangeBoundaries<string> boundaries = new RangeBoundaries<string>();
-            boundaries.Min = numMinVal.Text;
-            boundaries.Max = numMaxVal.Text;
+            RangeBoundaries<string> boundaries = new RangeBoundaries<string>(numMinVal.Text, numMaxVal.Text);
 
             if (logic.AddSensor(data, boundaries))
                 logic.SaveState();
@@ -155,19 +153,9 @@ namespace ISMAU
                 PollingInterval = Int32.Parse(numPoll.Text)
             };
 
-            logic.ModifySensor(sensor, data, numMinVal.Text, numMaxVal.Text);
+            logic.ModifySensor(sensor, data, new RangeBoundaries<string>(numMinVal.Text, numMaxVal.Text));
             logic.SaveState();
         }
-
-
-        //      private string trimSpace(string input)
-        //{
-        //	string output = "";
-        //	for (int i = 0; i < input.Length; ++i)
-        //		if (input[i] != ' ')
-        //			output += input[i];
-        //	return output;
-        //}
     }
 }
 

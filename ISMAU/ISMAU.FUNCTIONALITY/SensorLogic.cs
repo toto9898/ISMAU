@@ -107,10 +107,10 @@ namespace ISMAU.FUNCTIONALITY
                         sensor = new DoorSensor(data);
                         break;
                     case "ElPowerSensor":
-                            sensor = new ElPowerSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
+                        sensor = new ElPowerSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
                         break;
                     case "NoiseSensor":
-                            sensor = new NoiseSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
+                        sensor = new NoiseSensor(data, new RangeBoundaries<int>(int.Parse(rangeBoundaries.Min), int.Parse(rangeBoundaries.Max)));
                         break;
                     case "HumiditySensor":
                         sensor = new HumiditySensor(data, new RangeBoundaries<float>(float.Parse(rangeBoundaries.Min), float.Parse(rangeBoundaries.Max)));
@@ -156,10 +156,10 @@ namespace ISMAU.FUNCTIONALITY
         /// </summary>
         /// <returns></returns>
 		public async Task getValuesForAllSensorsFromAPI()
-		{
-			foreach(var sensor in Sensors)
+        {
+            foreach (var sensor in Sensors)
                 await UpdadeSensor(sensor);
-		}
+        }
 
         /// <summary>
         /// Updates the data of the sensor with current data, received from the API
@@ -186,19 +186,19 @@ namespace ISMAU.FUNCTIONALITY
         /// <param name="sensor"></param>
         /// <returns>String representing the sensor type</returns>
 		private string sensorTypeForAPICall(Sensor sensor)
-		{
-			if (sensor is DoorSensor)
-				return "window";
-			if (sensor is ElPowerSensor)
-				return "electric power";
-			if (sensor is HumiditySensor)
-				return "humidity";
-			if (sensor is NoiseSensor)
-				return "noise";
-			if (sensor is TemperatureSensor)
-				return "temperature";
-			return "invalid";
-		}
+        {
+            if (sensor is DoorSensor)
+                return "window";
+            if (sensor is ElPowerSensor)
+                return "electric power";
+            if (sensor is HumiditySensor)
+                return "humidity";
+            if (sensor is NoiseSensor)
+                return "noise";
+            if (sensor is TemperatureSensor)
+                return "temperature";
+            return "invalid";
+        }
 
         /// <summary>
         /// Returns List with only the sensors which are out of bounds
@@ -221,33 +221,42 @@ namespace ISMAU.FUNCTIONALITY
         /// <param name="data">The new data</param>
         /// <param name="minVal">The new minimal bounary value</param>
         /// <param name="maxVal">The new maximal bounary value</param>
-        public void ModifySensor(Sensor sensor, SensorData data, string minVal, string maxVal)
+        public void ModifySensor(Sensor sensor, SensorData data, RangeBoundaries<string> rangeBoundaries)
         {
             sensor.Description = data.Description;
             sensor.Location = data.Location;
             sensor.PollingInterval = data.PollingInterval;
 
-            minVal = minVal.Trim();
-            maxVal = maxVal.Trim();
-            if (minVal[0] == '-' && minVal[1] == ' ')
-                minVal = minVal.Remove(1, 1);
-            if (maxVal[0] == '-' && maxVal[1] == ' ')
-                maxVal = maxVal.Remove(1, 1);
+            rangeBoundaries.Min = rangeBoundaries.Min.Trim();
+            rangeBoundaries.Max = rangeBoundaries.Max.Trim();
+            if (rangeBoundaries.Min[0] == '-' && rangeBoundaries.Min[1] == ' ')
+                rangeBoundaries.Min = rangeBoundaries.Min.Remove(1, 1);
+            if (rangeBoundaries.Max[0] == '-' && rangeBoundaries.Max[1] == ' ')
+                rangeBoundaries.Max = rangeBoundaries.Max.Remove(1, 1);
 
             if (sensor is BoundedSensor<int> s)
             {
-                s.Boundaries.Min = Int32.Parse(minVal);
-                s.Boundaries.Max = Int32.Parse(maxVal);
+                s.Boundaries = new RangeBoundaries<int>
+                (
+                    int.Parse(rangeBoundaries.Min),
+                    int.Parse(rangeBoundaries.Max)
+                );
             }
             else if (sensor is BoundedSensor<float> s2)
             {
-                s2.Boundaries.Min = float.Parse(minVal);
-                s2.Boundaries.Max = float.Parse(maxVal);
+                s2.Boundaries = new RangeBoundaries<float>
+                (
+                    float.Parse(rangeBoundaries.Min),
+                    float.Parse(rangeBoundaries.Max)
+                );
             }
             else if (sensor is BoundedSensor<double> s3)
             {
-                s3.Boundaries.Min = Double.Parse(minVal);
-                s3.Boundaries.Max = Double.Parse(maxVal);
+                s3.Boundaries = new RangeBoundaries<double>
+                (
+                    double.Parse(rangeBoundaries.Min),
+                    double.Parse(rangeBoundaries.Max)
+                );
             }
         }
 

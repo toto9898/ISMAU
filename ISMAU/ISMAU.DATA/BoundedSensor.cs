@@ -6,17 +6,24 @@ namespace ISMAU.DATA
     /// This class is used to hold the acceptable range for a sensor
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class RangeBoundaries<T>
+    public class RangeBoundaries<T> where T : IComparable
     {
-        public RangeBoundaries()
+        public RangeBoundaries() : this(default, default)
         {
-            Min = default;
-            Max = default;
         }
+
         public RangeBoundaries(T min, T max)
         {
-            Min = min;
-            Max = max;
+            if (min.CompareTo(max) < 0)
+            {
+                Min = min;
+                Max = max;
+            }
+            else
+            {
+                Min = max;
+                Max = min;
+            }
         }
 
         /// <summary>
@@ -39,7 +46,7 @@ namespace ISMAU.DATA
     /// </remarks>
     /// <typeparam name="T"></typeparam>
     public abstract class BoundedSensor<T> : Sensor
-        where T: IComparable
+        where T : IComparable
     {
         private RangeBoundaries<T> boundaries;
         /// <summary>
