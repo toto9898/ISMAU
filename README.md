@@ -1,6 +1,6 @@
 # ISMAU
-# Course Project
-
+# Course Project  
+  ## Created by me and Iliyan Ruikov
 # Обектно Ориентирано Програмиране
 
 # (OOP with C#.NET)
